@@ -1,6 +1,6 @@
 ---
 layout: home
-
+title: "sup"
 hero:
   name: "Bryan Melanson"
   text: "buh-RAH-yan muh-LAHN-son"
