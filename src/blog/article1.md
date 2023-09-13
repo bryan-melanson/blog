@@ -1,8 +1,10 @@
 ---
 Updated: 2023-09-13
-image: "/dist/flame.gif"
+image: "/flame.gif"
 ---
 
 # sup world
 
 suppppp
+
+![image](/flame.gif)
