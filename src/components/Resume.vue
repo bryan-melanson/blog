@@ -6,7 +6,7 @@
         <h5>{{ resume.basics.label.toUpperCase() }}</h5>
       </div>
       <div class="med-column">
-        <a href="./assets/BryanMelanson-CV.pdf">
+        <a href="./assets/BryanMelanson-CV.pdf" target="_blank">
           <Tag :color="'secondary'" :key="k" class="item">PDF</Tag>
         </a>
         <div class="contact-profiles">
