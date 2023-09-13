@@ -1,1 +1,18 @@
-[{"title":"","path":".DS_Store","excerpt":[""]},{"Updated":"2023-09-13T00:00:00.000Z","image":"/dist/flame.gif","title":"","path":"article1.html","excerpt":[""]}]
+[
+  {
+    "title": "",
+    "path": ".DS_Store",
+    "excerpt": [
+      ""
+    ]
+  },
+  {
+    "Updated": "2023-09-13T00:00:00.000Z",
+    "image": "/flame.gif",
+    "title": "",
+    "path": "article1.html",
+    "excerpt": [
+      ""
+    ]
+  }
+]
