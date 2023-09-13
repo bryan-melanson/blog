@@ -44,7 +44,7 @@ const all = {
 };
 
 export default defineConfig({
-  base: '/base/',
+  base: '/blog/',
   srcDir: './src',
   markdown: {
     toc: { level: [1, 2, 3] },
