@@ -5,7 +5,7 @@ const customElements = ['mjx-container'];
 const music = {
   text: 'Music', items: [
     {
-      text: 'Albums', items: [
+      text: 'Albums', collapsible: true, items: [
         { text: 'Errand Boy - Bachelor of Commerce (2005)', link: 'music/bachelor-of-commerce' },
         { text: 'Errand Boy - Errand Boy (2007)', link: 'music/errand-boy' },
         { text: 'Errand Boy - At the 24 Hr Art Marathon (2008)', link: 'music/art-marathon' },
@@ -19,7 +19,7 @@ const music = {
 const guides = {
   text: 'Study Guides', items: [
     {
-      text: 'Engineering', items: [
+      text: 'Engineering', collapsible: true, items: [
         { text: 'Electronic Circuits', link: 'study-guides/circuits' },
         { text: 'Control Systems', link: 'study-guides/control-systems' },
         { text: 'Probability & Random Processes', link: 'study-guides/probability' },
@@ -27,7 +27,7 @@ const guides = {
       ]
     },
     {
-      text: 'Programming', items: [
+      text: 'Programming', collapsible: true, items: [
         { text: 'Data Structures', link: 'study-guides/data-structures' },
         { text: 'Rust', link: 'study-guides/rust' }
       ]
