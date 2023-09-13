@@ -2,6 +2,9 @@
   <a :href="href">
     <div class="card">
       <div class="flex">
+        <div class="media">
+          <img :src="image" :alt="title" />
+        </div>
         <div class="details">
           <h2 class="title">{{ title }}</h2>
           <div class="author">
