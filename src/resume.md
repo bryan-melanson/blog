@@ -13,6 +13,4 @@ import Tag from './components/Tag.vue'
 </a>
 </div>
 
-[Link to PDF](/BryanMelanson-CV.pdf)
-
 <Resume />
