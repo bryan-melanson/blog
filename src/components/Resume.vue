@@ -128,7 +128,6 @@
 
 import Tag from './Tag.vue';
 import Icon from './Icon.vue';
-import jsonURL from './resume.json'
 
 export default {
   name: 'Resume',
@@ -152,7 +151,7 @@ export default {
   async created() {
     // Fetch the JSON Resume data from the file
     try {
-      const response = await fetch(jsonURL);
+      const response = await fetch("https://registry.jsonresume.org/bryan-melanson.json");
       if (response.ok) {
         this.resume = await response.json();
       } else {
