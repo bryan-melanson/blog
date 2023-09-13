@@ -1,6 +1,6 @@
 ---
 Updated: 2023-09-13
-image: '/flame.gif' 
+image: "/assets/img/self.jpeg",
 ---
 
 # sup world
