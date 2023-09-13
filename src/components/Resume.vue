@@ -151,7 +151,7 @@ export default {
   async created() {
     // Fetch the JSON Resume data from the file
     try {
-      const response = await fetch('./resume.json');
+      const response = await fetch('/resume.json');
       if (response.ok) {
         this.resume = await response.json();
       } else {
