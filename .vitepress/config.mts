@@ -81,11 +81,6 @@ export default defineConfig({
       { icon: 'github', link: 'https://github.com/bryan-melanson' },
       { icon: 'linkedin', link: 'https://linkedin.com/in/bryanmelanson' }
     ],
-    blog: {
-      title: 'Blog Title',
-      description: 'All these articles were written by me!',
-      defaultAuthor: 'Me, Myself, and I',
-    },
   }
 })
 
