@@ -6,6 +6,9 @@
         <h5>{{ resume.basics.label.toUpperCase() }}</h5>
       </div>
       <div class="med-column">
+        <a href="./assets/BryanMelanson-CV.pdf">
+          <Tag :color="'secondary'" :key="k" class="item">PDF</Tag>
+        </a>
         <div class="contact-profiles">
           <h3>CONTACT &amp; PROFILES</h3>
           <div class="contact"><a :href="'mailto:' + resume.basics.email">{{ resume.basics.email }}</a></div>
