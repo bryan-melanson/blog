@@ -59,10 +59,10 @@ export default defineConfig({
       }
     },
   },
+  head: [['link', { rel: 'icon', href: './favicon.ico' }]],
   title: "Bryan Melanson",
   description: "A young curmudgeon",
   themeConfig: {
-    head: [['link', { rel: 'icon', href: '/favicon.ico' }]],
     nav: [
       { text: 'Home', link: '/' },
       { text: 'Blog', link: 'blog' },
