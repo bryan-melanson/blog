@@ -106,7 +106,7 @@
           <div v-for="(volunteerItem, index) in resume.volunteer" :key="index" style="position: relative;">
             <h3 style="margin-bottom: 0;">{{ volunteerItem.position }}</h3>
             <h5 style="margin: 2px 0; display: flex; justify-content: space-between;">
-             <strong>{{ volunteerItem.company ||
+              <strong>{{ volunteerItem.company ||
                 volunteerItem.organization
               }}</strong>
               <a :href="volunteerItem.website" target="_blank">{{ volunteerItem.website }}</a>
@@ -151,7 +151,7 @@ export default {
   async created() {
     // Fetch the JSON Resume data from the file
     try {
-      const response = await fetch('assets/resume/resume.json');
+      const response = await fetch('./assets/resume/resume.json');
       if (response.ok) {
         this.resume = await response.json();
       } else {
@@ -165,7 +165,6 @@ export default {
 </script>
 
 <style scoped>
-
 .name-label {
   grid-column: 1 / span 6;
   background-color: #333;
