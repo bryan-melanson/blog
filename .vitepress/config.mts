@@ -36,7 +36,7 @@ const guides = {
 }
 
 // Combine the 'items' arrays from both objects
-const combinedItems = music.items.concat(guides.items);
+const combinedItems = guides.items.concat(music.items);
 
 // Create a new object with the combined 'items' array
 const all = {
