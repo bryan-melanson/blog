@@ -13,6 +13,6 @@ hero:
       link: resume
     - theme: alt
       text: Think About Hiring Me!
-      link: blog
+      link: articles
 ---
 

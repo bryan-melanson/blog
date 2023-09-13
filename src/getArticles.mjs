@@ -2,11 +2,11 @@ import fs from 'node:fs/promises';
 import matter from 'gray-matter';
 import removeMd from 'remove-markdown';
 
-const articles = await fs.readdir('./src/blog/');
+const articles = await fs.readdir('./src/articles/');
 
 const data = await Promise.all(
   articles.map(async (article) => {
-    const file = matter.read(`./src/blog/${article}`, {
+    const file = matter.read(`./src/articles/${article}`, {
       excerpt: true,
       excerpt_separator: '<!-- more -->',
     });
@@ -19,7 +19,7 @@ const data = await Promise.all(
     return {
       ...data,
       title: contents[0].replace(/\s{2,}/g, '').trim(),
-      path: path.replace('./src/blog/', '').replace(/\.md$/, '.html'),
+      path: path.replace('./src/articles/', '').replace(/\.md$/, '.html'),
       excerpt: contents
     };
   })

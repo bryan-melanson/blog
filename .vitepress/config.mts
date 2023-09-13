@@ -65,7 +65,7 @@ export default defineConfig({
   themeConfig: {
     nav: [
       { text: 'Home', link: '/' },
-      { text: 'Blog', link: 'blog' },
+      { text: 'Blog', link: 'articles' },
       guides,
       music,
       { text: 'CV', link: 'resume' }
