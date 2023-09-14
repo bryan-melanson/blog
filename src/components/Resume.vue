@@ -184,13 +184,6 @@ export default {
   overflow-x: auto;
 }
 
-@media (max-width: 768px) {
-  .med-column {
-    padding: 10px;
-    grid-column: span 3;
-  }
-}
-
 .med-column {
   padding: 10px;
   grid-column: span 2;
@@ -227,8 +220,14 @@ export default {
 
 .container {
   display: grid;
-  grid-template-columns: 3fr 3fr 3fr;
+  grid-template-columns: 3fr 3fr 1fr;
   grid-gap: 20px;
+}
+
+@media (max-width: 768px) {
+  .container {
+    display: block
+  }
 }
 
 li {
