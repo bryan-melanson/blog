@@ -1,4 +1,5 @@
 <template>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <div v-if="resume">
     <div class="container">
       <div class="name-label">
@@ -180,6 +181,19 @@ export default {
 .med-column {
   padding: 10px;
   grid-column: span 2;
+  overflow-x: auto;
+}
+
+@media (max-width: 768px) {
+  .med-column {
+    padding: 10px;
+    grid-column: span 3;
+  }
+}
+
+.med-column {
+  padding: 10px;
+  grid-column: span 2;
 }
 
 .small-column {
@@ -199,7 +213,6 @@ export default {
 .item-list {
   display: flex;
   flex-wrap: wrap;
-  /* Wrap items to the next line when they exceed the column width */
 }
 
 .items {
@@ -210,7 +223,6 @@ export default {
 .item {
   margin-right: 5px;
   margin-bottom: 5px;
-  /* Add some spacing between items */
 }
 
 .container {
@@ -230,7 +242,6 @@ li {
 
 .small-caps {
   font-variant: small-caps;
-  /* Fallback font with small caps support */
 }
 </style>
 
