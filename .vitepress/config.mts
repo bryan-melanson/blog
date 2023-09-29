@@ -29,7 +29,8 @@ const guides = {
     {
       text: 'Programming', collapsible: true, items: [
         { text: 'Data Structures', link: 'study-guides/data-structures' },
-        { text: 'Rust', link: 'study-guides/rust' }
+        { text: 'Rust', link: 'study-guides/rust' },
+        { text: 'Lua', link: 'study-guides/lua' },
       ]
     },
   ]
