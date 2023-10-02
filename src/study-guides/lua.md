@@ -8,11 +8,71 @@ title: 'Lua'
 
 ## Syntax
 
+Lua is open source, written as a library in the C programming language. It provides a host program called `lua` that operates as a standalone interpreter. This host program can execute pieces of Lua code, write and read Lua variables and register C functions to be called by Lua code. Because of it's light weight, open source community, cooperation with C and portability, it's a good choice for some embedded devices.
+
+Lua ignores whitespace except for use as a delimiter between tokens, and interprets symbols such as a new line, tab, or carriage return as whitespace. Because Lua allows for parentheses, there can be some ambiguity when interpreting a command like:
+
+```
+a = b + c
+(print or io.write)('done')
+```
+
+Which could see the `c` as a function call `c(print...)` or a separate line `c; (print...)`. To avoid these ambiguities, the semicolon `;` can be used as an empty instruction to delimit the statement:
+
+```
+a = b + c;
+(print or io.write)('done');
+```
+
+When using statements with open parentheses, the semicolon can also be used at the start of the `(print...)` line as a fail-safe.
+
+To avoid ambiguity, a block can be explicitly defined as a single statement using a `do...end` wrap.
+
+```
+statement = 
+  do
+    block 
+  end
+```
+
 ## Data Structures
 
 ### `local` Variables
 
 ### Tables
+
+Tables are the only data structuring mechanism in Lua, and operate similarly to arrays of non-heterogeneous data type which can be indexed with any value. 
+
+### Assignment
+
+Lua allows variable assignment via a list of variables on the left side, and a list of expressions on the right side, each separated by commas.
+
+```
+a, b, c = 1, 2, { 3, 4 }
+```
+
+## Metatables and Metamethods
+
+Metatables are a concept used for defining special behaviors for tables. They define metamethods used to implement features like operator overloading, object-oriented programming and more. 
+
+```
+-- Create two tables
+table1 = { x = 10, y = 20 }
+table2 = { x = 5, y = 15 }
+
+-- Set a metatable for table1
+metatable = {
+  __add = function(table1, table2)
+    return { x = table1.x + table2.x, y = table1.y + table2.y }
+  end
+}
+
+setmetatable(table1, metatable)
+
+-- Now, when you use the '+' operator on table1 and table2, the metatable's '__add' function is called
+result = table1 + table2
+print(result.x, result.y) -- Output: 15 35
+```
 
 ## Control Structures
 
