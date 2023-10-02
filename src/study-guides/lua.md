@@ -8,14 +8,65 @@ title: 'Lua'
 
 ## Syntax
 
+
+
 ## Data Structures
+
+Variables in Lua are dynamically typed, so their data types are not explicitly declared when assigning them. The basic data types are *nil*, *boolean*, *number*, *string*, *function*, *userdata*, *thread* and *table*.
+
+### nil
+
+### Numbers
+
+The *Numbers* type represents both integer and float data types, and represent both using 64 bits in standard Lua. Since this can be excessive for embedded devices, Lua can be set to 32-bit representation using the `LUA_32BITS` configuration flag.  In the case where an integer `n` overflows in a system with `x` bit representation, the result will be $n mod(2^x)$. 
+
+### String
+
+### Boolean
+
+### Function
+
+### Userdata
+
+### Thread
+
+### Table
+
+You can index Lua's tables with any values, but in Lua they are customarily indexed starting with `1` instead of `0` as expected.
+
+```
+({[0] = 'a', 'b'})
+```
+
+```
+a = {}
+for i=-5, 5 do
+  a[i] = 0
+end
+```
+
 
 ### `local` Variables
 
-### Tables
+The default scope of Lua variables is global. To constrict a variables values to its block, the 
+`local` keyword can be used when assigning the variable.
+
+```
+a = 5
+
+do 
+  local a = 10
+  print(a)
+end
+
+print(a)
+
+-- 10
+-- 5
+```
 
 ## Control Structures
-
+ 
 ### `if...else`
 
 ```
@@ -56,8 +107,24 @@ end
 -- "H"
 -- "e"
 -- ...
+
+Lua's string manipulation libraries also make this operation easy.
 ```
 #### `pairs()`
+
+The `pairs()` function returns a `{ key, value }` pair when iterating over a table, can also be used to traverse in a `for` loop.
+
+```
+a = { "a", "b", "c", "d" }
+for key, value in pairs(a) do
+  print(key,value)
+end
+
+-- 1 a
+-- 2 b
+-- 3 c
+-- 4 d
+```
 
 ### `while`
 `while` loops continue to evaluate the statements in the body until the `while` condition is no longer true, or a `break` statement is reached.
@@ -110,5 +177,7 @@ until( condition )
 ## Modules
 
 ## File I/O
+
+## String Manipulation
 
 ## Garbage Collection
