@@ -374,7 +374,7 @@ lua_close(L);
 ### C Functions in Lua
 
 To call C functions in Lua, a function must first be written that follows the following signature:
-
+ 
 ``` c
 int myFunction(lua_State* L);
 ```
