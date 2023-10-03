@@ -41,19 +41,73 @@ Variables in Lua are dynamically typed, so their data types are not explicitly d
 
 ### nil
 
+`nil` represents the absence of any useful data. 
+
 ### Numbers
 
 The *Numbers* type represents both integer and float data types, and represent both using 64 bits in standard Lua. Since this can be excessive for embedded devices, Lua can be set to 32-bit representation using the `LUA_32BITS` configuration flag.  In the case where an integer `n` overflows in a system with `x` bit representation, the result will be $n mod(2^x)$. 
 
 ### String
 
+In Lua, strings are an immutable sequence of bytes, represented as sequences of characters. The index of the string starts with `1`, and accept negative integers as an index, which index from the end of the string.
+
+``` lua
+local myString = 'Hello, World!'
+local anotherString = 'This is a single-quoted string.'
+
+local myString = "Hello, World!"
+local anotherString = "This is a double-quoted string."
+```
+
+Lua also allows the creation of long strings, which can span multiple lines and are often used for multiline text, such as documentation or large blocks of text. Long strings are enclosed by double square brackets [[ and ]].
+
+```
+local longString = [[
+   This is a long string
+   that spans multiple lines.
+]]
+```
+
+Lua strings can also be concatenated using the `..` operator.
+
 ### Boolean
+
+Booleans in Lua can have the values `true` or `false`. Any value other than `nil` will make a value evaluate as `true`, so they should be carefully expressed. The values `nil` and `false` are also interchangeable, with the key difference that `false` can be used as a table value, while `nil` will represent an absent key.
 
 ### Function
 
+Lua can call functions [written in C](#c-api).
+
 ### Userdata
 
+In Lua, `userdata` is a special data type that allows you to create and manipulate values that are not under the direct control of the Lua garbage collector. It is a mechanism for integrating external data or objects written in a different programming language (usually C or C++) into Lua scripts. `userdata` objects are typically used for interfacing with C libraries or for creating custom user-defined types.
+
+Working with userdata requires a good understanding of the C API in Lua, as well as proper memory management, as userdata objects are not automatically garbage collected by Lua; you typically need to manage their lifecycle from the C side.
+
+``` lua
+-- Assume that a C library provides a function to create a userdata object.
+local myUserData = myClib.createUserData()
+
+-- You can define Lua functions that operate on the userdata.
+function myUserData:getValue()
+    return myClib.getValue(self) -- Calls a C function to get the value.
+end
+
+function myUserData:setValue(newValue)
+    myClib.setValue(self, newValue) -- Calls a C function to set the value.
+end
+
+-- Now you can use your custom userdata object in Lua.
+print(myUserData:getValue()) -- Prints the value associated with the userdata.
+myUserData:setValue(42) -- Sets a new value through Lua function.
+
+```
+
+This requires prerequisite setup for [C functions](#c-functions-in-lua).
+
 ### Thread
+
+The type thread represents independent threads of execution and it is used to implement (coroutines)[#coroutines]. Lua threads are not related to operating-system threads. Lua supports coroutines on all systems, even those that do not support threads natively.
 
 ### Table
 
@@ -145,6 +199,18 @@ end
 
 ### `for`
 
+ Lua `for` loops can be defined as numeric loops, or iterator loops:
+
+``` lua
+for variable = start, stop, step do -- step is optional
+    -- Loop body
+end
+
+for key, value in iterator_function do
+    -- Loop body
+end
+```
+
 #### `#` Length Operator
 
 The `variable#` syntax provides the length of the given variable, if it is a string or a table. In the case of strings, it will return the number of bytes in the variable. In case of tables, it will return the last numeric key whose value is not nil for tables, starting from 1. This behavior is only defined for tables with array-like qualities, such as keys which are a sequence `{1..n}`. When indexed with non-integer values, the result is *undefined*.
@@ -227,10 +293,41 @@ until( condition )
 ```
 
 ## Functions
+In Lua, functions are first-class citizens, which means you can assign them to variables, pass them as arguments, and return them from other functions. This flexibility allows you to create and work with a wide variety of distinct functions in your Lua programs.
 
+Lua functions follow the following syntax:
+
+``` lua
+function func_name(args,...)
+  body
+end
+```
 ### Var Args
 
-## Error Handling
+The provided list of arguments is resized to the length of the function's defined parameters, unless the functions is defined as a *variadic function* which has `...` at the end of the parameters.
+
+To access the varargs, the `select` function can be used, providing the index of the vararg to be selected as the first argument.
+
+``` lua
+function firstArg(...)
+    return select('#', ...)
+end
+```
+
+### Closures
+
+ Lua functions can be distinct based on the closures they capture. Two functions that have the same name, parameters, and body but capture different variables from their enclosing environment are distinct due to the values they capture.
+
+``` lua
+function makeMultiplier(factor)
+    return function(x)
+        return x * factor
+    end
+end
+
+local double = makeMultiplier(2)
+local triple = makeMultiplier(3)
+```
 
 ## C API
 
@@ -286,10 +383,154 @@ To make it accessible from Lua, it must be registered with Lua's C API, typicall
 
 ## Coroutines
 
+Coroutines in Lua provide a way to create cooperative multitasking, allowing you to pause and resume the execution of functions. They are intitialized using the `coroutine.create` function, yielded using the `coroutine.yield` function, and started as well as resumed using the `coroutine.resume` function. The status can be polled (`suspended`, `running`, `dead`) using the `couroutine.status` function.  
+
 ## Modules
 
-## File I/O
+Third party libraries can be imported as modules. In Lua, modules are a way to organize code into reusable units that can be loaded and used in other Lua scripts. A module in Lua is essentially a Lua script file that defines a set of functions, variables, and tables. To create a module, you typically create a Lua script with the desired functionality and save it as a .lua file.
+
+Modules can create private variables by declaring them as `local` in the script.
+
+``` lua
+local M = {}  -- Create a module table
+
+-- Module variables
+M.myVariable = "Hello, World!"
+
+-- Module function
+function M.myFunction()
+    print("This is a function from mymodule")
+end
+
+return M  -- Return the module table
+```
+
+To use a module in another Lua script, you need to require it. The require function loads and executes the module, returning the module table that was returned from the module script. You can then access the module's functions and variables through this table.
+
+``` lua
+local mymodule = require("mymodule")
+
+print(mymodule.myVariable)
+mymodule.myFunction()
+```
+
+If nested in a folder structure, a `project/mymodule.lua` script can be imported using `local mymodule = require("project.mymodule")`.
+
+## Errors
+
+In Lua, errors are managed using a combination of the `error` function for generating errors and the `pcall` function for handling errors.
+
+The `error` function takes a single string as its only argument, which is the error message presented when triggered. Optionally, a second argument can be provided which defines the error level. The error level is used in debugging to indicate where an error occurred in the call stack, and provides context about which function or level triggered the function.
+
+``` lua
+function divide(a, b)
+    if b == 0 then
+        error("Division by zero", 2) -- Specify error level 2
+    end
+    return a / b
+end
+
+local success, result = pcall(function()
+    local result = divide(10, 0)
+    print("Result:", result)
+end)
+
+if not success then
+    print("Error:", result)
+end
+```
+
+In this example, the error function is called with an error level of 2, indicating that the error message should report that the error occurred in the divide function (the caller of error), rather than in the immediate caller of the `pcall` function.
+
+### `pcall`
+
+To catch and handle errors in Lua, you can use the `pcall` (protected call) function. `pcall` takes a function and its arguments as arguments and attempts to call the function. If the function succeeds without errors, `pcall` returns true and any return values from the function. If an error occurs during the execution of the function, `pcall` returns false and the error message.
+
+It can be viewed similarly to a `try` and `catch` block:
+
+``` lua
+local success, result = pcall(function()
+    -- Code that may produce an error
+end)
+
+if success then
+    -- The code executed successfully
+    print("Result:", result)
+else
+    -- An error occurred
+    print("Error:", result)
+end
+```
 
 ## String Manipulation
 
-## Garbage Collection
+The Lua standard library provides generic functions for string manipulation.
+
+### String Concatenation
+
+The `..` operator is used to concatenate strings.
+
+``` lua
+local result = str1 .. str2
+```
+
+### String Length
+
+The `#` operator is used to return a string's length.
+
+``` lua
+local length = #str
+```
+
+### String Substring
+
+The `string.sub` function can be used to extract a substring.
+
+``` lua
+local substring = string.sub(str,7,11)
+```
+
+### String Search and Replace
+
+The `string.find` and `string.gsub` functions are used to find and replace substrings.
+
+``` lua
+local pos = string.find(str,"substring")
+local new = string.gsub(str, "find", "replace")
+```
+
+### String Splitting
+
+The `string.gmatch` function is used to split according to the Regex pattern.
+
+```lua
+local text = "test, test1, test2"
+for word in string.gmatch(str, "[^,]+") done
+  print word
+end
+
+-- test
+-- test1
+-- test2
+```
+
+### String Formatting
+
+The `string.format` function formats strings similarly to the `printf` function in C.
+
+``` lua
+string.format("%d", num)
+```
+
+### String Conversion
+
+The `string.upper` and `string.lower` functions are used to convert between upper and lower case.
+
+``` lua
+local upperTest = string.upper(str)
+local lowerTest = string.lower(str)
+```
+
+### Trim Whitespace
+
+Lua's standard library does not include a `trim` function.
