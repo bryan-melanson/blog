@@ -11,8 +11,5 @@ hero:
     - theme: brand
       text: Hire Me! 
       link: resume
-    - theme: alt
-      text: Think About Hiring Me!
-      link: resume
 ---
 
