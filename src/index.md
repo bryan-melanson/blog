@@ -10,7 +10,7 @@ hero:
   actions:
     - theme: brand
       text: Hire Me! 
-      email: hello@bryan.horse
+      link: hello@bryan.horse
     - theme: alt
       text: Think About Hiring Me!
       link: resume
