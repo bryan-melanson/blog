@@ -107,7 +107,7 @@ This requires prerequisite setup for [C functions](#c-functions-in-lua).
 
 ### Thread
 
-The type thread represents independent threads of execution and it is used to implement (coroutines)[#coroutines]. Lua threads are not related to operating-system threads. Lua supports coroutines on all systems, even those that do not support threads natively.
+The type thread represents independent threads of execution and it is used to implement [coroutines](#coroutines). Lua threads are not related to operating-system threads. Lua supports coroutines on all systems, even those that do not support threads natively.
 
 ### Table
 
@@ -440,7 +440,7 @@ if not success then
 end
 ```
 
-In this example, the error function is called with an error level of 2, indicating that the error message should report that the error occurred in the divide function (the caller of error), rather than in the immediate caller of the `pcall` function.
+In this example, the `error` function is called with an error level of 2, indicating that the error message should report that the error occurred in the `divide` function (the caller of error), rather than in the immediate caller of the `pcall` function.
 
 ### `pcall`
 
