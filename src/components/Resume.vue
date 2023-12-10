@@ -151,7 +151,7 @@ export default {
   async created() {
     // Fetch the JSON Resume data from the file
     try {
-      const response = await fetch("https://gist.githubusercontent.com/bryan-melanson/e4843ee863be3e76063a5b88e977daf1/raw/867ee62085e229f4c0fa75f214763cef58fd277a/resume.json");
+      const response = await fetch("https://gist.githubusercontent.com/bryan-melanson/e4843ee863be3e76063a5b88e977daf1/raw/c15a0fad3a05f07e4aba4d29a0e54d231d3037c7/resume.json");
       if (response.ok) {
         this.resume = await response.json();
       } else {
