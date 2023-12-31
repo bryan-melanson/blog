@@ -29,6 +29,7 @@ const guides = {
     {
       text: 'Programming', collapsible: true, items: [
         { text: 'Data Structures', link: 'study-guides/data-structures' },
+        { text: 'Make', link: 'study-guides/make' },
       ]
     },
     {
