@@ -126,6 +126,17 @@ target: prerequisite1 prerequisite2 prerequisite3
 	cc $^ -o $@
 ```
 
+#### Second Expansion
+
+The `.SECONDEXPANSION` special target is used to enable secondary expansion of prerequisites in explicit rules. The secondary expansion allows you to use automatic variables like `$@`, `$<`, and `$^` in the prerequisites list. Normally, in a makefile, automatic variables are not expanded in the prerequisites list of explicit rules, but with `.SECONDEXPANSION`, you can achieve this.
+
+``` make
+.SECONDEXPANSION:
+
+%.txt: $$(wildcard $$*.src)
+    cp $< $@
+```
+
 ### Implicit Variables
 
 Implicit variables are also made available for common commands, such as `AR` for archiving programs, `CC` for C compiling programs, and `RM` for removing a file. These can be useful for cross-platform makefiles.
