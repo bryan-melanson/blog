@@ -114,7 +114,10 @@ These variables can be treated as optional by assigning them using the `flexible
 
 - `$@` represents the targen which caused the rule to run
 - `$^` represents the list of prerequisites, separated by spaces
-- `$<` represents the first in the list of prerequisits
+- `$<` represents the first in the list of prerequisites
+- `$(@D)` represents the directory part of the target filename
+- `$(^D)` represents the directory parts of the prerequisites as a list
+- `$(<F)` represensts the directory part of the first prerequisite
 
 ``` make
 target: prerequisite1 prerequisite2 prerequisite3
