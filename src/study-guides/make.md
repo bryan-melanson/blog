@@ -108,11 +108,13 @@ A variable can also be passed in from the command line:
 make target VARIABLE=1
 ```
 
-These variables can be treated as optional by assigning them using the `flexible` **operator** `?=` which will assign a default value to the variable if one isn't provided.
+These variables can be treated as optional by assigning them using the **flexible operator** `?=` which will assign a default value to the variable if one isn't provided.
+
+Variables can be appended using the `+=` operator.
 
 ### Automatic Variables
 
-- `$@` represents the targen which caused the rule to run
+- `$@` represents the target which caused the rule to run
 - `$^` represents the list of prerequisites, separated by spaces
 - `$<` represents the first in the list of prerequisites
 - `$(@D)` represents the directory part of the target filename
