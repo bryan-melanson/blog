@@ -1,8 +1,8 @@
 ---
-title: 'GNU Make'
+title: 'Make'
 ---
 
-# GNU Make
+# Make
 
 [[toc]]
 
