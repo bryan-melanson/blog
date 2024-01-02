@@ -29,13 +29,13 @@ const guides = {
     {
       text: 'Programming', collapsible: true, items: [
         { text: 'Data Structures', link: 'study-guides/data-structures' },
-        { text: 'Make', link: 'study-guides/make' },
       ]
     },
     {
       text: 'Languages', collapsible: true, items: [
         { text: 'Lua', link: 'study-guides/lua' },
-        { text: 'Rust', link: 'study-guides/rust' }
+        { text: 'Rust', link: 'study-guides/rust' },
+        { text: 'Make', link: 'study-guides/make' },
       ]
     }
   ]
