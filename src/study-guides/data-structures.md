@@ -353,8 +353,164 @@ int pop()
 ```
 
 ## Queue
+A queue data structure is useful in many scenarios where you need to process elements in a first-in, first-out (FIFO) order. 
 
-![queue](/assets/img/study-guides/data-structures/queue.png)
+Queues are particularly useful when:
+- You need to maintain order of arrival for processing.
+- You want to decouple different parts of a system for asynchronous processing.
+- You need to buffer or manage flow of data between different processes or systems.
+
+By using queues in these scenarios, you can efficiently manage data flow, improve system responsiveness, and ensure fair processing of tasks or data in the order they arrive.
+
+``` c
+/*
+*  Queue implementation using linked list in C
+*/
+
+// Define the structure for the queue
+struct Queue {
+    struct Node* front;
+    struct Node* rear;
+};
+
+// Function to initialize an empty queue
+struct Queue* queue_init() {
+    struct Queue* queue = (struct Queue*)malloc(sizeof(struct Queue));
+    queue->front = queue->rear = NULL;
+    return queue;
+}
+
+// Function to check if the queue is empty
+bool queue_is_empty(struct Queue* queue) {
+    return (!queue->front);
+}
+
+// Function to enqueue (add an element to the rear of the queue)
+void queue_enqueue(struct Queue* queue, int data) {
+    struct Node* newNode = malloc(sizeof(struct Node));
+    
+    if (queue_is_empty(queue)) {
+        queue->front = queue->rear = newNode;
+    } else {
+        queue->rear->next = newNode;
+        queue->rear = newNode;
+    }
+}
+
+// Function to dequeue (remove an element from the front of the queue)
+int queue_dequeue(struct Queue* queue) {
+    if (queue_is_empty(queue)) {
+        return -1; // Or any other value to indicate an error
+    }
+    
+    struct Node* temp = queue->front;
+    int data = temp->data;
+    
+    queue->front = queue->front->next;
+    
+    // If front becomes NULL, set rear also as NULL
+    if (!queue->front) {
+        queue->rear = NULL;
+    }
+    
+    free(temp);
+    return data;
+}
+
+// Function to get the front element without removing it
+int queue_front(struct Queue* queue) {
+    if (queue_is_empty(queue)) {
+        return -1; // Or any other value to indicate an error
+    }
+    return queue->front->data;
+}
+
+// Function to free the memory used by the queue
+void queue_destroy(struct Queue* queue) {
+    while (!queue_is_empty(queue)) {
+        queue_dequeue(queue);
+    }
+    free(queue);
+}
+```
+
+``` c
+/*
+*  Queue implementation using array in C
+*/
+#define MAX_SIZE 100
+
+typedef struct {
+    int items[MAX_SIZE];
+    int front;
+    int rear;
+} Queue;
+
+// Initialize the queue
+void initialize(Queue *q) {
+    q->front = -1;
+    q->rear = -1;
+}
+
+// Check if the queue is empty
+int isEmpty(Queue *q) {
+    return (q->front == -1 && q->rear == -1);
+}
+
+// Check if the queue is full
+int isFull(Queue *q) {
+    return (q->rear + 1) % MAX_SIZE == q->front ? 1 : 0;
+}
+
+// Add an element to the queue
+void enqueue(Queue *q, int value) {
+    if (isFull(q)) {
+        printf("Queue is full!\n");
+    } else {
+        if (isEmpty(q)) {
+            q->front = 0;
+        }
+        q->rear = (q->rear + 1) % MAX_SIZE;
+        q->items[q->rear] = value;
+        printf("%d enqueued to queue\n", value);
+    }
+}
+
+// Remove an element from the queue
+int dequeue(Queue *q) {
+    int item;
+    if (isEmpty(q)) {
+        printf("Queue is empty!\n");
+        return -1;
+    } else {
+        item = q->items[q->front];
+        if (q->front == q->rear) {
+            // Last element in the queue
+            initialize(q);
+        } else {
+            q->front = (q->front + 1) % MAX_SIZE;
+        }
+        printf("%d dequeued from queue\n", item);
+        return item;
+    }
+}
+
+// Display the queue
+void display(Queue *q) {
+    int i;
+    if (isEmpty(q)) {
+        printf("Queue is empty!\n");
+    } else {
+        printf("Queue elements: ");
+        for (i = q->front; i != q->rear; i = (i + 1) % MAX_SIZE) {
+            printf("%d ", q->items[i]);
+        }
+        printf("%d\n", q->items[i]);
+    }
+}
+
+```
+
 
 ## Heap
 
