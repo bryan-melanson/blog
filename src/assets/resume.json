@@ -1,0 +1,165 @@
+{
+  "$schema": "https://raw.githubusercontent.com/jsonresume/resume-schema/v1.0.0/schema.json",
+  "basics": {
+    "name": "Bryan Melanson",
+    "label": "Embedded Developer",
+    "email": "bryan@bryanmelanson.com",
+    "website": "https://bryanmelanson.com",
+    "summary": "B.Eng in Computer Engineering from Memorial Univeristy of Newfoundland with a strong background in embedded development and a unique skill set in the creative arts. Practical experience in robotics, data science and safety-critical firmware development including Mission Control design of Killick-1 GNSS CubeSat, Pulsed Field Ablation devices for treatment of atrial fibrilation as well as the Mysa Smart Baseboard Thermostat, Smart Infloor Thermostat and Smart Air Conditioner. Skills include RTOS, NFC, C/C++, GDB, Assembly, React, Rust, Python and Bluetooth.\n",
+    "picture": "https://avatars.githubusercontent.com/u/46350945?v=4",
+    "location": {
+      "city": "Montreal",
+      "countryCode": "CA",
+      "region": "Quebec"
+    },
+    "profiles": [
+      {
+        "network": "linkedin",
+        "username": "bryanmelanson",
+        "url": "https://linkedin.com/in/bryanmelanson"
+      },
+      {
+        "network": "github",
+        "username": "bryan-melanson",
+        "url": "https://github.com/bryan-melanson"
+      }
+    ]
+  },
+  "work": [
+    {
+      "company": "Boston Scientifc",
+      "position": "Embedded Developer",
+      "website": "https://bostonscientific.com",
+      "startDate": "2023-11-06",
+      "summary": "Boston Scientific is dedicated to transforming lives through innovative medical solutions that improve the health of patients around the world.",
+      "highlights": [
+        "Designing, developing and testing firmware for Class IV medical devices.",
+        "Developing a bootloader system for managing MCU and FPGA updates across multiple devices with cryptographic verification",
+        "Spearheaded the automation testing initiatives for the software development lifecycle, employing Jenkins as the primary automation server and integrated automated test suites into the Jenkins continuous integration (CvI) pipeline."
+      ]
+    },
+    {
+      "company": "Mysa",
+      "position": "Software Developer",
+      "website": "https://getmysa.com",
+      "startDate": "2019-01-04",
+      "endDate": "2023-07-11",
+      "summary": "Mysa is the first ever high-voltage thermostat that is truly smart. It is fully featured for the conscientious consumer: smart learning features which amount to approximately 15% savings on energy bills, remote access to control their home’s heating through their smartphone from anywhere in the world, and integration with popular smart home platforms (Amazon Alexa, Google Home, and Apple Homekit)\n",
+      "highlights": [
+        "Designing, developing, coding, testing and debugging firmware for embedded devices and systems from requirements to production and commercial deployment.",
+        "Working with the hardware team to specify and develop new products from prototype through to production.",
+        "Working with the software team to develop and document API and interface specifications for embedded devices.",
+        "Working with the mobile team to design and developing applications for iOS and Android platforms using the React framework.",
+        "Developing reusable components, implementing state management, and leveraging third-party libraries and APIs in designing responsive and adaptive user interfaces.",
+        "Collaborating with cross-functional teams, including product managers, designers, and engineers, and leveraging embedded system experience to deliver high-quality mobile applications.",
+        "Integrating and validating new product designs."
+      ]
+    },
+    {
+      "company": "Nokia Inc.",
+      "position": "IP/TAC 2LS Support Engineer (Co-Op)",
+      "website": "https://nokia.com",
+      "startDate": "2016-07-01",
+      "endDate": "2016-12-01",
+      "summary": "Remote Technical Support for 5620 SAM Network Services Platform and associated network elements. Debugging complex product installations on CentOS/Solaris/RHEL systems, resolving complicated network problems using Open Stack, Cloud Stack and VMWare. Scripting at a Unix/Linux level in bash and Python. Interfacing, developing and maintaining strong relationships with regional TEC (Technical Expertise Centers), Solution Teams and Product Business Units.\n"
+    },
+    {
+      "company": "Nalcor Energy",
+      "position": "Software Developer (Co-Op)",
+      "website": "https://nalcorenergy.com/",
+      "startDate": "2015-12-01",
+      "endDate": "2016-05-01",
+      "summary": "Nalcor Energy is a provincial energy corporation which is headquartered in St. John's, Newfoundland and Labrador. A provincial Crown corporation under the Government of Newfoundland and Labrador, Nalcor Energy was created in 2007 to manage the province's energy resources.\n",
+      "highlights": [
+        "Developed GIS application development for analyzing prices and visualizing correlations within the New York energy market.",
+        "Initiated migration of heat map functionality to web application using R and Google Maps.",
+        "Scripted the mapping of all major North American energy markets."
+      ]
+    }
+  ],
+  "interests": [
+    {
+      "keywords": [
+        "Woodworking",
+        "Weightlifting",
+        "Baking",
+        "Gardening"
+      ]
+    }
+  ],
+  "education": [
+    {
+      "website": "https://www.mun.ca",
+      "institution": "Memorial University of Newfoundland",
+      "area": "Computer Engineering",
+      "studyType": "Bachelor",
+      "startDate": "2015-09-01",
+      "endDate": "2020-05-31",
+      "courses": [
+        "Real Time Operating Systems",
+        "Embedded Systems",
+        "Software Design",
+        "Data Structures",
+        "Image Processing",
+        "Computer Security",
+        "Microelectronics"
+      ]
+    }
+  ],
+  "skills": [
+    {
+      "name": "Embedded Development",
+      "level": "Intermediate",
+      "keywords": [
+        "C",
+        "C++",
+        "FreeRTOS",
+        "I2C",
+        "SPI",
+        "CAN",
+        "UART",
+        "DMA",
+        "USB",
+        "ESP32",
+        "ARM Cortex-M",
+        "Bootloader",
+        "JTAG",
+        "Bluetooth",
+        "NFC",
+        "Make",
+        "CMake",
+        "Jenkins",
+        "Oscilloscopes",
+        "Logic Analyzers",
+        "Rust"
+      ]
+    },
+    {
+      "name": "Front End Development",
+      "level": "Beginner",
+      "keywords": [
+        "React",
+        "Redux",
+        "Vue",
+        "Flipper",
+        "Android"
+      ]
+    }
+  ],
+  "languages": [
+    {
+      "language": "English",
+      "fluency": "Fluent"
+    },
+    {
+      "language": "French",
+      "fluency": "Intermediate"
+    },
+  ],
+  "meta": {
+    "canonical": "https://raw.githubusercontent.com/jsonresume/resume-schema/master/resume.json",
+    "version": "v1.0.0",
+    "lastModified": "2017-12-24T15:53:00",
+    "theme": "spartacus"
+  }
+}
