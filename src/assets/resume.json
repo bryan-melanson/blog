@@ -34,10 +34,8 @@
       "summary": "Boston Scientific is dedicated to transforming lives through innovative medical solutions that improve the health of patients around the world.",
       "highlights": [
         "Designing, developing and testing firmware for Class IV medical devices.",
-        "Developing a bootloader system for managing MCU and FPGA updates across multiple devices with cryptographic verification.",
-        "Devloping and executing verification & validation test plans—including software unit tests—to ensure medical-device compliance and functional safety.",
-        "Designing and prototyping embedded hardware featuring CAN, USB, and SPI interfaces for sensor data acquisition and device control",
-        "Spearheaded the automation testing initiatives for the software development lifecycle, employing Jenkins as the primary automation server and integrated automated test suites into the Jenkins continuous integration (CI) pipeline."
+        "Developing a bootloader system for managing MCU and FPGA updates across multiple devices with cryptographic verification",
+        "Spearheaded the automation testing initiatives for the software development lifecycle, employing Jenkins as the primary automation server and integrated automated test suites into the Jenkins continuous integration (CvI) pipeline."
       ]
     },
     {
@@ -81,7 +79,12 @@
   ],
   "interests": [
     {
-      "keywords": ["Woodworking", "Weightlifting", "Baking", "Gardening"]
+      "keywords": [
+        "Woodworking",
+        "Weightlifting",
+        "Baking",
+        "Gardening"
+      ]
     }
   ],
   "education": [
@@ -134,7 +137,13 @@
     {
       "name": "Front End Development",
       "level": "Beginner",
-      "keywords": ["React", "Redux", "Vue", "Flipper", "Android"]
+      "keywords": [
+        "React",
+        "Redux",
+        "Vue",
+        "Flipper",
+        "Android"
+      ]
     }
   ],
   "languages": [
@@ -145,7 +154,7 @@
     {
       "language": "French",
       "fluency": "Intermediate"
-    }
+    },
   ],
   "meta": {
     "canonical": "https://raw.githubusercontent.com/jsonresume/resume-schema/master/resume.json",
@@ -154,4 +163,3 @@
     "theme": "spartacus"
   }
 }
-
