@@ -9,7 +9,7 @@ const members = [
     links: [
       { icon: 'github', link: 'https://github.com/bryan-melanson' },
       { icon: 'linkedin', link: 'https://linkedin.com/in/bryanmelanson' },
-			{ icon: 'email', link: 'mailto:bryan@bryanmelanson.com' }
+			{ icon: 'link', link: 'mailto:bryan@bryanmelanson.com' }
     ]
   },
 ]
