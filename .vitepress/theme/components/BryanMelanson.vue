@@ -8,7 +8,8 @@ const members = [
     title: 'Embedded Developer',
     links: [
       { icon: 'github', link: 'https://github.com/bryan-melanson' },
-      { icon: 'linkedin', link: 'https://linkedin.com/in/bryanmelanson' }
+      { icon: 'linkedin', link: 'https://linkedin.com/in/bryanmelanson' },
+			{ icon: 'email', link: 'mailto:bryan@bryanmelanson.com' }
     ]
   },
 ]
