@@ -1,12 +1,12 @@
 ---
 title: "Articles"
 ---
- 
+
  <script setup>
   import Hero from './components/Hero.vue'
   import ArticleCard from './components/ArticleCard.vue'
 
-  import data from './data.json' 
+  import data from './data.json'
 </script>
 
 <div v-for="(article, index) in data" :key="index">
