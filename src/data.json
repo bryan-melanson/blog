@@ -1,16 +1,16 @@
 [
 	{
-		"Updated": "2023-09-13",
-		"image": "./flame.gif",
-		"title": "sup world",
-		"path": "articles/article1.html",
-		"excerpt": "supppp"
-	},
-	{
 		"Updated": "2025-06-23",
 		"image": "./dance.gif",
 		"title": "Jarring One Loose",
 		"path": "articles/06-23-25.html",
 		"excerpt": "my cat crapped his pants"
+	},
+	{
+		"Updated": "2023-09-13",
+		"image": "./flame.gif",
+		"title": "sup world",
+		"path": "articles/article1.html",
+		"excerpt": "supppp"
 	}
 ]
