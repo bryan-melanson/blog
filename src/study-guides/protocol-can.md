@@ -83,7 +83,7 @@ Uses extended 29-bit address identifier.
 packet-beta
 title CAN 2.0A Packet
 0-1: "SOF"
-2-14: "Arbirtation Field"
+2-14: "Arbitration Field"
 15-21: "Control Field"
 22-30: "Data Field"
 31-47: "CRC Field"

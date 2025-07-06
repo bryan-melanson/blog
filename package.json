@@ -7,8 +7,10 @@
   "devDependencies": {
     "@jcamp/vitepress-blog-theme": "^0.3.0",
     "markdown-it-mathjax3": "^4.3.2",
+    "mermaid": "^11.8.0",
     "postcss": "^8.4.29",
-    "vitepress": "^1.6.3"
+    "vitepress": "^1.6.3",
+    "vitepress-plugin-mermaid": "^2.0.17"
   },
   "dependencies": {
     "gray-matter": "^4.0.3",
