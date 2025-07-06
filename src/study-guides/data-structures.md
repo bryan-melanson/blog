@@ -77,7 +77,9 @@ To reverse these positions, the bytes can be isolated and bit-shifted by the app
 
 Arrays are collections of same-type data items stored in a contiguous memory location. Knowing the data type, each element is located at an offset based on that data size. In other words, for `int data[]` the data at `data[1]` is located at `data[0] + sizeof(int)`.
 
-![array](/assets/img/study-guides/data-structures/array.png)
+<figure>
+  <img src="/assets/img/study-guides/data-structures/array.png" alt="array" />
+</figure>
 
 ### Arrays in C
 
@@ -101,7 +103,9 @@ A C string is a pointer to an array of `char` data items which is terminated by 
 
 ## Matrix
 
-![matrix](/assets/img/study-guides/data-structures/matrix.png)
+<figure>
+  <img src="/assets/img/study-guides/data-structures/matrix.png" alt="matrix" />
+</figure>
 
 ### Normal Declaration
 
@@ -111,7 +115,9 @@ A C string is a pointer to an array of `char` data items which is terminated by 
 
 Unlike arrays, Linked Lists are dynamic and can grow by pointing to non-contiguous locations in memory using pointers. Extra memory is required when representing each pointer in the linked list, but it allows for easily inserting and deleting objects in the linked list.
 
-![linkedlist](/assets/img/study-guides/data-structures/linkedlist.png)
+<figure>
+  <img src="/assets/img/study-guides/data-structures/linkedlist.png" alt="linkedlist" />
+</figure>
 
 Each node in the linked list consists of its data, and a pointer to the next object in the linked list. In the case that the head of the linked list is null.
 
@@ -125,11 +131,15 @@ Each node in the linked list consists of its data, and a pointer to the next obj
 
 ### Deleting
 
-![circularlinkedlist](/assets/img/study-guides/data-structures/circularlinkedlist.jpg)
+<figure>
+  <img src="/assets/img/study-guides/data-structures/circularlinkedlist.png" alt="circularlinkedlist" />
+</figure>
 
 ## Doubly Linked List
 
-![doublylinkedlist](/assets/img/study-guides/data-structures/doublylinkedlist.jpg)
+<figure>
+  <img src="/assets/img/study-guides/data-structures/doublylinkedlist.png" alt="doublylinkedlist" />
+</figure>
 
 ### Inserting
 
@@ -137,7 +147,9 @@ Each node in the linked list consists of its data, and a pointer to the next obj
 
 ## Binary Tree
 
-![binarytree](/assets/img/study-guides/data-structures/binarytree.png)
+<figure>
+  <img src="/assets/img/study-guides/data-structures/binarytree.png" alt="binarytree" />
+</figure>
 
 A Binary Tree is any tree organized in which each node, or **root** has at most two children, or **leaves**, hence *binary*, designated left and right.
 
@@ -215,7 +227,9 @@ def bfs(self):
 
 ## Binary Search Tree
 
-![binarysearchtree](/assets/img/study-guides/data-structures/binarysearchtree.jpg)
+<figure>
+  <img src="/assets/img/study-guides/data-structures/binarysearchtree.png" alt="binarysearchtree" />
+</figure>
 
 A Binary Search Tree is one in which the value of the node stored on the left is less than the value of root, and the value of the node on the right is greater than the value of the root. By organizing a tree in this way, values can easily be found using a similar method as binary search which eliminates half of the remaining possibilities at each step.
 
@@ -262,7 +276,9 @@ void insert(Node* new, Node* curr, int value) {
 
 ## Stack
 
-![stack](/assets/img/study-guides/data-structures/stack.png)
+<figure>
+  <img src="/assets/img/study-guides/data-structures/stack.png" alt="stack" />
+</figure>
 
 ### Stack Array
 
@@ -514,7 +530,9 @@ void display(Queue *q) {
 
 ## Heap
 
-![heap](/assets/img/study-guides/data-structures/heap.png)
+<figure>
+  <img src="/assets/img/study-guides/data-structures/heap.png" alt="heap" />
+</figure>
 
 ### Maximum Heap
 
@@ -522,7 +540,9 @@ void display(Queue *q) {
 
 ## Hashes
 
-![hash](/assets/img/study-guides/data-structures/hash.jpg)
+<figure>
+  <img src="/assets/img/study-guides/data-structures/hash.jpeg" alt="hash" />
+</figure>
 
 A hash map combines features of a static array and a linked list, without being bound by issues such as inserting new values in a size-defined array, or searching for values in a linked list. A hash map has a preallocated buffer, and uses the value of the data to be inserted to generate a key, or index by hashing it. If a hash is properly defined, there will be no hash collisions, and data with an indentical value will be stored in the identical spot in the hash map. This way, a value need only be calculated once, then stored in the hash map. Insted of generating the value again by calculation, the value can be retrieved from the hash map by visiting the pre-determined index.
 
@@ -599,6 +619,8 @@ A good hash value would distribute values evenly across the map.
 
 ## Graph
 
-![graph](/assets/img/study-guides/data-structures/graph.png)
+<figure>
+  <img src="/assets/img/study-guides/data-structures/graph.png" alt="graph" />
+</figure>
 
 <BryanMelanson />

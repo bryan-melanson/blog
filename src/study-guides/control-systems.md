@@ -10,7 +10,9 @@ title: 'Control Systems'
 
 ### System Configuration
 
-![system-blocks](/assets/img/study-guides/control-systems/system-blocks.png)
+<figure>
+  <img src="/assets/img/study-guides/control-systems/system-blocks.png" alt="system-blocks" />
+</figure>
 
 **Open Loop** systems do not monitor or correct the output for disturbances; however, they are simpler and less expensive than closed-loop systems.
 
@@ -40,21 +42,29 @@ That characteristic of a system defined by a natural response that decays to zer
 
 The block diagram of a linear, time-invariant system consists of four elements: *signals*, systems, summing junctions , and *pickoff points* . These elements can be assembled into three basic forms: *cascade*, *parallel* , and *feedback*.
 
-![reduction](/assets/img/study-guides/control-systems/reduction.png)
+<figure>
+  <img src="/assets/img/study-guides/control-systems/reduction.png" alt="reduction" />
+</figure>
 
 #### Cascade Form
 
-![cascade](/assets/img/study-guides/control-systems/cascade.png)
+<figure>
+  <img src="/assets/img/study-guides/control-systems/cascade.png" alt="cascade" />
+</figure>
 
 #### Parallel Form
 
-![parallel](/assets/img/study-guides/control-systems/parallel.png)
+<figure>
+  <img src="/assets/img/study-guides/control-systems/parallel.png" alt="parallel" />
+</figure>
 
 From the above diagram, it is clear that each branch will be $R(s)G_1(s)$, $R(s)G_2(s)$, or $R(s)G_3(s)$, and when the three are summed at the summer, $R(s)[G_1(s) + G_2(s) + G_3(s)]$.
 
 #### Feedback Form
 
-![feedback](/assets/img/study-guides/control-systems/feedback.png)
+<figure>
+  <img src="/assets/img/study-guides/control-systems/feedback.png" alt="feedback" />
+</figure>
 
 #### Moving Blocks
 
@@ -63,67 +73,99 @@ From these diagrams, the logic of moving each process can be validated when summ
 $[R(s) + X(s)] * G(s) = R(s)G(s) + X(s)G(s)$  $\equiv$
 $R(s)G(s) + X(s)G(s) = C(s)$
 
-![move1](/assets/img/study-guides/control-systems/move1.png)
+<figure>
+  <img src="/assets/img/study-guides/control-systems/move1.png" alt="move1" />
+</figure>
 
-![move2](/assets/img/study-guides/control-systems/move2.png)
+<figure>
+  <img src="/assets/img/study-guides/control-systems/move2.png" alt="move2" />
+</figure>
 
 ## Stability
 
 ### Routh-Hurwitz Criteria
 
-![routh-1](/assets/img/study-guides/control-systems/routh-1.png)
+<figure>
+  <img src="/assets/img/study-guides/control-systems/routh-1.png" alt="routh-1" />
+</figure>
 
-![routh-2](/assets/img/study-guides/control-systems/routh-2.png)
+<figure>
+  <img src="/assets/img/study-guides/control-systems/routh-2.png" alt="routh-2" />
+</figure>
 
 ### Routh-Hurwitz Special Cases
 
 #### Zero Only in the First Column
 
-![routh-e](/assets/img/study-guides/control-systems/routh-e.png)
+<figure>
+  <img src="/assets/img/study-guides/control-systems/routh-e.png" alt="routh-e" />
+</figure>
 
-![routh-e2](/assets/img/study-guides/control-systems/routh-e2.png)
+<figure>
+  <img src="/assets/img/study-guides/control-systems/routh-e2.png" alt="routh-e2" />
+</figure>
 
 Assume a value for the variable $\epsilon$, and follow through the system, tracking sign changes. This should be the same for either assumed value of $\epsilon$.
 
 Alternately, the reverse coefficients of the denominator can be used in analysis, as seen below:
 
-![routh-recip](/assets/img/study-guides/control-systems/routh-recip.png)
+<figure>
+  <img src="/assets/img/study-guides/control-systems/routh-recip.png" alt="routh-recip" />
+</figure>
 
-![routh-recip2](/assets/img/study-guides/control-systems/routh-recip2.png)
+<figure>
+  <img src="/assets/img/study-guides/control-systems/routh-recip2.png" alt="routh-recip2" />
+</figure>
 
 #### Entire Row Is Zero
 
 If an entire row is zero, return to the row above, and form the equation represented by those coefficients. For example, from the system below, at row $s^3$ there is a row of zeroes. From the row $s^4$ above, form the equation $s^4 + 6s^2 + 8$. The derivative of this equation will take the place of the row of zeroes. Therefore, $4s^3 + 12s + 0$ will take the place of the zeroes in row $s^3$.
 
-![routh-roz](/assets/img/study-guides/control-systems/routh-roz.png)
+<figure>
+  <img src="/assets/img/study-guides/control-systems/routh-roz.png" alt="routh-roz" />
+</figure>
 
 In the case of a row of zeroes formed by a row of even polynomials, for example $s^4 + s^2 + 1$, it can be determined that its roots are symmetric about the origin. If we don't have a row of zeroes, we cannot have roots on the $jw$-axis. Once a row of zeroes is found for an even polynomial, everything from that row to the end is a test of only the even polynomial. Because in the example above, the zeroes occur in the $s^3$ row, it's considered the $s^4$ row that causes the zeroes, and it is therefore even.
 
-![routh-zeroes](/assets/img/study-guides/control-systems/routh-zeroes.png)
+<figure>
+  <img src="/assets/img/study-guides/control-systems/routh-zeroes.png" alt="routh-zeroes" />
+</figure>
 
-![routh-roz-analysis](/assets/img/study-guides/control-systems/routh-roz-analysis.png)
+<figure>
+  <img src="/assets/img/study-guides/control-systems/routh-roz-analysis.png" alt="routh-roz-analysis" />
+</figure>
 
 From the example above, the row of zeroes can be seen to occur in the $s^4$ row. The rest of rows are therefore a test of the even polynomial, where it is determined there are no changes in sign. Thus, there are no poles in the right half plane, and no left plane poles can exist due to symmetry. Therefore, all four poles must be on the $jw$-axis.
 
 The findings for the even polynomials are then combined with the findings for the rest of the system:
 
-![routh-even](/assets/img/study-guides/control-systems/routh-even.png)
+<figure>
+  <img src="/assets/img/study-guides/control-systems/routh-even.png" alt="routh-even" />
+</figure>
 
 ## Steady State Errors
 
 \textit Steady State Error  is defined as the difference between the input and output as t $\rightarrow \infty$. When testing for factors such as constant position, constant velocity and constant acceleration, inputs such as unit steps $u(t)$, ramps $r(t)$ and parabolas are used. This discussion is limited to stable systems.
 
-![inputs](/assets/img/study-guides/control-systems/inputs.png)
+<figure>
+  <img src="/assets/img/study-guides/control-systems/inputs.png" alt="inputs" />
+</figure>
 
 Most steady state errors $E(s)$ arise from the input and/or the configuration of the system, as seen in the diagrams below for general closed loop and unity feedback systems.
 
-![closedlooperror](/assets/img/study-guides/control-systems/closedlooperror.png)
+<figure>
+  <img src="/assets/img/study-guides/control-systems/closedlooperror.png" alt="closedlooperror" />
+</figure>
 
-![unityfeedback](/assets/img/study-guides/control-systems/unityfeedback.png)
+<figure>
+  <img src="/assets/img/study-guides/control-systems/unityfeedback.png" alt="unityfeedback" />
+</figure>
 
 In the first case $E(s) = R(s) - C(s)$ is the error. If the input $R(s)$ is a step input, then $C(s)$ should $= R(s)$ and $E(s) = 0$. However, if gain $K$ is introduced, $C(s) = KR(s)$ and $E(s)$ must be finite and non-zero.
 
-![integrator](/assets/img/study-guides/control-systems/integrator.png)
+<figure>
+  <img src="/assets/img/study-guides/control-systems/integrator.png" alt="integrator" />
+</figure>
 
 From these systems we see that $C(s)$ = $KE(s)$, or $E(s) = \frac{1}{K} C(s)$
 
@@ -131,7 +173,9 @@ From these systems we see that $C(s)$ = $KE(s)$, or $E(s) = \frac{1}{K} C(s)$
 
 Steady-state error can be calculated from transfer function $T(s)$ or the open loop transfer function $G(s)$. Once $E(s)$ is found, the steady state error can be found using the \textit Final Value Theorem , which states that the value at infinity is equal to the Laplace as $s \rightarrow 0$.
 
-![closedlooperror](/assets/img/study-guides/control-systems/closedlooperror.png)
+<figure>
+  <img src="/assets/img/study-guides/control-systems/closedlooperror.png" alt="closedlooperror" />
+</figure>
 
 $E(s) = R(s) - C(s)$
 $C(s) = R(s)T(s)$
@@ -141,7 +185,9 @@ $e(\infty) = \text{lim}_s\rightarrow 0  sR(s)[1 - T(s)]$
 
 #### Steady State Error in Terms of $G(s)$
 
-![unityfeedback](/assets/img/study-guides/control-systems/unityfeedback.png)
+<figure>
+  <img src="/assets/img/study-guides/control-systems/unityfeedback.png" alt="unityfeedback" />
+</figure>
 
 $E(s) = R(s) - C(s)$
 $C(s) = E(s)G(s)$ 
@@ -166,7 +212,9 @@ The terms in the denominator are known as $k_p, k_v, k_a$, the **static error** 
 
 Systems can also be defined by **system type**. This defines the number of pure integrations in the forward path, assuming a unity feedback system. Increasing the system type decreases the steady-state error as long as the system is stable.
 
-![types](/assets/img/study-guides/control-systems/types.png)
+<figure>
+  <img src="/assets/img/study-guides/control-systems/types.png" alt="types" />
+</figure>
 
 This will also be apparent by the structure of the system. An $s$ factor in the denominator which won't cancel with $u(t)$ input indicates the system is not Type 0. Therefore, testing with a ramp and parabola input will determine whether the static constant is finite for each input.
 
@@ -176,7 +224,9 @@ The steady-state error is inversely proportional to the static error constant - 
 
 ### Steady State Disturbances
 
-![disturbance](/assets/img/study-guides/control-systems/disturbance.png)
+<figure>
+  <img src="/assets/img/study-guides/control-systems/disturbance.png" alt="disturbance" />
+</figure>
 
 $C(s) = E(s)G_1(s)G_2(s) + D(s)G_2(s)$
 
@@ -190,11 +240,13 @@ $e(\infty) = e_R(\infty) + e_D(\infty)$
 
 ### Forming Equivalent Unity from Non-Unity Systems
 
-![nonunity](/assets/img/study-guides/control-systems/nonunity.png)
+<figure>
+  <img src="/assets/img/study-guides/control-systems/nonunity.png" alt="nonunity" />
+</figure>
 
 ## Root Locus Techniques
 
-The following sections apply to \textbf Negative Feedback Closed Loop  systems.
+The following sections apply to Negative Feedback Closed Loop systems.
 
 ### Sketching the Root Locus
 
@@ -216,7 +268,9 @@ The root locus begins at the finite and infinite poles of $G(s)H(s)$ and ends at
 
 #### Behavior at Infinity
 
-![asymptotes](/assets/img/study-guides/control-systems/asymptotes.png)
+<figure>
+  <img src="/assets/img/study-guides/control-systems/asymptotes.png" alt="asymptotes" />
+</figure>
 
 When finding $K$, remember that the denominator of the transfer function $T(s)$, $1 + KG(s)H(s) = 0$ if the point is on the root locus. Set $s$ to a known point on the root locus (break in points work) and solve $1 + KG(s)H(s) = 0$ for $K$.
 
@@ -232,7 +286,9 @@ $K = -\frac{1}{G(s)H(s)}$, $\frac{1}{G(s)H(s)} = -1$ and by differential calculu
 
 $dK = 0$ will produce $\sigma$, whose zeroes will produce the break-in points.
 
-![breakpoints](/assets/img/study-guides/control-systems/breakpoints.png)
+<figure>
+  <img src="/assets/img/study-guides/control-systems/breakpoints.png" alt="breakpoints" />
+</figure>
 
 Or, conversely,
 
@@ -256,7 +312,9 @@ $-\theta_1 + \theta_2 + \theta_3 - \theta_4 - \theta_5 + \theta_6 = (2k+1)180^\c
 
 $\theta_1 = \theta_2 + \theta_3 - \theta_4 - \theta_5 + \theta_6 = (2k+1)180^\circ$
 
-![angles-pole](/assets/img/study-guides/control-systems/angles-pole.png)
+<figure>
+  <img src="/assets/img/study-guides/control-systems/angles-pole.png" alt="angles-pole" />
+</figure>
 
 If we assume a point on the root locus $\epsilon$ close to a complex **zero** , the sum of angles drawn from all finite poles and zeros to this point is an odd multiple of 180$^\circ$. Except for the **zero** that is $\epsilon$ close to the point, we can assume all angles drawn from all other poles and zeros are drawn directly to the **zero** that is near the point. Thus, the only unknown angle in the sum is the angle drawn from the **zero** that is $\epsilon$ close. We can solve for this unknown angle, which is also the angle of arrival to this complex **zero**.
 
@@ -266,7 +324,9 @@ $-\theta_1 + \theta_2 + \theta_3 - \theta_4 - \theta_5 + \theta_6 = (2k+1)180^\c
 
 $\theta_2 = \theta_1 - \theta_3 + \theta_4 + \theta_5 - \theta_6 = (2k+1)180^\circ$
 
-![angles-zero](/assets/img/study-guides/control-systems/angles-zero.png)
+<figure>
+  <img src="/assets/img/study-guides/control-systems/angles-zero.png" alt="angles-zero" />
+</figure>
 
 Note that finding the angle at these points is calculating the length from the poles or zeroes to this point.
 
@@ -276,7 +336,9 @@ When locating points on the root locus and finding their specified gain, for exa
 
 Evaluating the graph at points along the line, and summing the angles from poles and zeros, it can be determined if a point is on the root locus if the angles are a multiple of 180$^\circ$.
 
-![calibrating](/assets/img/study-guides/control-systems/calibrating.png)
+<figure>
+  <img src="/assets/img/study-guides/control-systems/calibrating.png" alt="calibrating" />
+</figure>
 
 $\zeta = cos(\theta)$, therefore $cos^{-1} \zeta = \theta$
 
@@ -288,7 +350,9 @@ If finding the root locus of a system concerning a single parameter instead of g
 
 $T(s) = \frac{KG(s)H(s)}{1 + KG(s)H(s)} = \frac{10}{s^2 + (p_1 +2)s + 2p_1 + 10}  = \frac{10}{s^2 + 2s + 10 + p_1(s + 2)}$
 
-![parameter1](/assets/img/study-guides/control-systems/parameter1.png)
+<figure>
+  <img src="/assets/img/study-guides/control-systems/parameter1.png" alt="parameter1" />
+</figure>
 
 ### Positive Feedback Systems
 
@@ -314,7 +378,9 @@ $\theta_a = \frac{k2\pi}{\text{N Finite Poles} - \text{M Finite Zeros}}$
 
 ## Design via Root Locus
 
-![comps](/assets/img/study-guides/control-systems/comps.png)
+<figure>
+  <img src="/assets/img/study-guides/control-systems/comps.png" alt="comps" />
+</figure>
 
 ## Frequency Response Techniques
 

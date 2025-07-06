@@ -62,7 +62,11 @@ ROMs were intended as memory devices (such as cartridges) but could be used for 
 
 Programmable Logic Arrays (PLA) are based on the notion that any logic function is a combination of product terms OR'd together.
 
-![Programmable Logic Array](/assets/img/study-guides/digital-systems/pla.png)
+<figure>
+  <img src="/assets/img/study-guides/digital-systems/pla.png" alt="pla" />
+  <figcaption>Programmable Logic Array</figcaption>
+</figure>
+
 ### FPGAs
 
 Field Programmable Gate Arrays are flexible programmable logic for larger designs. Complicated to program, but offer large capacities and flexibility.
@@ -115,39 +119,58 @@ Transport will delay the signals without rejecting.
 
 **Architecture** is a description of the internals.
 
-![VHDL](/assets/img/study-guides/digital-systems/vhdl.png)
+<figure>
+  <img src="/assets/img/study-guides/digital-systems/vhdl.png" alt="vhdl" />
+  <figcaption>VHDL</figcaption>
+</figure>
 
 The devices can be reused in separate files by declaring it as a component and instantiating each element individually, assigning pins.
 
-![VHDL2](/assets/img/study-guides/digital-systems/vhdl2.png)
+<figure>
+  <img src="/assets/img/study-guides/digital-systems/vhdl2.png" alt="vhdl2" />
+</figure>
 
 ### Sequential Statements
 
 The **process** statement will monitor a signal using a sensitivity list and trigger a sequence of lines to be completed in order.
 
-![process](/assets/img/study-guides/digital-systems/process.png)
+<figure>
+  <img src="/assets/img/study-guides/digital-systems/process.png" alt="process" />
+</figure>
 
 ### Flip Flops
 
-![flipflops](/assets/img/study-guides/digital-systems/flipflops.png)
+<figure>
+  <img src="/assets/img/study-guides/digital-systems/flipflops.png" alt="flipflops" />
+</figure>
 
 ### Conditional Assignments
 
-![condition](/assets/img/study-guides/digital-systems/condition.png)
+<figure>
+  <img src="/assets/img/study-guides/digital-systems/condition.png" alt="condition" />
+</figure>
 
-![case](/assets/img/study-guides/digital-systems/case.png)
+<figure>
+  <img src="/assets/img/study-guides/digital-systems/case.png" alt="case" />
+</figure>
 
 ### User Defined Types
 
-![types](/assets/img/study-guides/digital-systems/types.png)
+<figure>
+  <img src="/assets/img/study-guides/digital-systems/types.png" alt="types" />
+</figure>
 
-![shifts](/assets/img/study-guides/digital-systems/shifts.png)
+<figure>
+  <img src="/assets/img/study-guides/digital-systems/shifts.png" alt="shifts" />
+</figure>
 
 ## Advanced Design
 
 ### Logic Minimization
 
-![logic](/assets/img/study-guides/digital-systems/logic.png)
+<figure>
+  <img src="/assets/img/study-guides/digital-systems/logic.png" alt="logic" />
+</figure>
 
 $y - A'BC + AB'C + ABC' + ABC$ can be reduced to **minterms**.  
 
@@ -163,13 +186,19 @@ This reduces the SSOP form to a minimum sum of products by eliminating as many l
 
 Recall $XY + XY' = X$ - use this to combine minterms if they differ in one minterm. Terms are then represented as binary, for example $AB'CD' = 1010$, so $AB'CD' + AB'CD = AB'C$ or $101-$.
 
-![quine](/assets/img/study-guides/digital-systems/quine.png)
+<figure>
+  <img src="/assets/img/study-guides/digital-systems/quine.png" alt="quine" />
+</figure>
 
 The numbers which don't reduce to the following column or are redundant are \textit{prime implicants}. In this case, the prime implicants are $0-01$, $01-1$, $011-$, $-00-$, $-0-0$, and $--10$.
 
-![implicants](/assets/img/study-guides/digital-systems/implicants.png)
+<figure>
+  <img src="/assets/img/study-guides/digital-systems/implicants.png" alt="implicants" />
+</figure>
 
-![implicants2](/assets/img/study-guides/digital-systems/implicants2.png)
+<figure>
+  <img src="/assets/img/study-guides/digital-systems/implicants2.png" alt="implicants2" />
+</figure>
 
 Choose the values with a single X in its column, then draw a horizontal line through the row. Any intersections, draw a vertical line. Continue until all X are crossed out, choosing values which will cover off as much as possible.
 
@@ -189,15 +218,15 @@ A circuit goes 1 when it should be constant 0
 
 When the circuit should transition from 0 to 1 or 1 to 0, but transitions three or more times
 
-![hazard](/assets/img/study-guides/digital-systems/hazard.png)
-
-<p align="center">
-    <img src="/assets/img/study-guides/digital-systems/hazard.png">
-</p>
+<figure>
+  <img src="/assets/img/study-guides/digital-systems/hazard.png" alt="hazard" />
+</figure>
 
 Select inputs to test specific port errors:
 
-![test](/assets/img/study-guides/digital-systems/test.png)
+<figure>
+  <img src="/assets/img/study-guides/digital-systems/test.png" alt="test" />
+</figure>
 
 ### Scan Testing
 
@@ -215,7 +244,9 @@ AMBA has four interface protocols, *AXI* (Advanced Extemsible Interface), *AHB* 
 
 **AXI4-Lite** is a subset of AXI4 used for simpler control register style interfaces. All transactions are burst legnths of 1, data accesses are the same size and width as the data bus, and exclusive access is not supported.
 
-![axi](/assets/img/study-guides/digital-systems/axi.png)
+<figure>
+  <img src="/assets/img/study-guides/digital-systems/axi.png" alt="axi" />
+</figure>
 
 **Channel** is a collection of signals associated to a VALID signal.
 
@@ -237,7 +268,9 @@ An AXI4 handshake is as follows:
 * If the transaction has more than 1 transfer, next data is sent, otherwise VALID is removed
 * If slave cannot accept, READY is removed to pause
 
-![handshake](/assets/img/study-guides/digital-systems/handshake.png)
+<figure>
+  <img src="/assets/img/study-guides/digital-systems/handshake.png" alt="handshake" />
+</figure>
 
 AXI4 and variants all have 5 basic signalling channels:
 
@@ -247,13 +280,19 @@ AXI4 and variants all have 5 basic signalling channels:
 * Write data
 * Write response (Slave to Master)
 
-![axi-sm](/assets/img/study-guides/digital-systems/axi-sm.png)
+<figure>
+  <img src="/assets/img/study-guides/digital-systems/axi-sm.png" alt="axi-sm" />
+</figure>
 
 For AXI-Lite, only 1 data tranfer per transaction.
 
-![axi-sm](/assets/img/study-guides/digital-systems/axi_read.png)
+<figure>
+  <img src="/assets/img/study-guides/digital-systems/axi_read.png" alt="axi_read" />
+</figure>
 
-![axi-sm](/assets/img/study-guides/digital-systems/axi_write.png)
+<figure>
+  <img src="/assets/img/study-guides/digital-systems/axi_write.png" alt="axi_write" />
+</figure>
 
 **Write Address Channel (AXI4-Lite)**
 
