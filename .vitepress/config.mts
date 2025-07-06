@@ -1,6 +1,8 @@
 import { defineConfig } from "vitepress";
 import mathjax3 from "markdown-it-mathjax3";
 import { withMermaid } from "vitepress-plugin-mermaid";
+import markdownItAttrs from 'markdown-it-attrs'
+import markdownItContainer from 'markdown-it-container'
 
 const customElements = ["mjx-container"];
 
@@ -108,7 +110,8 @@ export default withMermaid(
 			toc: { level: [1, 2, 3] },
 			config: (md) => {
 				md.use(mathjax3);
-				// `withMermaid` will add the mermaid plugin automatically
+				md.use(markdownItAttrs);
+				md.use(markdownItContainer, 'div');
 			},
 		},
 

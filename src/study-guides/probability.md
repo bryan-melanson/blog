@@ -6,7 +6,7 @@
 
 ### Statistics
 
-**Statistics** are the summarization of a set of data that has been collected, which demonstrates random variation. *Extracting meaning from data*.
+**Statistics** are the summarization of a set of data that has been collected, which demonstrates random variation. _Extracting meaning from data_.
 
 ### Inferential Statistics
 
@@ -14,15 +14,15 @@
 
 ### Representative Values
 
-* Mean - *The sum of all numbers in a list divided by the number of items in the list*
-* Median - *The middle value in a list ordered from smallest to largest*
-* Mode - *The most frequently occuring value in a list*
-* Range - *[Min, Max]*
-* Variance - *Average of deviation from the mean squared*
-* Standard Deviation - *Measure of average absolute deviation*
-* Skewness - *Measure of the shape of the distribution function*
-* Quantiles - *Generalization of the median to percentiles*
-  
+- Mean - _The sum of all numbers in a list divided by the number of items in the list_
+- Median - _The middle value in a list ordered from smallest to largest_
+- Mode - _The most frequently occuring value in a list_
+- Range - _[Min, Max]_
+- Variance - _Average of deviation from the mean squared_
+- Standard Deviation - _Measure of average absolute deviation_
+- Skewness - _Measure of the shape of the distribution function_
+- Quantiles - _Generalization of the median to percentiles_
+
 ### Observational vs. Experimental Data
 
 Experimental Data involves manipulating objects to determine cause and effect in data. Observational Data refers to data extrapolated from naturally occurring events.
@@ -33,17 +33,19 @@ Experimental Data involves manipulating objects to determine cause and effect in
 
 Probability events have a total probability between zero and one.
 
-$\text{Pr}[\textrm{An Event}] = 1$
+::: div {.math-figure}
+$\text{Pr}[\textrm{Event}] = 1$
 
-An event that is sure to happen
-{:.figcaption}
+<p class="figcaption">An event that is sure to happen</p>
+:::
 
 The definition of probability for how often an event is observed can be related to the number of repetions of the experiment.
 
+::: div {.math-figure}
 $\text{Pr}[\textrm{Heads}] = \frac{\textrm{Number } k \textrm{ of Heads in }N \textrm{ coin tosses}}{N \textrm{ coin tosses}}$
 
-Counting the probability of heads in a set of coin tosses
-{:.figcaption}
+<p class="figcaption">Counting the probability of heads in a set of coin tosses</p>
+:::
 
 The larger the number of repetiions, the higher accuracy with which we can predict the likelihood of an event happening.
 
@@ -57,15 +59,17 @@ Events are elements in the set of possible outcomes in an experiment.
 
 The set of all possible outcomes for an experiment.
 
+::: div {.math-figure}
 $S = \{1,2,3,4,5,6\}$
 
-The sample space for a dice roll
-{:.figcaption}
+<p class="figcaption">The sample space for a dice roll</p>
+:::
 
+::: div {.math-figure}
 $A_1 = \{1\}, A_2 = \{1,2,5\}$
 
-Subsets containing events in the sample space
-{:.figcaption}
+<p class="figcaption">Subsets containing events in the sample space</p>
+:::
 
 The complement of a subset $A^C$ is the subset of all other events in the sample space which are not contained in $A$.
 
@@ -90,15 +94,15 @@ For $A = \{1,2,3, 5\}$ and $B = \{3, 4\}$, $A_1A_2 = \{3\}$
 5. Associativity: $A_1 + (A_2 + A_3) = (A_1 + A_2) + A_3$
 6. Distributivity: $A_1 (A_2 + A_3) = A_1A_2 + A_1A_3$
 7. DeMorgan’s Law: $(A_1A_2)^c = (A_1)^C + (A_2)^C$
-  
+
 ### Probability of Events
 
 1. For any event $A$: $\text{Pr}[A] \geq 0$
 2. For the full set, $\text{Pr}[S] = 1$
-3. If $A$ and $B$ are *Mutually Exclusive* then $\text{Pr}[A + B] = \text{Pr}[A] + \text{Pr}[B]$
+3. If $A$ and $B$ are _Mutually Exclusive_ then $\text{Pr}[A + B] = \text{Pr}[A] + \text{Pr}[B]$
 4. Axiom 3 can be extended: $\text{Pr}[A_1 + A_2 + ... ] = \text{Pr}[A_1] + \text{Pr}[A_2] + ...$
 
-*Mutual Exclusivity* refers to the fact that $A$ and $B$ will never occur simultaneously, ie $AB = 0$.
+_Mutual Exclusivity_ refers to the fact that $A$ and $B$ will never occur simultaneously, ie $AB = 0$.
 
 #### Non-Mutually Exclusive
 
@@ -106,28 +110,31 @@ In cases where $A$ and $B$ can occur in the same set, Axiom 3 will not apply.
 
 This is due to the fact that in overlapping events, the same area of probability will be counted twice, though it has no statistical importance.
 
+::: div {.math-figure}
 $\text{Pr}[A_1 + A_2] = \text{Pr}[A_1] + \text{Pr}[A_2] - \text{Pr}[A_1A_2]$
 
-Non mutually exclusive OR
-{:.figcaption}
+<p class="figcaption">Non mutually exclusive OR</p>
+:::
 
 #### Complement of an Event
 
 From expanding on these axioms, it can be seen that the complement of an event has a probability related to subtraction of itself from the sample space probability. If the chance of the event happening is known, the chance of an event not happening is found by subtracting this from absolute certainty.
 
+::: div {.math-figure}
 $\text{Pr}[A^c] = 1 - \text{Pr}[A]$
 
-The complement of a set versus the whole
-{:.figcaption}
+<p class="figcaption">The complement of a set versus the whole</p>
+:::
 
 #### Statistical Independence
 
 Two events $A$ and $B$ are said to be statiscally independent if:
 
+::: div {.math-figure}
 $\text{Pr}[AB] = \text{Pr}[A]\text{Pr}[B]$
 
-Statistical independence
-{:.figcaption}
+<p class="figcaption">Statistical independence</p>
+:::
 
 This refers to the fact that statistical data will happen independent of the preceding events. If you flip a coin, the probability of the next coin will be the same. If you take items from a bin, the probability of the next item being picked will go up, and is therefore dependent.
 
@@ -135,6 +142,7 @@ This refers to the fact that statistical data will happen independent of the pre
 
 From the rule of statistical independence, we can process repeated trials.
 
+::: div {.math-figure}
 $\text{Pr}[H] = p$
 
 $\text{Pr}[T] = \text{Pr}[H^c] = 1 - p = q$
@@ -143,11 +151,12 @@ $\text{Pr}[HHH] = ppp = p^3$
 
 $\text{Pr}[HTH] = pqp = p^2q$
 
-Coin Flips
-{:.figcaption}
+<p class="figcaption">Coin Flips</p>
+:::
 
 Knowing that the probability of either event is 0.5, we can take the list of possible outcomes and calculate the probability.
 
+::: div {.math-figure}
 $$
 \begin{aligned}
 \text{Pr}[\textrm{At least two heads}] &= \text{Pr}[HHH] + \text{Pr}[HHT] + \text{Pr}[HTH] + \text{Pr}[THH] \cr
@@ -161,6 +170,7 @@ $$
 $$
 
 $\text{Pr}[\textrm{No heads}] = \text{Pr}[TTT] = q^3 = (0.5)^3 = 0.125$
+:::
 
 #### Sampling with Replacement
 
@@ -182,10 +192,11 @@ When a trial is repeated $k$ times, we form a sample space of outcomes made up o
 
 How many possibilities are there for the formation of $k$-tuples, if there are $N_i$ choices for the $i$th element?
 
+::: div {.math-figure}
 $N_1 * N_2 * ... N_k$
 
-The Rule of Product
-{:.figcaption}
+<p class="figcaption">The Rule of Product</p>
+:::
 
 By this rule, the number of possibilities when rolling a dice, then flipping a coin, will be $6 * 2$. In the case where same number of outcomes are possible with each experiment, the number of $k$-tuples is $N^k$, or $2^k$ in the case of repeated coin tosses.
 
@@ -197,10 +208,10 @@ This involves the number of ways we can choose $k$ objects in $N$ choices.
 
 ##### Permutations Without Replacement
 
-* Experiments with two or more possible outcomes
-* These trials can be repeated independently for $N$ times
-* For each $k$th trial the outcome from the previous is removed
-* Probabilities change for each consecutive trial
+- Experiments with two or more possible outcomes
+- These trials can be repeated independently for $N$ times
+- For each $k$th trial the outcome from the previous is removed
+- Probabilities change for each consecutive trial
 
 The resulting set is ordered, but as mentioned before, we only care about the number of possible permutations from these elements.
 
@@ -220,7 +231,7 @@ The notation for permutations is $P^{13}_3$
 
 #### Combinations of Non-Unique Outcomes
 
-A *combination* is a way of choosing elements from a set in which order does not matter.
+A _combination_ is a way of choosing elements from a set in which order does not matter.
 
 Consider the following example: Lisa has 13 different ornaments and she wants to give 3 ornaments to her mom as a birthday gift (the order of the gifts does not matter). How many ways can she do this?
 
@@ -228,10 +239,11 @@ We can think of Lisa giving her mom a first ornament, a second ornament, a third
 
 There are $3!$ reorderings of the chosen ornaments, implying the total number of ways for Lisa to give her mom an unordered set of 5 ornaments is $\frac{13!}{3!10!}$.
 
+::: div {.math-figure}
 $\frac{N!}{k!(N-k)!}$
 
-Rule of Combinations or Unordered Permutations
-{:.figcaption}
+<p class="figcaption">Rule of Combinations or Unordered Permutations</p>
+:::
 
 The notation for combinations is $C^{N}_k$ = ${N}\choose{k}$
 
@@ -239,10 +251,11 @@ The notation for combinations is $C^{N}_k$ = ${N}\choose{k}$
 
 A **conditional probability** is a probability that a certain event will occur given some knowledge about the outcome or some other event. $P[A \mid B]$ is a conditional probability, it is read as "Probability of A given B".
 
+::: div {.math-figure}
 $\text{Pr}[A|B] = \frac{\text{Pr}[AB]}{\text{Pr}[B]}$
 
-Rule of Conditional Probability
-{:.figcaption}
+<p class="figcaption">Rule of Conditional Probability</p>
+:::
 
 A simple example - A fair 12-sided die is rolled. What is the probability that the roll is a 3 given that the roll is odd?
 
@@ -250,25 +263,29 @@ This is $\text{Pr}[3 \mid \text{Odd}]$ or $\frac{\text{Pr}[3]\text{Pr}[\text{Odd
 
 Because $B$ has already happened, the intersection of $B$ and $A$ can have the $B$ probability removed, because it is statistically redundant.
 
+::: div {.math-figure}
 $\text{Pr}[A|B] = \frac{\text{Pr}[AB]}{\text{Pr}[B]} = \frac{\text{Pr}[B]\text{Pr}[A]}{\text{Pr}[A]} = \text{Pr}[B]$
 
-Conditional Probability if statiscally independent
-{:.figcaption}
+<p class="figcaption">Conditional Probability if statiscally independent</p>
+:::
 
 #### Bayes Theorem
 
 When attempting to compute the conditional probability of two events, when only one event is known, the Bayes Theorem allows for a workaround.
 
-*Consider $H$ to be Hypothesis, and $E$ to be Evidence*
+_Consider $H$ to be Hypothesis, and $E$ to be Evidence_
 
+::: div {.math-figure}
 $\text{Pr}[H|E] = \frac{\text{Pr}[E|H] \text{Pr}[H]}{\text{Pr}[E]}$
 
-Bayes Theorem
-{:.figcaption}
+<p class="figcaption">Bayes Theorem</p>
+:::
 
 We can expand the equation in the numerator to demonstrate fully:
 
+::: div {.math-figure}
 $\text{Pr}[E|H]\text{Pr}[H] = \frac{\text{Pr}[EH]}{\text{Pr}[H]}*\text{Pr}[H] = \text{Pr}[EH] = \text{Pr}[HE]$
+:::
 
 Therefore, $\text{Pr}[H \mid E]$ or $\frac{\text{Pr}[HE]}{\text{Pr}[E]}$ can be found from $\text{Pr}[E \mid H]$ and vice versa.
 
@@ -276,22 +293,25 @@ Therefore, $\text{Pr}[H \mid E]$ or $\frac{\text{Pr}[HE]}{\text{Pr}[E]}$ can be 
 
 If $A_1, A_2$, and $A_3$ form a partition of the sample space, for each $A_i$
 
+::: div {.math-figure}
 $\text{Pr}[A_i|B] = \frac{\text{Pr}[B|A_i] \text{Pr}[A_i]}{\text{Pr}[B]}, i = 1,2,3$
 
-Total Probability
-{:.figcaption}
+<p class="figcaption">Total Probability</p>
+:::
 
 Knowing this, $\text{Pr}[B]$ can be found from $\text{Pr}[B \mid A_1] + \text{Pr}[B \mid A_2] + \text{Pr}[B \mid A_3]$
 
+::: div {.math-figure}
 $\text{Pr}[A_i|B] = \frac{\text{Pr}[B|A_i] \text{Pr}[A_i]}{\text{Pr}[B|A_1] + \text{Pr}[B|A_2] + \text{Pr}[B|A_3]}, i = 1,2,3$
 
-Bayes General Rule
-{:.figcaption}
+<p class="figcaption">Bayes General Rule</p>
+:::
 
+::: div {.math-figure}
 $\text{Pr}[B] = \text{Pr}[B|A_1] + \text{Pr}[B|A_2] + \text{Pr}[B|A_3]$
 
-Total Probability, when $A_1$, $A_2$, $A_3$ form a partition
-{:.figcaption}
+<p class="figcaption">Total Probability, when $A_1$, $A_2$, $A_3$ form a partition</p>
+:::
 
 ## Random Variables
 
@@ -303,16 +323,16 @@ Discrete random variables involve events with a discrete set of values.
 
 #### Probability Mass Function
 
-The *Probability Mass Function*, or **PMF** $f_k [k]$ is a plotting of the probability of all events associated with a random variable $K$. The sum of all amplitudes of the graph, $\sum f_k [k]$ will be 1.
+The _Probability Mass Function_, or **PMF** $f_k [k]$ is a plotting of the probability of all events associated with a random variable $K$. The sum of all amplitudes of the graph, $\sum f_k [k]$ will be 1.
 
 For a given value $k$, the probability of this value is $f_k[k] = \text{Pr}[K = k]$.
 
 Consider $f_k[k]$ the ranking of weights of each possible outcome. If an outcome is more probable, it is heavier, and plotted above the others.
 
-![pmf](/assets/img/study-guides/probability/pmf.png)
-
-Probability Mass Function
-{:.figcaption}
+<figure>
+  <img src="/assets/img/study-guides/probability/pmf.png" alt="pmf" />
+  <figcaption>Probability Mass Function</figcaption>
+</figure>
 
 #### Bernouli Random Variable
 
@@ -328,25 +348,26 @@ As shown in earlier sections, there are $n\choose{k}$ possible variations of $k$
 
 Geometric RVs concern a wait for an event to happen. Should the expected event be given $p$ probability, there will be $k$ consecutive $(1-p)$ events before the $p$ occurs. Therefore, as seen in the graph below, the event occuring at the second transmission will be $(1-p)^2p$.
 
-![geo1](/assets/img/study-guides/probability/geo1.png)
+<figure>
+  <img src="/assets/img/study-guides/probability/geo1.png" alt="geo1" />
+  <figcaption>Geometric Random Variable</figcaption>
+</figure>
 
-Geometric Random Variable
-{:.figcaption}
-
-
+::: div {.math-figure}
 $f_K[k] = p(1-p)^k$
-  
-Geometric Random Variable PMF (0 $\leq$ k $<$ $\infty$)
-{:.figcaption}
+
+<p class="figcaption">Geometric Random Variable PMF (0 $\leq$ k $<$ $\infty$)</p>
+:::
 
 #### Poisson Random Variable
 
 For a situtation where revents occur randomly at a given rate $\lambda$ over a certain time interval $t$, the probability of $k$ events happening within this time frame has been experimentally verified with $\lambda t$ representing the average.
 
+::: div {.math-figure}
 $f_K[k] = \frac{a^k}{k!}e^{-a}$
 
-Poisson Random Variable PMF
-{:.figcaption}
+<p class="figcaption">Poisson Random Variable PMF</p>
+:::
 
 Note that for finding the probability of an event occurring after time $t$, the probability becomes $\text{Pr}[0] + \text{Pr}[1] + \text{Pr}[2] ... + \text{Pr}[t]$.
 
@@ -354,45 +375,59 @@ Note that for finding the probability of an event occurring after time $t$, the 
 
 When all events are equally likely, the probability of each can be found easily from the uniform random variable PMF.
 
+::: div {.math-figure}
 $f_K[k] = \frac{1}{n - m + 1}$
 
-Uniform Distribution
-{:.figcaption}
+<p class="figcaption">Uniform Distribution</p>
+:::
 
-![uniform](/assets/img/study-guides/probability/uniform.png)
+<figure>
+  <img src="/assets/img/study-guides/probability/uniform.png" alt="CDF" />
+  <figcaption>Uniform Distribution</figcaption>
+</figure>
+
 
 ### Continous RVs and Their Distributions
 
-For values which can take on a continuum of values, such as voltage, velocity, and mass, new tools are used to analyze their probability. The probability of these events is determined using the *Cumulative Distribution Function* or **CDF**, which is written as $F_X(x) = \text{Pr}[X \leq x]$.
+For values which can take on a continuum of values, such as voltage, velocity, and mass, new tools are used to analyze their probability. The probability of these events is determined using the _Cumulative Distribution Function_ or **CDF**, which is written as $F_X(x) = \text{Pr}[X \leq x]$.
 
 By this notation we can see that by following the graph from left to right, the probability of the event occuring to the **left** of value $x$ will be found by the amplitude of the CDF at that value. Therefore, as $x \rightarrow \infty$, $F_x \rightarrow 1$.
 
-![cdf](/assets/img/study-guides/probability/cdf.png)
+<figure>
+  <img src="/assets/img/study-guides/probability/cdf.png" alt="CDF" />
+  <figcaption>Cumulative Distribution Function</figcaption>
+</figure>
 
 When finding the probability of a value occurring between points $a$ and $b$, their CDF values can be used. Remember this is **Distribution**, not **Density**, as we'll see in the PDF below. By keeping this straight, their purposes should be easy to remember.
 
+::: div {.math-figure}
 $\text{Pr}[a < X \leq b] = F_X(b) - F_x(a)$
 
-CDF Probability Within a Range (b $>$ a)
-{:.figcaption}
+<p class="figcaption">CDF Probability Within a Range (b $>$ a)</p>
+:::
 
-The *Probability Density Function* or **PDF** is a derivative of the CDF that can also be used to find this probability:
+The _Probability Density Function_ or **PDF** is a derivative of the CDF that can also be used to find this probability:
 
-![pdf1](/assets/img/study-guides/probability/pdf1.png)
+<figure>
+  <img src="/assets/img/study-guides/probability/pdf1.png" alt="pdf1" />
+  <figcaption>Probability Density Function</figcaption>
+</figure>
 
-$\text{Pr}[a < X \leq b] = \int_{b}^{a}f_X(x)dx $
+::: div {.math-figure}
+$\text{Pr}[a < X \leq b] = \int_{b}^{a}f_X(x)dx$
 
-CDF Probability Within a Range (b $>$ a) From Integration
-{:.figcaption}
+<p class="figcaption">CDF Probability Within a Range (b $>$ a) From Integration</p>
+:::
 
 This can be seen to be similar to the Probability Mass Function, as it will integrate over its full range to $1 -  \int_{\infty}^{\infty}f_X(x)dx = 1$. The difference is due to continous distributions being non-discrete - we can no longer say an item has mass, but points will now be denser (equivalent to heavier).
 
 To use the PDF to find the probability of a number $a + \Delta x$, we can multiply the PDF value at this point by the increment value to find the probability.
 
+::: div {.math-figure}
 $\text{Pr}[a < X \leq a + \Delta x] = f_X(a) \cdot \Delta x$
 
-PDF Probability Within a Range ($a < a + \Delta x$)
-{:.figcaption}
+<p class="figcaption">PDF Probability Within a Range ($a < a + \Delta x$)</p>
+:::
 
 Integrating over a range ($a, b$) will also produce $\text{Pr}[a < x \leq b]$ from the PDF.
 
@@ -408,21 +443,26 @@ Its PDF follows $f_X(x) = \lambda e^{-\lambda x}$
 
 The Gaussian or "normal" random variable arises naturally in numerous cases. It can be defined by its mean, $\mu$, which will be the center of its bell shape, and its standard deviation $\sigma$, which denotes the value in each direction it will pass before reaching $60.7\%$ of its peak value.
 
+::: div {.math-figure}
 $f_X(x) = \frac{1}{\sqrt{2\pi \sigma ^2}} e^{-(x-\mu)^2/2\sigma ^2}$
 
-The Gaussian PDF
-{:.figcaption}
+<p class="figcaption">The Gaussian PDF</p>
+:::
 
-![gauss](/assets/img/study-guides/probability/gauss.png)
+<figure>
+  <img src="/assets/img/study-guides/probability/gauss.png" alt="gauss" />
+  <figcaption>Gaussian PDF</figcaption>
+</figure>
 
 The square of the standard deviation, $\sigma ^2$ is known as the variance, and is a measure of the total width of the bell between these points.
 
 The standard form of the PDF, centered at $0$ with a $\sigma ^2$ $=1$ can be used to express $\text{Pr}[X \leq x]$:
 
+::: div {.math-figure}
 $\Phi(x) = \frac{1}{\sqrt{2\pi}} \int_{\infty}^{x}e^{-x^2/2}$
 
-The Standard Gaussian Function
-{:.figcaption}
+<p class="figcaption">The Standard Gaussian Function</p>
+::: div {.math-figure}
 
 $F_X(x) = \text{Pr}[X \leq x] = \Phi (\frac{x - \mu}{\sigma})$
 
@@ -434,92 +474,108 @@ These $\Phi$ values, which can be used as a CDF, as with other standard Gaussian
 
 In cases where the probablity of values at either tail of a Gaussian is required, such as $\text{Pr}[a < x \leq \infty]$, it is common to use $Q$ functions.
 
+::: div {.math-figure}
 $Q(x) = 1 - \Phi(x)$
 
-The Gaussian Q Function
-{:.figcaption}
+<p class="figcaption">The Gaussian Q Function</p>
+:::
 
 When a value $x$ is sought which is less than $\mu$, the argument of the $Q$ function will be negative, and define the left tail of the CDF. $Q(-x) = 1 - Q(x)$.
 
-![q1](/assets/img/study-guides/probability/q1.png)
+<figure>
+  <img src="/assets/img/study-guides/probability/q1.png" alt="q1" />
+  <figcaption>Gaussian Q Function</figcaption>
+</figure>
 
+::: div {.math-figure}
 $\text{Pr}[X < x] = Q(\frac{x - \mu}{\sigma})$
 
-The Gaussian Q Function
-{:.figcaption}
+<p class="figcaption">The Gaussian Q Function</p>
+:::
 
+::: div {.math-figure}
 $\text{Pr}[X > x] = 1- Q(x) = Q(\frac{- x + \mu}{\sigma})$
 
-The Gaussian Q Function with Negative Argument
-{:.figcaption}
+<p class="figcaption">The Gaussian Q Function with Negative Argument</p>
+:::
 
-![q2](/assets/img/study-guides/probability/q2.png)
+<figure>
+  <img src="/assets/img/study-guides/probability/q2.png" alt="q2" />
+  <figcaption>Gaussian Q Function with Negative Argument</figcaption>
+</figure>
 
-
+::: div {.math-figure}
 $\text{Pr}[a \leq x \leq b] = Q(\frac{b-\mu}{\sigma}) - Q(\frac{a-\mu}{\sigma})$
+:::
 
 ### Expectation
 
 Expecation can be considered the average of the expected values in a sample space, where the values are weighted by their probability and summed.
 
+::: div {.math-figure}
 $E\{X\} = \sum kf_K[k]$
 
-Expectation of a Discrete RV
-{:.figcaption}
+<p class="figcaption">Expectation of a Discrete RV</p>
+:::
 
 For continuous random variables, when the PDF exists, the expectation can be calculated whenever the variable converges absolutely:
 
+::: div {.math-figure}
 $E\{X\} = \int_{-\infty}^{\infty}xf_X(x)dx$
 
-Expectation of a Continuous RV
-{:.figcaption}
+<p class="figcaption">Expectation of a Continuous RV</p>
+:::
 
 An important feature of the expectation is its **invariance**.
 
 $E\{c\} = c$
 
 $E\{X + c\} = E\{X\} + c$
-    
+
 $E\{cX\} = cE\{X\}$
-    
+
 $E\{E\{X\}\} = E\{X\}$
 
 #### Moments
 
 The moment is the produced when the $X$ value of the expectation is raised to the $n$ power. If $g(X) = X^n$ for $n$ = 1, 2, 3
 
-$E\{X^n\} = \int_{-\infty}^{\infty}x^nf_X(x)dx$  
+::: div {.math-figure}
+$E\{X^n\} = \int_{-\infty}^{\infty}x^nf_X(x)dx$
 
-Continous Moment
-{:.figcaption}
+<p class="figcaption">Continous Moment</p>
+:::
 
+::: div {.math-figure}
 $E\{X^n\} = \sum k^n f_K[k]$
 
-Discrete Moment
-{:.figcaption}
+<p class="figcaption">Discrete Moment</p>
+:::
 
-The first moment is the *mean*, and each further $n$ value is called the $n$th moment of the distribution.
+The first moment is the _mean_, and each further $n$ value is called the $n$th moment of the distribution.
 
 #### Central Moments
 
-The *Central Moment* is a mean of a random variable not centered at 0. Of particular importance is the **variance**, the square root of which will grant the width of the distribution.
+The _Central Moment_ is a mean of a random variable not centered at 0. Of particular importance is the **variance**, the square root of which will grant the width of the distribution.
 
+::: div {.math-figure}
 $\sigma^2 = \text{Var}[X] = E\{(X-m_X)^2\}$
 
-The 2nd Central Moment
-{:.figcaption}
+<p class="figcaption">The 2nd Central Moment</p>
+:::
 
+::: div {.math-figure}
 $m_X = E\{X\}$
 
-The mean of $X$
-{:.figcaption}
+<p class="figcaption">The mean of $X$</p>
+:::
 
 The Standard Deviation is represented as $\sigma_X$, and is a measure of the width.
 
 $\text{Var}[c] = 0$
-    
+
 $\text{Var}[X + c] = \text{Var}[X]$
-    
+
 $\text{Var}[cX] = c^2 \text{Var}[X]$
 
 Also note, $\text{Var}[X] = E\{X^2\} - m_X^2$ - this method is much easier to solve than the initial method of finding variance.
@@ -554,7 +610,7 @@ Joint probability distribution can be thought of as $\text{Pr}[(X \leq x \text{ 
 
 Or as $F_{X,Y}(x,y)$ where $F_X(x) = \text{Pr}[X \leq x]$ and $F_Y(y) = \text{Pr}[Y \leq y]$
 
-A relationship can be *deterministic*, such as $Y = 2X + 1$ or *probabilistic*, where probabilities of one value will affect the other.
+A relationship can be _deterministic_, such as $Y = 2X + 1$ or _probabilistic_, where probabilities of one value will affect the other.
 
 **Joint Probabilities** refers to the probability of two variables taken together, such as $\text{Pr}[(X \leq q) \text{ and } (Y \leq y)]$. To answer this, the **Joint CDF**, $F_{X,Y}(x,y)$ must be found.
 
@@ -566,13 +622,17 @@ For continuous distributions, the variables $x$ and $y$ will be used, however di
 
 From each joint distribution, individual distributions for each variable, or \textbf{Marginal Distributions} can be found. These are simply the PDFs of the individual random variables found in earlier sections.
 
-![marginal](/assets/img/study-guides/probability/marginal.png)
+<figure>
+  <img src="/assets/img/study-guides/probability/marginal.png" alt="marginal" />
+</figure>
 
-![marginal2](/assets/img/study-guides/probability/marginal2.png)
+<figure>
+  <img src="/assets/img/study-guides/probability/marginal2.png" alt="marginal2" />
+</figure>
 
 $f_{K_1}[k_1] = \sum\limits_{k2=-\infty}^\infty f_{K_1K_2}[k_1,k_2]$
 
-$f_{K_2}[k_2] = \sum\limits_{k1=-\infty}^\infty f_{K_1K_2}[k_1,k_2]$  
+$f_{K_2}[k_2] = \sum\limits_{k1=-\infty}^\infty f_{K_1K_2}[k_1,k_2]$
 
 #### Independant Random Variables
 
@@ -588,10 +648,13 @@ Notice that this is a special condition for random variables and does not apply 
 
 #### Joint Distributions
 
-![joint-cdf](/assets/img/study-guides/probability/joint-cdf.png)
+<figure>
+  <img src="/assets/img/study-guides/probability/joint-cdf.png" alt="joint-cdf" />
+  <figcaption>Joint Continuous Distribution Function</figcaption>
+</figure>
 
 **CDF**: $f_{X_1X_2}(x_1,x_2) = \frac{\partial^2F_{X_1X_2}(x_1,x_2) }{\partial x_1 \partial x_2}$
- 
+
 **PDF**: $F_{X_1X_2}(x_1,x_2) = \int_{-\infty}^{x_1} \int_{-\infty}^{x_2} f_{X_1X_2}(u_1,u_2)du_1du_2$
 
 Joint continuity can be proven if the PDF evaluates to 1.
@@ -604,7 +667,10 @@ $f_{X_1}(x_1) = \int_{-\infty}^{\infty} f_{X_1X_2}(x_1,x_2)dx_2$
 
 $f_{X_2}(x_2) = \int_{-\infty}^{\infty} f_{X_1X_2}(x_1,x_2)dx_1$
 
-![marginal-pdf](/assets/img/study-guides/probability/marginal-pdf.png)
+<figure>
+  <img src="/assets/img/study-guides/probability/marginal-pdf.png" alt="marginal-pdf" />
+  <figcaption>Marginal Probability Distribution Function</figcaption>
+</figure>
 
 #### Correlation
 
@@ -618,7 +684,7 @@ $r = E\{X_1X_2\} = \int \int x_1x_2f_{X_1,X_2}(x_1,x_2)dx_1dx_2$
 
 $r = E\{KL\} = \sum\limits_k \sum\limits_l klf_{K,L}(k,l)$
 
-The correlation can be misleading if both $X_1$ and $X_2$ have offsets built in to their means. The get around this, *covariance* is defined to remove their means.
+The correlation can be misleading if both $X_1$ and $X_2$ have offsets built in to their means. The get around this, _covariance_ is defined to remove their means.
 
 $c = \text{Cov}[X_1,X_2] = E\{(X_1 - m_1)(X_2 - m_2)\}$
 
@@ -628,7 +694,7 @@ $m_1 = E\{X_1\} = \int x_1f_{X1}(x_1)dx_1$
 
 $m_2 = E\{X_2\} = \int x_1f_{X2}(x_2)dx_2$
 
-*Note* - Covariance is similar to variance, in that variance is a measure of how to the outcome of $X_1$ can vary, while covariance is the measure of how the outcome of $X_1$ and $X_2$ can vary together.
+_Note_ - Covariance is similar to variance, in that variance is a measure of how to the outcome of $X_1$ can vary, while covariance is the measure of how the outcome of $X_1$ and $X_2$ can vary together.
 
 Also similarly to variance:
 
@@ -646,7 +712,7 @@ Where $\sigma_1$ and $\sigma_2$ are the standard deviations of $X_1$ and $X_2$.
 
 #### Invariance of Expectation
 
-If a random variable $X$ with PDF $f_X(x)$ is transformed to another random variable $Y$ by a *deterministic* relationship, $Y = g(X)$, e.g.
+If a random variable $X$ with PDF $f_X(x)$ is transformed to another random variable $Y$ by a _deterministic_ relationship, $Y = g(X)$, e.g.
 
 $Y = 3X +2$
 
@@ -699,9 +765,9 @@ $f_Y(y) = \int\limits^{\infty}_{-\infty}f_{X_1}(x_1)f_{X_2}(y-x_1)dx_1$
 
 #### Notes on Sums of Independent RVs
 
-* When $X_1$ and $X_2$ are independent, $\text{Cov}[X_1,X_2]$ = 0 and $\text{Var}[Y]$ = $\text{Var}[X_1]$ + $\text{Var}[X_2]$, while $m_Y = E\{Y\} = E\{X_1\} + E\{X_2\} = m_{X_1} + m_{X_2}$
-* If $X_1$ and $X_2$ have the same distribution, $m_{X_1} = m_{X_2} = m$
-  
+- When $X_1$ and $X_2$ are independent, $\text{Cov}[X_1,X_2]$ = 0 and $\text{Var}[Y]$ = $\text{Var}[X_1]$ + $\text{Var}[X_2]$, while $m_Y = E\{Y\} = E\{X_1\} + E\{X_2\} = m_{X_1} + m_{X_2}$
+- If $X_1$ and $X_2$ have the same distribution, $m_{X_1} = m_{X_2} = m$
+
 #### Sums of Dependent RVs
 
 In the case of $Y = X_1 + X_2$, if $X_1$ and $X_2$ are not independent, then:
@@ -718,14 +784,17 @@ $$
 
 ### Bivariate Gaussian
 
-Two joint RVs with Gaussian characteristics together will have a joint Gaussian characteristic, called *bivariate* or *multi-variate* for more than 2.
+Two joint RVs with Gaussian characteristics together will have a joint Gaussian characteristic, called _bivariate_ or _multi-variate_ for more than 2.
 
-![bivariate](/assets/img/study-guides/probability/bivariate.png)
+<figure>
+  <img src="/assets/img/study-guides/probability/bivariate.png" alt="bivariate" />
+  <figcaption>Bivariate Gaussian Function</figcaption>
+</figure>
 
 ## Limit Theorems
 
 $M_n = \frac{1}{n} \sum\limits^n_{i = 1}K_i$
-
+ 
 $E\{Y_n\} = mY_n = nm_x$
 
 $\text{Var}[Y_n] = \sigma_{Y_n}^2 = n\sigma^2_x$

@@ -12,9 +12,10 @@ An *Operation Amplifier* is a device which, when powered by $+V$ and $-V$ DC pow
 
 Where no input current enters $+$ and $-$, the *input impedance is infinite*.
 
-![Ideal Op Amp](/assets/img/study-guides/circuits-ii/op.png)
-Ideal Op Amp
-{:.figcaption}
+<figure>
+  <img src="/assets/img/study-guides/circuits-ii/op.png" alt="Ideal Op Amp" />
+  <figcaption>Ideal Op Amp</figcaption>
+</figure>
 
 $A$ is referred to as the **Open Loop Gain**, where the output and inputs have not been connected. The **Closed Loop Gain** will be denoted as $G$.
 
@@ -30,10 +31,10 @@ In the inverting configuration, the output of the op-amp is connected back into 
 
 In the case where a resistance is placed between $v_2$ and $v_o$, there would be a **Positive Feedback**, and the output would increase exponentially.
 
-![Inverting Configuration of Op Amp](/assets/img/study-guides/circuits-ii/invert.png)
-
-Inverting Configuration of Op Amp
-{:.figcaption}
+<figure>
+  <img src="/assets/img/study-guides/circuits-ii/invert.png" alt="Inverting Configuration of Op Amp" />
+  <figcaption>Inverting Configuration of Op Amp</figcaption>
+</figure>
 
 $v_3 = A(v_2-v_1)$
 
@@ -51,10 +52,11 @@ The **Closed Loop Gain** $G$ is defined as $\frac{v_o}{v_i}$
 
 From Figure 1, we can see that knowing $v_1 = v_2 = 0$, therefore $i_1$ can be calculated, and passes to the input without entering the op amp terminals.
 
+::: div {.math-figure}
 $G = \frac{v_0}{v_i} = -\frac{R_2}{R_1}$
 
-Closed Loop Gain of a Non-Inverting Amplifier
-{:.figcaption}
+<p class="figcaption">Closed Loop Gain of a Non-Inverting Amplifier</p>
+:::
 
 #### Finite Open-Loop Gain
 
@@ -74,10 +76,10 @@ In the case where a design must be created to fit an equation with multiple inve
 
 $v_o = v_1(\frac{R_a}{R_1})(\frac{R_c}{R_b}) + v_2(\frac{R_a}{R_2})(\frac{R_c}{R_b}) - v_3(\frac{R_c}{R_3}) - v_4(\frac{R_c}{R_4})$
 
-![Weighted Summers in Series](/assets/img/study-guides/circuits-ii/summer-2.png)
-
-Weighted Summers in Series
-{:.figcaption}
+<figure>
+  <img src="/assets/img/study-guides/circuits-ii/summer-2.png" alt="Weighted Summers in Series" />
+  <figcaption>Weighted Summers in Series</figcaption>
+</figure>
 
 ### Non-Inverting Configuration
 
@@ -85,10 +87,11 @@ The Non-inverting configuration occurs when a voltage input enters the $v_2$ ter
 
 The $v_1$ terminal, grounded in this case, creates $i_1 = \frac{v_I}{R_1}$, and the solution can follow as before.
 
+::: div {.math-figure}
 $G = \frac{v_0}{v_i} = 1 + \frac{R_2}{R_1}$
 
-Closed Loop Gain of a Non-Inverting Amplifier
-{:.figcaption}
+<p class="figcaption">Closed Loop Gain of a Non-Inverting Amplifier</p>
+:::
 
 #### Finite Open-Loop Gain
 
@@ -98,10 +101,10 @@ When the open-loop gain $A$ is not finite, $\frac{v_3}{A} = v_2-v_1$ no longer p
 
 In this configuration, the loop is closed by short circuiting the output to non-inverting input. This will again create a virtual short circuit between $v_2$ and $v_1$, and because a real short circuit exists between $v_1$ and $v_o$, all terminal values will be equal to the voltage source, $v_I$.
 
-![Buffer Amplifier or Voltage Follower](/assets/img/study-guides/circuits-ii/buff.png)
-
-Buffer Amplifier or Voltage Follower
-{:.figcaption}
+<figure>
+  <img src="/assets/img/study-guides/circuits-ii/buff.png" alt="Buffer Amplifier or Voltage Follower" />
+  <figcaption>Buffer Amplifier or Voltage Follower</figcaption>
+</figure>
 
 ### Difference Amplifiers
 
@@ -109,10 +112,11 @@ A Difference Amplifier is one where voltage sources are applied to the $v_2$ and
 
 In a case like this, $v_o = A_dv_{id} + A_{cm}v_{Icm}$, and the efficiency of the Difference Amplifier can be determined by its *common-mode rejection ratio (CMRR)*
 
+::: div {.math-figure}
 $\text{CMRR} = 20 \text{log}\frac{|A_d|}{|A_{cm}|}$
 
-Common Mode Rejection Ratio
-{:.figcaption}
+<p class="figcaption">Common Mode Rejection Ratio</p>
+:::
 
 In a Difference amplifier with voltage sources at $v_2$ and $v_1$, it can be seen that this will have a inverting and non-inverting output superimposed on one another. However, the gain ratio of both inputs must be equal for the common mode ratio rejection, so the $v_2$ input must use a voltage divider ($v_3$ and $v_4$) to reduce the input voltage.
 
@@ -120,21 +124,25 @@ Therefore, $\frac{R_4}{R_4 + R_3}(1 + \frac{R2}{R1}) = \frac{R2}{R1}$, and $\fra
 
 To find values concering solely the $v_{Id}$ and $v_{Icm}$, consider a voltage source $v_Id$ or $v_Icm$ applied at the inputs, where $v_Icm$ is applied to both, and the negative and positve termals of $v_{id}$ are connected in series between the two terminals.
 
-![Difference Amplifier](/assets/img/study-guides/circuits-ii/diff.png)
-
-Difference Amplifier
-{:.figcaption}
+<figure>
+  <img src="/assets/img/study-guides/circuits-ii/diff.png" alt="Difference Amplifier" />
+  <figcaption>Difference Amplifier</figcaption>
+</figure>
 
 #### Instrumentation Bridge Amplifiers
 
 The Instrumentation Bridge Amplifier is a Difference Amplifier created as a solution to the low input resistance of Difference Amplifiers, without sacrificing ease of control. From Figure 6, it can be noted that $R_1$ can be used to control the output voltage of the circuit.
 
+::: div {.math-figure}
 $v_o = \frac{R4}{R3}(1 + \frac{R_2}{R_1})v_{Id}$
 
-Output of the Instrumentation Bridge Amplifier
-{:.figcaption}
+<p class="figcaption">Output of the Instrumentation Bridge Amplifier</p>
+:::
 
-![Instrumentation Bridge Amplifier](/assets/img/study-guides/circuits-ii/instr.png)
+<figure>
+  <img src="/assets/img/study-guides/circuits-ii/instr.png" alt="Instrumentation Bridge Amplifier" />
+  <figcaption>Instrumentation Bridge Amplifier</figcaption>
+</figure>
 
 ## Filters and Tuned Amplifiers
 
@@ -154,12 +162,16 @@ $\phi(\frac{\omega_0}{\omega_0+\omega j}) = \frac{\text{tan}^{-1}\frac{0}{\omega
 
 The transmission characteristics of a filter are specified in terms of the edges of the passband(s) $\omega_p$ and the stopband(s) $\omega_s$. The maximum allowed variation in passband transmission, $A_{max}$ (dB); and the minimum attenuation required in the stopband, $A_{min}$ (dB). In some applications, the phase characteristics are also specified.
 
-![General First-Order Transfer Function](/assets/img/study-guides/circuits-ii/transmission.png)
+<figure>
+  <img src="/assets/img/study-guides/circuits-ii/transmission.png" alt="General First-Order Transfer Function" />
+  <figcaption>General First-Order Transfer Function</figcaption>
+</figure>
 
+::: div {.math-figure}
 $T(s) = \frac{a_1s + a_0}{s + \omega_0}$
 
-General First-Order Transfer Function
-{:.figcaption}
+<p class="figcaption">General First-Order Transfer Function</p>
+:::
 
 The filter transfer function can be expressed as the ratio of two polynomials in $s$. The degree of the denominator polynomial, $N$, is the filter order. The $N$ roots of the denominator polynomial are the poles (natural modes).
 
@@ -167,15 +179,24 @@ The filter transfer function can be expressed as the ratio of two polynomials in
 
 **High Pass** allows high frequencies to pass through (the *passband*) and attenuates frequences below (the *stopband*).
 
-![High Pass](/assets/img/study-guides/circuits-ii/highpass2.png)
+<figure>
+  <img src="/assets/img/study-guides/circuits-ii/highpass2.png" alt="highpass2" />
+  <figcaption>High Pass</figcaption>
+</figure>
 
 **Low Pass** allows low frequencies to pass through.
 
-![Low Pass](/assets/img/study-guides/circuits-ii/lowpass2.png)
+<figure>
+  <img src="/assets/img/study-guides/circuits-ii/lowpass2.png" alt="lowpass2" />
+  <figcaption>Low Pass</figcaption>
+</figure>
 
 **Band Pass** will pass all bands, but invert phase.
 
-![Band Pass](/assets/img/study-guides/circuits-ii/bandpass2.png)
+<figure>
+  <img src="/assets/img/study-guides/circuits-ii/bandpass2.png" alt="bandpass2" />
+  <figcaption>Band Pass</figcaption>
+</figure>
 
 **Band Stop** will stop all bands within the specified range.
 
@@ -185,10 +206,11 @@ The **All Pass Filter** is a special case which does not attenuate, but serves a
 
 ### Filter Transmission (2nd Order Filters)
 
+::: div {.math-figure}
 $T(s) = \frac{a_2s^2 + a_1s + a_0}{s^2 + (\omega_0/Q)s + \omega_{0}^2}$
 
-General Second-Order Transfer Function
-{:.figcaption}
+<p class="figcaption">General Second-Order Transfer Function</p>
+:::
 
 ### Filter Types
 
@@ -196,25 +218,37 @@ General Second-Order Transfer Function
 
 $T(s) = \frac{a_0}{s^2 + (\omega_0/Q)s + \omega_{0}^2}$
 
-![High Pass](/assets/img/study-guides/circuits-ii/highpass3.png)
+<figure>
+  <img src="/assets/img/study-guides/circuits-ii/highpass3.png" alt="highpass3" />
+  <figcaption>High Pass</figcaption>
+</figure>
 
 **Low Pass** allows low frequencies to pass through.
 
 $T(s) = \frac{a_2s^2}{s^2 + (\omega_0/Q)s + \omega_{0}^2}$
 
-![Low Pass](/assets/img/study-guides/circuits-ii/lowpass3.png)
+<figure>
+  <img src="/assets/img/study-guides/circuits-ii/lowpass3.png" alt="lowpass3" />
+  <figcaption>Low Pass</figcaption>
+</figure>
 
 **Band Pass** will attenuate all but the $\omega_0$ frequency.
 
 $T(s) = \frac{a_1s}{s^2 + (\omega_0/Q)s + \omega_{0}^2}$
 
-![Band Pass](/assets/img/study-guides/circuits-ii/bandpass3.png)
+<figure>
+  <img src="/assets/img/study-guides/circuits-ii/bandpass3.png" alt="bandpass3" />
+  <figcaption>Band Pass</figcaption>
+</figure>
 
 **Notch** will attenutate at the center frequency $\omega_0$.
 
 $T(s) = a_2\frac{s^2+\omega_{0}^2}{s^2 + (\omega_0/Q)s + \omega_{0}^2}$
 
-![Notch](/assets/img/study-guides/circuits-ii/notch.png)
+<figure>
+  <img src="/assets/img/study-guides/circuits-ii/notch.png" alt="notch" />
+  <figcaption>Notch</figcaption>
+</figure>
 
 $Q = 1/\sqrt{2} = $The Butterworth Maximally Flat Response
 
@@ -224,7 +258,10 @@ $\text{BW} = \omega_2 - \omega_1 = \omega_0/Q$
 
 Resonators are used to realize second order filters.
 
-![Resonator](/assets/img/study-guides/circuits-ii/resonator.png)
+<figure>
+  <img src="/assets/img/study-guides/circuits-ii/resonator.png" alt="resonator" />
+  <figcaption>Resonator</figcaption>
+</figure>
 
 For a current applied to this circuit,
 
@@ -244,9 +281,15 @@ Using this structure,
 
 $T(s) = \frac{v_0}{v_i} = \frac{Z_2}{Z_1+Z_2}$
 
-![Resonator LPF](/assets/img/study-guides/circuits-ii/res-lpf.png)
+<figure>
+  <img src="/assets/img/study-guides/circuits-ii/res-lpf.png" alt="res-lpf" />
+  <figcaption>Resonator LPF</figcaption>
+</figure>
 
-![Resonator Notch](/assets/img/study-guides/circuits-ii/res-notch.png)
+<figure>
+  <img src="/assets/img/study-guides/circuits-ii/res-notch.png" alt="res-notch" />
+  <figcaption>Resonator Notch</figcaption>
+</figure>
 
 By following the structure $T(s) = \frac{v_0}{v_i} = \frac{Z_2}{Z_1+Z_2}$, it can be seen that from these structures the transfer function for each second order filter can be derived by these circuits. It can also be seen that the order of capacitors are mirrored by the single order op amp filters.
 
@@ -256,11 +299,17 @@ Inductors in the resonator circuits can be replaced by a system of op amps, such
 
 From the circuit below, an impedance $Z = sC_4R_1R_3R_5/R_2$, $L = C_4R_1R_3R_5/R_2$
 
-![Antoniou](/assets/img/study-guides/circuits-ii/antoniou.png)
+<figure>
+  <img src="/assets/img/study-guides/circuits-ii/antoniou.png" alt="antoniou" />
+  <figcaption>Antoniou</figcaption>
+</figure>
 
 The design of this circuit is usually based on selecting $R_1 = R_2 = R_3 = R_5 = R$ and $C_4 = C$, which leads to $L = CR^2$. When used in a resonator,
 
-![Antoniou Res](/assets/img/study-guides/circuits-ii/antoniou-res.png)
+<figure>
+  <img src="/assets/img/study-guides/circuits-ii/antoniou-res.png" alt="antoniou-res" />
+  <figcaption>Antoniou Res</figcaption>
+</figure>
 
 This circuit would have a pole frequency $\omega_0 = 1/LC_6 = 1/C_4C_6R_1R_3R_5/R_2$ 
 
@@ -268,11 +317,11 @@ The gain would be derived from $+K$ op amp, $Q = \omega_0C_6R_6$, $\omega_0 = 1/
 
 #### Filter Types
 
-![LP Antoniou](/assets/img/study-guides/circuits-ii/lp-antoniou.png)
-
-![HP Antoniou](/assets/img/study-guides/circuits-ii/hp-antoniou.png)
-
-![BP Antoniou](/assets/img/study-guides/circuits-ii/bp-antoniou.png)
+<figure>
+  <img src="/assets/img/study-guides/circuits-ii/lp-antoniou.png" alt="lp-antoniou" />
+  <img src="/assets/img/study-guides/circuits-ii/hp-antoniou.png" alt="hp-antoniou" />
+  <img src="/assets/img/study-guides/circuits-ii/bp-antoniou.png" alt="bp-antoniou" />
+</figure>
 
 The position of the capacitor $C$ in each case will mirror the filter type in the first order filters, and in each case the gain will be created through $+K$.
 
@@ -282,7 +331,9 @@ Biquads based on the two-integrator-loop topology are the most versatile and pop
 
 #### KHN Biquad
 
-![KHN](/assets/img/study-guides/circuits-ii/khn.png)
+<figure>
+  <img src="/assets/img/study-guides/circuits-ii/khn.png" alt="khn" />
+</figure>
 
 Analyzed by superposition,
 
@@ -292,9 +343,10 @@ Where $R_f/R_1 = 1$, $R_3/R_2 = 2Q - 1$, and $K = 2 - (1/Q)$
 
 Center frequency, $KQ = 2Q - 1$ and $\omega_0 = 1/RC$.
 
-![TOW](/assets/img/study-guides/circuits-ii/tow.png)
-
-![TOW Feedback](/assets/img/study-guides/circuits-ii/tow-feed.png)
+<figure>
+  <img src="/assets/img/study-guides/circuits-ii/tow.png" alt="tow" />
+  <img src="/assets/img/study-guides/circuits-ii/tow-feed.png" alt="tow-feed" />
+</figure>
 
 ### Single Amplifier Biquadratic Active Filters
 
@@ -303,8 +355,12 @@ are thus limited to low-$Q$ applications ($Q \leq 10$).
 
 #### Bridged T Amplifiers
 
-![Bridged T Amplifier](/assets/img/study-guides/circuits-ii/bridge-t.png)
+<figure>
+  <img src="/assets/img/study-guides/circuits-ii/bridge-t.png" alt="bridge-t" />
+  <figcaption>Bridged T Amplifier</figcaption>
+</figure>
 
+::: div {.math-figure}
 $\omega_0 = 1/\sqrt{C_1C_2R_3R_4}$
 
 $Q = (\frac{\sqrt{C_1C_2R_3R_4}}{R_3})(\frac{1}{C_1}+\frac{1}{C_2})^{-1}$
@@ -314,6 +370,7 @@ $m = 4Q^2$
 $CR = \frac{2Q}{\omega_0}$
 
 $R_3 = R$, $R_4 = R/m$
+:::
 
 ### Sensitivity
 
@@ -347,17 +404,28 @@ When analyzing a given oscillator circuit, follow the following steps:
 
 A popular limiter circuit used to control the amplitude of oscillating circuits is pictured below. By disconnecting the feedback loop, the linear gain $-\frac{R_f}{R_1}$ is found. When the input source goes positive of negative, the limiting value $L_+$ or $L_-$ can be found, as seen in the transfer characteristic.
 
-![Limiting Characteristic](/assets/img/study-guides/circuits-ii/lim-char.png)
+<figure>
+  <img src="/assets/img/study-guides/circuits-ii/lim-char.png" alt="lim-char" />
+  <figcaption>Limiting Characteristic</figcaption>
+</figure>
 
+::: div {.math-figure}
 $L_+ = V\frac{R_4}{R_3} + V_D(1 + \frac{R_4}{R_3})$, $L_- = V\frac{R_3}{R_2} - V_D(1 + \frac{R_3}{R_2})$
+:::
+
 
 #### Wien Bridge
 
-![Wien Bridge](/assets/img/study-guides/circuits-ii/wien.png)
+<figure>
+  <img src="/assets/img/study-guides/circuits-ii/wien.png" alt="wien" />
+  <figcaption>Wien Bridge</figcaption>
+</figure>
 
+::: div {.math-figure}
 $w_0 = 1/CR$
 
 $L(s) = (1+\frac{R_2}{R_1})\frac{Z_p}{Z_p+Z_s}$
+:::
 
 ### Bistable Multivibrators
 
@@ -377,11 +445,20 @@ When the $v_I$ value exceeds the other input, it will trigger a positive feedbac
 
 This pair of values in the negative and positive direction are the $V_{TH}$ and $V_{TL}$, which can be found to be $L^+\beta$ and $L^-\beta$.
 
-![Bistable](/assets/img/study-guides/circuits-ii/bistable.png)
+<figure>
+  <img src="/assets/img/study-guides/circuits-ii/bistable.png" alt="bistable" />
+  <figcaption>Bistable</figcaption>
+</figure>
 
-![Bistable Negative Characteristic](/assets/img/study-guides/circuits-ii/bistable-neg-char.png)
+<figure>
+  <img src="/assets/img/study-guides/circuits-ii/bistable-neg-char.png" alt="bistable-neg-char" />
+  <figcaption>Bistable Negative Characteristic</figcaption>
+</figure>
 
-![Bistable Positive Characteristic](/assets/img/study-guides/circuits-ii/bistable-pos-char.png)
+<figure>
+  <img src="/assets/img/study-guides/circuits-ii/bistable-pos-char.png" alt="bistable-pos-char" />
+  <figcaption>Bistable Positive Characteristic</figcaption>
+</figure>
 
 For the non-inverting bistable circuit, superposition must be used to find the value of $v^+$ due to the input $v_I$ and the output $v_o$ being fed back into the op amp. Therefore,
 
@@ -401,13 +478,19 @@ For each case, adding a reference DC voltage $V_R$ to an input will move the cha
 
 By connecting a bistable multivibrator with an RC circuit in a feedback loop, a square wave can be generated where the circuit will switch states periodically. The capacitor will charge until it reaches $\beta L^+$, then discharge until $\beta L^-$, upon which time it will begin charging again.
 
-![Astable Multivibrator](/assets/img/study-guides/circuits-ii/astable.png)
+<figure>
+  <img src="/assets/img/study-guides/circuits-ii/astable.png" alt="astable" />
+  <figcaption>Astable Multivibrator</figcaption>
+</figure>
 
 The time constant for this circuit is $\tau = CR$, which will define the period.
 
 $T = 2\tau \text{ln}\frac{1+\beta}{1-\beta}$
 
-![Triangle](/assets/img/study-guides/circuits-ii/triangle.png)
+<figure>
+  <img src="/assets/img/study-guides/circuits-ii/triangle.png" alt="triangle" />
+  <figcaption>Triangle</figcaption>
+</figure>
 
 $T_1 = CR\frac{V_{TH}-V_{TL}}{L^+}$
 
@@ -415,9 +498,15 @@ $T_2 = CR\frac{V_{TH}-V_{TL}}{L^-}$
 
 ### Monostable Multivibrator
 
-![Monostable](/assets/img/study-guides/circuits-ii/mono.png)
+<figure>
+  <img src="/assets/img/study-guides/circuits-ii/mono.png" alt="mono" />
+  <figcaption>Monostable</figcaption>
+</figure>
 
-![Monostable Characteristic](/assets/img/study-guides/circuits-ii/mono-char.png)
+<figure>
+  <img src="/assets/img/study-guides/circuits-ii/mono-char.png" alt="mono-char" />
+  <figcaption>Monostable Characteristic</figcaption>
+</figure>
 
 A single pulse seen at point $E$ will trigger $L_-$ saturation, where point $B$ will be pulled through the capacitor, as the negative voltage turns off $D_1$.
 
@@ -425,8 +514,14 @@ After the period $T$, the circuit will saturate to $L_+$ again, upon which point
 
 ### Precision Rectifiers
 
-![Precision Rectifier](/assets/img/study-guides/circuits-ii/prec-char.png)
+<figure>
+  <img src="/assets/img/study-guides/circuits-ii/prec-char.png" alt="prec-char" />
+  <figcaption>Precision Rectifier</figcaption>
+</figure>
 
-![Precision Rectifier Characteristic](/assets/img/study-guides/circuits-ii/prec-full-char.png)
+<figure>
+  <img src="/assets/img/study-guides/circuits-ii/prec-full-char.png" alt="prec-full-char" />
+  <figcaption>Precision Rectifier Characteristic</figcaption>
+</figure>
 
 <BryanMelanson />
