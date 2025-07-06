@@ -71,19 +71,34 @@ const guides = {
 			text: "Communication Protocols",
 			collapsible: true,
 			items: [
-				{ text: "CAN", link: "/study-guides/protocol-can" },
-				{ text: "CAN-ISOTP", link: "/study-guides/protocol-can-isotp" },
+				{
+					text: "CAN",
+					collapsible: true,
+					link: "/study-guides/protocol-can",
+					items: [
+						{ text: "CAN Standard", link: "/study-guides/protocol-can" },
+						{ text: "CAN-ISOTP", link: "/study-guides/protocol-can-isotp" },
+					],
+				},
+				{
+					text: "BLE",
+					collapsible: true,
+					link: "/study-guides/protocol-ble-gap",
+					items: [
+						{ text: "BLE GAP", link: "/study-guides/protocol-ble-gap" },
+						{ text: "BLE GATT", link: "/study-guides/protocol-ble-gatt" },
+					],
+				},
+				{ text: "OneWire", link: "/study-guides/protocol-onewire" },
 			],
 		},
 	],
 };
 
-// Combine items for sidebar 'resume' section
 const all = {
 	items: [...guides.items, ...music.items],
 };
 
-// ✅ Wrap with `withMermaid` to support SSR diagram rendering
 export default withMermaid(
 	defineConfig({
 		base: "/blog/",
@@ -135,7 +150,6 @@ export default withMermaid(
 			],
 		},
 
-		// ✅ Optional: Customize mermaid rendering and plugin behavior
 		mermaid: {
 			theme: "default", // or 'dark'
 		},
