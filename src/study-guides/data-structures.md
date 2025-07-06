@@ -1,5 +1,5 @@
 ---
-title: 'Data Structures'
+title: "Data Structures"
 ---
 
 # Data Structures
@@ -10,12 +10,12 @@ title: 'Data Structures'
 
 ### Operators
 
-* Shift Left `<<`
-* Shift Right `>>`
-* Or `|`
-* And `&`
-* Invert `~`
-* Exclusive Or `^`
+- Shift Left `<<`
+- Shift Right `>>`
+- Or `|`
+- And `&`
+- Invert `~`
+- Exclusive Or `^`
 
 ### Common Operations
 
@@ -45,33 +45,33 @@ To clear all values, `AND` the value with `0xFFFF`.
 
 A little-endian system, in contrast, stores the least-significant byte at the smallest address.
 
-| Binary (Decimal: 149) |`1`|`0`|`0`|`1`|`0`|`1`|`0`|`1`|
-| :-------------------- |:-:|:-:|:-:|:-:|:-:|:-:|:-:|:-:|
-| Bit weight            |$2^7$|$2^6$|$2^5$|$2^4$|$2^3$|$2^2$|$2^1$|$2^0$|
-| Bit position          |MSB|   |   |   |   |   |   |LSB|
+| Binary (Decimal: 149) |  `1`  |  `0`  |  `0`  |  `1`  |  `0`  |  `1`  |  `0`  |  `1`  |
+| :-------------------- | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: |
+| Bit weight            | $2^7$ | $2^6$ | $2^5$ | $2^4$ | $2^3$ | $2^2$ | $2^1$ | $2^0$ |
+| Bit position          |  MSB  |       |       |       |       |       |       |  LSB  |
 
 In the case of the value `0x12345678`, the **least significant byte** of this value `0x78` is stored in the lowest little Endian address, and subsequent bytes are stored in the next locations. The least significant byte can be considered the byte with the lowest value, when evaluated in typical bitwise fashion: `0x78563412`
 
-* `0x78` `(0x004000)`
-* `0x56` `(0x004001)`
-* `0x34` `(0x004002)`
-* `0x12` `(0x004003)`
+- `0x78` `(0x004000)`
+- `0x56` `(0x004001)`
+- `0x34` `(0x004002)`
+- `0x12` `(0x004003)`
 
 #### Big Endian to Little Endian
 
 In a Big Endian representation of `0x12345678`, the **most significant byte** (`0x12`) is stored at the lowest memory address: `0x12345678`
 
-* `0x12` `(0x004000)`
-* `0x34` `(0x004001)`
-* `0x56` `(0x004002)`
-* `0x78` `(0x004003)`
+- `0x12` `(0x004000)`
+- `0x34` `(0x004001)`
+- `0x56` `(0x004002)`
+- `0x78` `(0x004003)`
 
 To reverse these positions, the bytes can be isolated and bit-shifted by the appropriate number of bits to form the appropriate order.
 
-* `(0x12345678 & 0x000000FF) << 24`
-* `(0x12345678 & 0x0000FF00) << 16`
-* `(0x12345678 & 0x00FF0000) << 8`
-* `(0x12345678 & 0xFF000000) >> 24`
+- `(0x12345678 & 0x000000FF) << 24`
+- `(0x12345678 & 0x0000FF00) << 16`
+- `(0x12345678 & 0x00FF0000) << 8`
+- `(0x12345678 & 0xFF000000) >> 24`
 
 ## Array
 
@@ -132,13 +132,13 @@ Each node in the linked list consists of its data, and a pointer to the next obj
 ### Deleting
 
 <figure>
-  <img src="/assets/img/study-guides/data-structures/circularlinkedlist.png" alt="circularlinkedlist" />
+  <img src="/assets/img/study-guides/data-structures/circularlinkedlist.jpg" alt="circularlinkedlist" />
 </figure>
 
 ## Doubly Linked List
 
 <figure>
-  <img src="/assets/img/study-guides/data-structures/doublylinkedlist.png" alt="doublylinkedlist" />
+  <img src="/assets/img/study-guides/data-structures/doublylinkedlist.jpg" alt="doublylinkedlist" />
 </figure>
 
 ### Inserting
@@ -151,15 +151,15 @@ Each node in the linked list consists of its data, and a pointer to the next obj
   <img src="/assets/img/study-guides/data-structures/binarytree.png" alt="binarytree" />
 </figure>
 
-A Binary Tree is any tree organized in which each node, or **root** has at most two children, or **leaves**, hence *binary*, designated left and right.
+A Binary Tree is any tree organized in which each node, or **root** has at most two children, or **leaves**, hence _binary_, designated left and right.
 
 ### Depth First Traversal
 
-**Depth First Traversal** traverses the tree to its extents before backtracking and completing the traversal. It will explore until it reaches nodes with no children before moving to the nearest neighbor. The order of traversal can be categorized into **Pre-Order**, **In-Order** and **Post-Order** which determine which order the nodes (*Left*, *right*,*center*) are visited.
+**Depth First Traversal** traverses the tree to its extents before backtracking and completing the traversal. It will explore until it reaches nodes with no children before moving to the nearest neighbor. The order of traversal can be categorized into **Pre-Order**, **In-Order** and **Post-Order** which determine which order the nodes (_Left_, _right_,_center_) are visited.
 
 #### Pre-Order Traversal
 
-``` c
+```c
 void pre_order(struct Node* n) {
     // print n->value
 
@@ -173,7 +173,7 @@ void pre_order(struct Node* n) {
 
 #### In-Order Traversal
 
-``` c
+```c
 void in_order(struct Node* n) {
     if (n->left)
         pre_order(n->left);
@@ -187,7 +187,7 @@ void in_order(struct Node* n) {
 
 #### Post-Order Traversal
 
-``` c
+```c
 void post_order(struct Node* n) {
     if (n->left)
         pre_order(n->left);
@@ -203,7 +203,7 @@ void post_order(struct Node* n) {
 
 Breadth first traversal traverses a tree by visiting all nodes at a given height, before descending the depth of the tree.
 
-``` python
+```python
 def bfs(self):
     queue = Queue()
     queue.put(self)
@@ -228,14 +228,14 @@ def bfs(self):
 ## Binary Search Tree
 
 <figure>
-  <img src="/assets/img/study-guides/data-structures/binarysearchtree.png" alt="binarysearchtree" />
+  <img src="/assets/img/study-guides/data-structures/binarysearchtree.jpg" alt="binarysearchtree" />
 </figure>
 
 A Binary Search Tree is one in which the value of the node stored on the left is less than the value of root, and the value of the node on the right is greater than the value of the root. By organizing a tree in this way, values can easily be found using a similar method as binary search which eliminates half of the remaining possibilities at each step.
 
 ### Searching
 
-``` c
+```c
 bool contains(Node* curr, int value) {
     if (curr->data == value) { return true; }
     else if (value < curr->value) {
@@ -254,7 +254,7 @@ bool contains(Node* curr, int value) {
 
 To maintain the structure rules of the Binary Search Tree after insertion, the leaves of each node must be evaluated and the next route determined until a non-null spot that meets the criteria is determined. If the the current value of the node is greater than the value to be inserted, it will attempt to insert on the left if the left is currently null. If the left is not null, it will recursively evaluate the left node in the same way.
 
-``` c
+```c
 void insert(Node* new, Node* curr, int value) {
     if (value <= curr->value) {
         if (curr->left == NULL) {
@@ -284,7 +284,7 @@ void insert(Node* new, Node* curr, int value) {
 
 A struct can be created which tracks the index of the top, and holds the allocated array. When popping a value, the array index should be wiped with `null` value and top decremented. If the top index is out of range, it should throw an error to indicate a stack underflow.
 
-``` c
+```c
 /*
 * Stack implementation using array in C
 */
@@ -304,7 +304,7 @@ void push(stack* s, int val)
 
 // Function to pop element from top of stack
 int pop(stack* s)
-{    
+{
     if (top < 0) return -1;
     return s->arr[s->top--];
 }
@@ -314,7 +314,7 @@ int pop(stack* s)
 
 When the size of the array is not known and allocating a static array of its capacity may be wasteful, Linked Lists can be used to connect the items on the stack. When popping an object, the node pointer should be stored in a temporary pointer, then free'd once the new top is the old node's next pointer.
 
-``` c
+```c
 /*
 * Stack implementation using linked list in C
 */
@@ -336,7 +336,7 @@ void push(int element)
     newNode->data = element;
 
     // Next element after new node should be current top element
-    newNode->next = top;        
+    newNode->next = top;
 
     // Make sure new node is always at top
     top = newNode;
@@ -344,7 +344,7 @@ void push(int element)
 
 // Function to pop element from top of stack.
 int pop()
-{    
+{
     // Check stack underflow
     if (!top)
     {
@@ -353,9 +353,9 @@ int pop()
     }
     // Hold pointer to node to be removed
     stack* old = top;
-    
+
     int data = 0;
- 
+
     // Copy data from stack's top element
     data = old->data;
 
@@ -369,16 +369,18 @@ int pop()
 ```
 
 ## Queue
-A queue data structure is useful in many scenarios where you need to process elements in a first-in, first-out (FIFO) order. 
+
+A queue data structure is useful in many scenarios where you need to process elements in a first-in, first-out (FIFO) order.
 
 Queues are particularly useful when:
+
 - You need to maintain order of arrival for processing.
 - You want to decouple different parts of a system for asynchronous processing.
 - You need to buffer or manage flow of data between different processes or systems.
 
 By using queues in these scenarios, you can efficiently manage data flow, improve system responsiveness, and ensure fair processing of tasks or data in the order they arrive.
 
-``` c
+```c
 /*
 *  Queue implementation using linked list in C
 */
@@ -404,7 +406,7 @@ bool queue_is_empty(struct Queue* queue) {
 // Function to enqueue (add an element to the rear of the queue)
 void queue_enqueue(struct Queue* queue, int data) {
     struct Node* newNode = malloc(sizeof(struct Node));
-    
+
     if (queue_is_empty(queue)) {
         queue->front = queue->rear = newNode;
     } else {
@@ -418,17 +420,17 @@ int queue_dequeue(struct Queue* queue) {
     if (queue_is_empty(queue)) {
         return -1; // Or any other value to indicate an error
     }
-    
+
     struct Node* temp = queue->front;
     int data = temp->data;
-    
+
     queue->front = queue->front->next;
-    
+
     // If front becomes NULL, set rear also as NULL
     if (!queue->front) {
         queue->rear = NULL;
     }
-    
+
     free(temp);
     return data;
 }
@@ -450,7 +452,7 @@ void queue_destroy(struct Queue* queue) {
 }
 ```
 
-``` c
+```c
 /*
 *  Queue implementation using array in C
 */
@@ -527,7 +529,6 @@ void display(Queue *q) {
 
 ```
 
-
 ## Heap
 
 <figure>
@@ -541,7 +542,7 @@ void display(Queue *q) {
 ## Hashes
 
 <figure>
-  <img src="/assets/img/study-guides/data-structures/hash.jpeg" alt="hash" />
+  <img src="/assets/img/study-guides/data-structures/hash.jpg" alt="hash" />
 </figure>
 
 A hash map combines features of a static array and a linked list, without being bound by issues such as inserting new values in a size-defined array, or searching for values in a linked list. A hash map has a preallocated buffer, and uses the value of the data to be inserted to generate a key, or index by hashing it. If a hash is properly defined, there will be no hash collisions, and data with an indentical value will be stored in the identical spot in the hash map. This way, a value need only be calculated once, then stored in the hash map. Insted of generating the value again by calculation, the value can be retrieved from the hash map by visiting the pre-determined index.
@@ -550,7 +551,7 @@ The **Hash Set** is a hash map which stores no repeated values.
 
 ### Code
 
-``` c
+```c
 int hash(int key) {
     int r = key % SIZE;
     return r < 0 ? r + SIZE : r;
@@ -578,8 +579,8 @@ int search(int *keys, int *values, int key) {
     return 0;
 }
 
-// The requested value is checked for, in each step of the loop 
-// then the hash map is populated with the value if it doesn't 
+// The requested value is checked for, in each step of the loop
+// then the hash map is populated with the value if it doesn't
 // already exist. This means the check will take O(n)
 
 int* main(int* nums, int numsSize, int target) {
@@ -604,10 +605,10 @@ int* main(int* nums, int numsSize, int target) {
 
 #### Simple Hash Function for Strings
 
-``` c
+```c
 int hash_function(char* key) {
-    int hash = toupper(key[0]) - 'A'; 
-    // Subtracting 'A' sets the index of alpha characters 
+    int hash = toupper(key[0]) - 'A';
+    // Subtracting 'A' sets the index of alpha characters
     // starting with 0 for 'A'. 'A' is 0, 'B' is 1, etc.
     return hash % SIZE; // Constrain to the array size
 }
