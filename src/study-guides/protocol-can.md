@@ -24,6 +24,8 @@ tags:
     - [CAN XL](#can-xl)
     <!--toc:end-->
 
+Originally created as a way to multiplex communication wires in vehicles, CAN
+is a multi-master serial bus standard that broadcasts messages across systems
 and handles prioritizes messages through arbitration in case of multiple
 messages.
 

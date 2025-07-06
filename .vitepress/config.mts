@@ -63,6 +63,14 @@ const guides = {
 				{ text: "Make", link: "study-guides/make" },
 			],
 		},
+		{
+			text: "Communication Protocols",
+			collapsible: true,
+			items: [
+				{ text: "CAN", link: "study-guides/protocol-can.md" },
+				{ text: "CAN-ISOTP", link: "study-guides/protocol-can-isotp.md" },
+			],
+		},
 	],
 };
 

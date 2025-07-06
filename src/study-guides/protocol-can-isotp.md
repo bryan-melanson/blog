@@ -29,8 +29,6 @@ tags:
       - [Example Use Case Code](#example-use-case-code)
       <!--toc:end-->
 
-CAN Protocol](protocol-can.md)
-
 Allows for more than 8 bytes of data to be sent over a CAN bus.
 Breaks the message into multiple frames with added metadata (CAN-TP Header).
 
@@ -262,7 +260,11 @@ sequenceDiagram
   Sender->>Receiver: IsoTP_Send_Frame(CF Block 6)
   Note right of Receiver: Expected number of blocks received
   deactivate Receiver
+<<<<<<< HEAD
   Sender->>Sender: IsoTP_Tx_Complete_Cb(
+=======
+  Sender->>Sender: IsoTP_Tx_Complete_Cb()
+>>>>>>> 0de7bf6 (Add study)
 ```
 
 ##### Example Use Case Code
@@ -297,3 +299,45 @@ sequenceDiagram
       isotp_send_frame();
     }
 ```
+
+# <<<<<<< HEAD
+
+##### Send-Receive Diagram
+
+```mermaid
+sequenceDiagram
+  Sender->>Sender: IsoTP_Init
+  Note left of Sender: ISOTP_TX_STATUS_IDLE
+  Receiver->>Receiver: IsoTP_Init
+  Note right of Receiver: ISOTP_RX_STATUS_IDLE
+  Note left of Sender: Payload < 7, Sending SF
+  Sender->>Receiver: IsoTP_Send()
+  Note left of Sender: ISOTP_TX_STATUS_SENDING_SF
+  Sender->>Receiver: IsoTP_Send_Frame(SF)
+  Note left of Sender: ISOTP_TX_STATUS_IDLE
+  Receiver->>Receiver: IsoTP_Receive_Frame(SF)
+  Note right of Receiver: ISOTP_RX_STATUS_IDLE
+  Note left of Sender: Payload > 7, Sending FF
+  Sender->>Receiver: IsoTP_Send()
+  Note left of Sender: ISOTP_TX_STATUS_SENDING_CF
+  Sender->>Receiver: IsoTP_Send_Frame(FF)
+  Note left of Sender: ISOTP_TX_WAITING_FOR_FC
+  Receiver->>Receiver: IsoTP_Receive_Frame(FF)
+  Note right of Receiver: ISOTP_RX_SENDING_FC
+  Receiver->>Sender: IsoTP_Send_Frame(FC)
+  Note right of Receiver: ISOTP_RX_RECEIVING_CF
+  Sender->>Receiver: IsoTP_Send_Frame(CF)
+  Note left of Sender: ISOTP_TX_SENDING_CF
+  Receiver->>Receiver: IsoTP_Receive_Frame(CF)
+  Sender->>Receiver: IsoTP_Send_Frame(CF)
+  Sender->>Receiver: IsoTP_Send_Frame(CF)
+  Sender->>Receiver: IsoTP_Send_Frame(CF)
+  Note left of Sender: ISOTP_TX_WAITING_FOR_FC
+  Receiver->>Receiver: IsoTP_Receive_Frame(CF)
+  Note right of Receiver: ISOTP_RX_SENDING_FC
+  Receiver->>Sender: IsoTP_Send_Frame(FC)
+  Note right of Receiver: ISOTP_RX_IDLE
+  Note left of Sender: ISOTP_TX_IDLE
+```
+
+> > > > > > > 0de7bf6 (Add study)
