@@ -19,7 +19,7 @@ Ideally, I would be able to design something digitally on a tablet, and transfer
 
 A flat representation of the shape could be done by wrapping the doll in strips of paper, cutting them to match the outline required to cover the circumference of the doll, then collect the strips into a single shape. This would be a decent, not wholly accurate, representation of the object, but because this is a technique I'd like to be able to reproduce for other projects, I aimed to instead render the dolls as a 3D object in a CAD program, and flatten it digitally using what's called [UV Mapping](https://en.wikipedia.org/wiki/UV_mapping).
 
-### 3D Design
+## 3D Design
 
 Because the doll is an object which is symmetrical around its center axis, the design was an easy one to replicate. I took a flat image of the profile of the doll, and imported it into Autodesk Fusion 360 as a guide for tracing its contours.
 
@@ -45,11 +45,11 @@ By marking the vertical center line of the doll and tracing one half of its prof
   <figcaption>Creating a solid shape by revolving around the center line</figcaption>
 </figure>
 
-#### Other Options
+### Other Options
 
 For irregular shapes that would be harder to render in CAD, some apps are available for capturing a 3D representation of an object using photos like [Scanniverse](https://scaniverse.com/). These may require a bit more post-processing before they can be used, but look promising for complex shapes.
 
-### 3D to 2D
+## 3D to 2D
 
 After a complete 3D mesh is captured and exported as a 3D filetype (I used .obj), it can be imported into [Blender](https://www.blender.org/). Blender has built-in tools for applying textures to 3D shapes that first render the shape as a UV Map, and it's free, so this was ideal. I had never used Blender before, so this was still hell.
 
