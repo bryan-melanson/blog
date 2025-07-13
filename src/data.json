@@ -1,5 +1,11 @@
 [
 	{
+		"Updated": "2025-07-13",
+		"title": "Creating a 2D Wrap from a 3D Object",
+		"path": "articles/matryoshka-uv-map.html",
+		"excerpt": "UV Mapping a Matryoshka Doll"
+	},
+	{
 		"Updated": "2025-06-25",
 		"title": "Microcorruption Pt. 1 - New Orleans",
 		"path": "articles/microcorruption-01-neworleans.html",
