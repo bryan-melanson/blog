@@ -71,3 +71,9 @@ Because the final UV map was a little janky, I processed it in [GIMP](https://ww
   <img src="/assets/img/matryoshka/matryoshka-template.png" />
   <figcaption>Final template</figcaption>
 </figure>
+
+## Next Steps
+
+- Find a reliable way to print these to exact height of the dolls
+- Settle on a design (All different, or all the same design?)
+- Learn how to paint and seal these things
