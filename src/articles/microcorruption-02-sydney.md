@@ -8,6 +8,8 @@ tags:
 
 # Microcorruption (Sydney)
 
+Code is [here](https://microcorruption.com/debugger/Sydney)
+
 ## `main`
 
 ```assembly
