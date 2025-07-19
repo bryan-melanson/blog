@@ -17,7 +17,7 @@ tags:
 ; if r15 is not zero, success
 ```
 
-### `get_password`
+## `get_password`
 
 ```assembly
 ; load r14 = 0x64 (max input length)
@@ -25,7 +25,7 @@ tags:
 ; returns SP buffer
 ```
 
-#### `getsn`
+## `getsn`
 
 ```assembly
 ; pushes r14 to stack (size value)
@@ -38,7 +38,7 @@ tags:
 ; add is the same as pop 3 times, without returning a value
 ```
 
-### `check_password`
+## `check_password`
 
 ```assembly
 ; compare byte 1 of sp to 0x577b
