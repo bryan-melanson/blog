@@ -13,7 +13,7 @@ tags:
 ## Microcorruption (Hanoi)
 
 - There is no default password on the LockIT Pro HSM-1. Upon receiving the LockIT Pro, a new password must be set by first connecting the LockitPRO HSM to output port two, connecting it to the LockIT Pro App, and entering a new password when prompted, and then restarting the LockIT Pro using the red button on the back.
-- LockIT Pro Hardware Security Module 1 stores the login password, ensuring users can not access the password through other means. The LockIT Pro can send the LockIT Pro HSM-1 a password, and the HSM will return if the password is correct by setting a flag in memory.
+- LockIT Pro Hardware Security Module 1 stores the login password, ensuring users can not access the password through other means. The LockIT Pro can send the LockIT Pro HSM-1 a password, and _the HSM will return if the password is correct by setting a flag in memory_.
 
 ## `<main>`
 
