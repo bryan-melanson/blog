@@ -6,9 +6,13 @@ tags:
   - sydney
 ---
 
-# Microcorruption (Sydney)
+# Microcorruption
 
-Code is [here](https://microcorruption.com/debugger/Sydney)
+[Microcorruption](https://www.microcorruption.com) CTF is a capture the flag (CTF) competition designed to teach low-level reverse engineering by pitting the user against a lock mechanism running on a simulated MSP430 controller. The user exploits MSP430 assembly to gain access to the device and unlock the door.
+
+## Microcorruption (Sydney)
+
+- This is Software Revision 02. We have received reports that the prior version of the lock was bypassable without knowing the password. We have fixed this and removed the password from memory.
 
 ## `main`
 
