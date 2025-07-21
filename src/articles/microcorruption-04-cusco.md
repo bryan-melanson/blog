@@ -16,8 +16,6 @@ tags:
   lock by removing a conditional flag that could accidentally get
   set by passwords that were too long.
 
-Testing this to see if the same flaw seen in Hanoi:
-
 ## `<main>`
 
 ```assembly
