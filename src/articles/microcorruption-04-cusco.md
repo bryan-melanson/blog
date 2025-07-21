@@ -36,7 +36,7 @@ call #0x4446 <unlock_door>
 
 We're told only 8-16 character passwords are allowed, but the password is stored starting at 0x43F0, and stores up to 0x4420.
 
-We can overflow up to 0x441A, so we will look for anything referencing addresses in the range of 0x43EE-0x441A.
+We can overflow up to 0x4420, so we will look for anything referencing addresses in the range of 0x43EE-0x4420.
 
 When `<login>` is called, it stores its position 0x43FE in `sp`, and returns to it at the end of the function. Knowing `<unlock_door>` is at 0x4446, we can overflow the input buffer until 0x43FE contains the address we want to jump to.
 
