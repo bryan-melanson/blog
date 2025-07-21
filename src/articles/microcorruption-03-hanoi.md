@@ -1,9 +1,11 @@
----
+--
 id: study-microcorruption-hanoi
 aliases: []
 tags:
-  - microcorruption
-  - hanoi
+
+- microcorruption
+- hanoi
+
 ---
 
 # Microcorruption
@@ -25,13 +27,21 @@ clr   r15
 ## `<login>`
 
 ```assembly
-; Enter the password, stored at &0x2400
-; Store 0x1C in R15 (&0x2410)
-call <test_password_valid>
-; Test if &0x2410 is 0x1C
-; If yes, jump to <unlock_door>
+...                           ; Enter the password
+mov    #0x2400, r15           ; Store address 0x2400 in R15
+mov    #0x1C, r14             ; Store 0x1C in R14
+call   <test_password_valid>
+cmp.b  #0x1C, &0x2410         ; Test if &0x2410 is 0x1C
+jnz    $+0x10                 ; If no, jump to the fail condition
+call   #0x4448                ; else jump to <unlock_door>
+```
+
 ```
 
 ## Solution
 
+There doesn't seem to be any functioning check for password length. It specified 8-16 characters, but doesn't catch either case.
+
 Write any hex value password with the 0x10 byte == 0x1C: `0x000102030405060708090A0B0C0D0E0F1C`
+
+```
