@@ -273,6 +273,19 @@ Actions that are about to happen.
 
 > "Je vais manger"
 
+#### Futur Proche Rules
+
+present tense of aller + infinitive
+
+|  Subject   | Aller (present) |
+| :--------: | :-------------: |
+|     je     |      vais       |
+|     tu     |       vas       |
+| il/elle/on |       va        |
+|    nous    |     allons      |
+|    vous    |      allez      |
+| ils/elles  |      vont       |
+
 ### Futur Simple
 
 Actions that are far in the future.
@@ -281,6 +294,19 @@ Actions that are far in the future.
 
 > "Je mangerai"
 
+#### Futur Simple Rules
+
+Infinitive of the verb (or irregular stem) + future endings
+
+|  Subject  | Ending |
+| :-------: | :----: |
+|    je     |  -ai   |
+|    tu     |  -as   |
+|  il/elle  |   -a   |
+|   nous    |  -ons  |
+|   vous    |  -ez   |
+| ils/elles |  -ont  |
+
 ### Futur Antérieur
 
 Actions that will happen by a certain time in the future.
@@ -288,3 +314,31 @@ Actions that will happen by a certain time in the future.
 > "I will have eaten"
 
 > "J'aurai mangé"
+
+Future Antériur is a compound type, similar to passé composée, and follows the same rules except it uses the futur simple form of avoir or être.
+
+#### Futur Antérieur Rules
+
+Futur simple of avoir or être + past participle of the main verb
+
+##### Avoir (Futur simple)
+
+|  Subject  | Futur of avoir |
+| :-------: | :------------: |
+|    je     |     aurai      |
+|    tu     |     auras      |
+|  il/elle  |      aura      |
+|   nous    |     aurons     |
+|   vous    |     aurez      |
+| ils/elles |     auront     |
+
+##### Être (Futur simple)
+
+|  Subject  | Futur of être |
+| :-------: | :-----------: |
+|    je     |     serai     |
+|    tu     |     seras     |
+|  il/elle  |     sera      |
+|   nous    |    serons     |
+|   vous    |     serez     |
+| ils/elles |    seront     |
