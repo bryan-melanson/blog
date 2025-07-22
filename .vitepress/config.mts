@@ -1,8 +1,8 @@
 import { defineConfig } from "vitepress";
 import mathjax3 from "markdown-it-mathjax3";
 import { withMermaid } from "vitepress-plugin-mermaid";
-import markdownItAttrs from 'markdown-it-attrs'
-import markdownItContainer from 'markdown-it-container'
+import markdownItAttrs from "markdown-it-attrs";
+import markdownItContainer from "markdown-it-container";
 
 const customElements = ["mjx-container"];
 
@@ -61,7 +61,7 @@ const guides = {
 			],
 		},
 		{
-			text: "Languages",
+			text: "Programming Languages",
 			collapsible: true,
 			items: [
 				{ text: "Lua", link: "/study-guides/lua" },
@@ -94,6 +94,11 @@ const guides = {
 				{ text: "OneWire", link: "/study-guides/protocol-onewire" },
 			],
 		},
+		{
+			text: "Languages",
+			collapsible: true,
+			items: [{ text: "French", link: "/study-guides/languages-french" }],
+		},
 	],
 };
 
@@ -111,7 +116,7 @@ export default withMermaid(
 			config: (md) => {
 				md.use(mathjax3);
 				md.use(markdownItAttrs);
-				md.use(markdownItContainer, 'div');
+				md.use(markdownItContainer, "div");
 			},
 		},
 
