@@ -89,7 +89,7 @@ xor.b  0x247c(r13), 0x0(r15)  ; XOR of lower byte of 0x247C + R13 and R15 (0x240
 inc    r15                    ; Increase R15
 ```
 
-Remember in `<main>` where it calls 0x2400? This function runs through the bytes starting at 0x2400 and ungarbles them. After `<enc>` runs it will be readable by assembly so that `<main>` can call it. This means we can use the Microcorruption disassembler to make this section readable after `<enc> runs. Download the .bin and open it in something like VS Code's Hex Inspector to make it easier to copy it as Hex.
+Remember in `<main>` where it calls 0x2400? This function runs through the bytes starting at 0x2400 and ungarbles them. After `<enc>` runs it will be readable by assembly so that `<main>` can call it. This means we can use the Microcorruption disassembler to make this section readable after `<enc>` runs. Download the .bin and open it in something like VS Code's Hex Inspector to make it easier to copy it as Hex.
 
 ## Disassembly of `0x2400`
 
