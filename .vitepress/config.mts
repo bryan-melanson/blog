@@ -54,6 +54,11 @@ const guides = {
 			],
 		},
 		{
+			text: "Languages",
+			collapsible: true,
+			items: [{ text: "French", link: "/study-guides/language-french" }],
+		},
+		{
 			text: "Programming",
 			collapsible: true,
 			items: [
