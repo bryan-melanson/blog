@@ -94,11 +94,6 @@ const guides = {
 				{ text: "OneWire", link: "/study-guides/protocol-onewire" },
 			],
 		},
-		{
-			text: "Languages",
-			collapsible: true,
-			items: [{ text: "French", link: "/study-guides/languages-french" }],
-		},
 	],
 };
 
