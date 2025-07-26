@@ -8,7 +8,10 @@ tags:
 
 # Microcorruption
 
-[Microcorruption](https://www.microcorruption.com) CTF is a capture the flag (CTF) competition designed to teach low-level reverse engineering by pitting the user against a lock mechanism running on a simulated MSP430 controller. The user exploits MSP430 assembly to gain access to the device and unlock the door.
+[Microcorruption](https://www.microcorruption.com) CTF is a capture the flag (CTF) competition designed to teach
+low-level reverse engineering by pitting the user against a lock mechanism
+running on a simulated MSP430 controller. The user exploits MSP430 assembly to gain
+access to the device and unlock the door.
 
 ## Microcorruption (Whitehorse)
 
@@ -18,11 +21,14 @@ tags:
 
 ## Long Passwords
 
-Password prompts you to enter between 8 and 16 characters, but you are able overflow the buffer from 0x3864-0x3894.
+Password prompts you to enter between 8 and 16 characters, but you are able to
+overflow the buffer from 0x3864-0x3894.
 
-Let's use an input that's easy for indexing byte locations: `0102030405060708090A0B0C0D0E0F101112131415161718191A1B1C1D1E1F`
+Let's use an input that's easy for indexing byte locations:
+`0102030405060708090A0B0C0D0E0F101112131415161718191A1B1C1D1E1F`
 
-This causes an `insn address unaligned` error, so we'll want to find where a returned value is getting overwritten to an unexpected address.
+This causes an `insn address unaligned` error, so we'll want to find where a
+returned value is getting overwritten to an unexpected address.
 
 ## `<main>`
 
@@ -48,7 +54,10 @@ After success or failure, this returns to `<main>` and stops execution.
 
 Handling of the unlock must be in `<conditional_unlock_door>`.
 
-The return here is where the operation goes to an invalid address, and stepping over the return here shows the program counter goes to address `0x1211` after this function. This shows us that bytes 17 and 18 are overwriting its return address.
+The return here is where the operation goes to an invalid address, and stepping
+over the return here shows the program counter goes to address `0x1211` after
+this function. This shows us that bytes 17 and 18 are overwriting its return
+address.
 
 ## `<conditional_unlock_door>`
 
@@ -71,13 +80,18 @@ pop   r4              ; Stores value at SP in R4 and increments SP + 2
 ret                   ; Returns to value stored at SP (0x3864)
 ```
 
-The `<INT>` function is obfuscated from the user, and handles the password checking and unlock.
+The `<INT>` function is obfuscated from the user, and handles the password
+checking and unlock.
 
-Nothing jumps out here, but the return address of `<login>` can be used to return something else...
+Nothing jumps out here, but the return address of `<login>` can be used
+to return something else...
 
 ## Stack Overflow Attack
 
-This is the first time in these exercises where we've needed to inject our own code to manipulate the lock. Referring to [the Microcorruption manual](https://microcorruption.com/public/manual.pdf) shows that there are a few arguments similar to the `0x7E` used by `<conditional_unlock_door>` for operation of the lock:
+This is the first time in these exercises where we've needed to inject our
+own code to manipulate the lock. Referring to [the Microcorruption manual](https://microcorruption.com/public/manual.pdf)
+shows that there are a few arguments similar to the `0x7E` used by
+`<conditional_unlock_door>` for operation of the lock:
 
 > INT 0x7F - Interface with deadbolt to trigger an unlock (Takes no arguments)
 
@@ -90,15 +104,22 @@ call  #0x4532 ; <INT>
 
 ## Assembling Shellcode
 
-We can use the [Microcorruption (Dis)Assembler](https://microcorruption.com/assembler) to generate hex machine code from this code: `30127f00b0123245`
+We can use the [Microcorruption (Dis)Assembler](https://microcorruption.com/assembler) to generate hex machine code from this code:
+`30127f00b0123245`
 
-_Note_: If trying to generate [Machine Code](https://en.wikipedia.org/wiki/Machine_code) in the wild, you'll need to match the target tool change, assemble an object file from your code and dump it to hex using `objcopy`.
+_Note_: If trying to generate [Machine Code](https://en.wikipedia.org/wiki/Machine_code) in the wild, you'll need to match the
+target tool change, assemble an object file from your code and dump it to
+hex using `objcopy`.
 
 ## Inserting Shellcode
 
-Combining what we know from examining the password locations, our password buffer starts at address `0x3864`, and following the `<login>` function call, we can force it jump to any address by writing those bytes to the 17-18th bytes in our password.
+Combining what we know from examining the password locations, our password
+buffer starts at address `0x3864`, and following the `<login>` function call,
+we can force it jump to any address by writing those bytes to the
+17-18th bytes in our password.
 
-By creating a password that consists of shellcode, filler and the address of the shellcode at bytes 17 and 18, we can execute the shellcode.
+By creating a password that consists of shellcode, filler and the address
+of the shellcode at bytes 17 and 18, we can execute the shellcode.
 
 ## Solution
 
