@@ -86,9 +86,10 @@ But the disassembled form of this code has a `0x00` byte that causes the input
 buffer to cut off: `30127f00b0123245`
 
 The `<INT>` function uses the current value pushed to the SP as its arg, so to
-get around the `0x00` byte that `#0x7F` or `#0x007F` as the 16-bit architecture
-interprets it, we have to use 16-bit immediate values as our inputs to generate
-the `0x7F` byte. We'll use R6, which is unused, to calculate the value.
+get around the `0x00` byte in `#0x007F` that the 16-bit architecture
+interprets `0x7F` as, we have to use 16-bit immediate values without `0x00` bytes
+as our inputs to generate the `0x7F` byte. We'll use R6, which is unused,
+to calculate the value.
 
 ```assembly
 clr     r6              ; R6 = 0x0000

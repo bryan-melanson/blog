@@ -22,7 +22,7 @@ access to the device and unlock the door.
 ## Long Passwords
 
 Password prompts you to enter between 8 and 16 characters, but you are able to
-overflow the buffer from 0x3864-0x3894.
+overflow the buffer from `0x3864` to `0x3894`.
 
 Let's use an input that's easy for indexing byte locations:
 `0102030405060708090A0B0C0D0E0F101112131415161718191A1B1C1D1E1F`
