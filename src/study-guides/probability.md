@@ -462,9 +462,11 @@ The standard form of the PDF, centered at $0$ with a $\sigma ^2$ $=1$ can be use
 $\Phi(x) = \frac{1}{\sqrt{2\pi}} \int_{\infty}^{x}e^{-x^2/2}$
 
 <p class="figcaption">The Standard Gaussian Function</p>
-::: div {.math-figure}
+:::
 
+::: div {.math-figure}
 $F_X(x) = \text{Pr}[X \leq x] = \Phi (\frac{x - \mu}{\sigma})$
+:::
 
 And as with any other CDF, $\text{Pr}[a < x \leq b] = F_X(b) - F_x(a)$
 
