@@ -3,10 +3,10 @@
   "basics": {
     "name": "Bryan Melanson",
     "label": "Embedded Developer",
-    "email": "bryan@bryanmelanson.com",
-    "website": "https://bryanmelanson.com",
-    "summary": "B.Eng in Computer Engineering from Memorial Univeristy of Newfoundland with a strong background in embedded development and a unique skill set in the creative arts. Practical experience in robotics, data science and safety-critical firmware development including Mission Control design of Killick-1 GNSS CubeSat, Pulsed Field Ablation devices for treatment of atrial fibrilation as well as the Mysa Smart Baseboard Thermostat, Smart Infloor Thermostat and Smart Air Conditioner. Skills include RTOS, NFC, C/C++, GDB, Assembly, React, Rust, Python and Bluetooth.\n",
-    "picture": "https://avatars.githubusercontent.com/u/46350945?v=4",
+    "email": "bryan.melanson@gmail.com",
+    "url": "https://bryanmelanson.com",
+    "summary": "B.Eng in Computer Engineering from Memorial Univeristy of Newfoundland with a strong background in embedded development. Practical experience in safety-critical firmware development including Mission Control design of Killick-1 GNSS CubeSat, Pulsed Field Ablation devices for treatment of atrial fibrilation as well as the Mysa Smart Baseboard Thermostat, Smart Infloor Thermostat and Smart Air Conditioner. Skills include RTOS, NFC, C/C++, GDB, Assembly, React, Rust, Python and Bluetooth.\n",
+    "image": "https://avatars.githubusercontent.com/u/46350945?v=4",
     "location": {
       "city": "Montreal",
       "countryCode": "CA",
@@ -27,14 +27,15 @@
   },
   "work": [
     {
-      "company": "Boston Scientific",
+      "name": "Boston Scientifc",
       "position": "Embedded Developer",
-      "website": "https://bostonscientific.com",
+      "url": "https://bostonscientific.com",
       "startDate": "2023-11-06",
       "summary": "Boston Scientific is dedicated to transforming lives through innovative medical solutions that improve the health of patients around the world.",
       "highlights": [
-        "Designing, developing, and testing embedded software for Class IV medical devices including next-generation EP ablation systems, contributing to system architecture, requirements definition, and full lifecycle documentation in a regulated environment",
-        "Developing automated test scripts and tooling in Python to support verification, prototype evaluation, and continuous improvement of embedded software test coverage. Implementing firmware in C for microcontrollers, employing event-driven and state-machine architectures to ensure reliable real-time system performance.",
+        "Designing, developing, and testing embedded software for Class IV medical devices including next-generation EP ablation systems, contributing to system architecture, requirements definition, and full lifecycle documentation in a regulated environment.",
+        "Developing automated test scripts and tooling in Python to support verification, prototype evaluation, and continuous improvement of embedded software test coverage.",
+        "Implementing firmware in C for microcontrollers, employing event-driven and state-machine architectures to ensure reliable real-time system performance.",
         "Developing verification plans and executing unit, integration, and system-level testing, creating well-structured test protocols and conducting prototype and verification testing to ensure compliance with design requirements.",
         "Executing structured debugging and issue-resolution efforts, applying methodical root-cause analysis and maintaining comprehensive documentation within issue-tracking and configuration-management systems.",
         "Collaborating with cross-functional engineering and program management teams to build, manage, and deliver software development plans aligned with program milestones.",
@@ -42,9 +43,9 @@
       ]
     },
     {
-      "company": "Mysa",
-      "position": "Embedded Developer",
-      "website": "https://getmysa.com",
+      "name": "Mysa",
+      "position": "Software Developer",
+      "url": "https://getmysa.com",
       "startDate": "2019-01-04",
       "endDate": "2023-07-11",
       "summary": "Mysa is the first ever high-voltage thermostat that is truly smart. It is fully featured for the conscientious consumer: smart learning features which amount to approximately 15% savings on energy bills, remote access to control their home’s heating through their smartphone from anywhere in the world, and integration with popular smart home platforms (Amazon Alexa, Google Home, and Apple Homekit)\n",
@@ -59,17 +60,17 @@
       ]
     },
     {
-      "company": "Nokia Inc.",
+      "name": "Nokia Inc.",
       "position": "IP/TAC 2LS Support Engineer (Co-Op)",
-      "website": "https://nokia.com",
+      "url": "https://nokia.com",
       "startDate": "2016-07-01",
       "endDate": "2016-12-01",
       "summary": "Remote Technical Support for 5620 SAM Network Services Platform and associated network elements. Debugging complex product installations on CentOS/Solaris/RHEL systems, resolving complicated network problems using Open Stack, Cloud Stack and VMWare. Scripting at a Unix/Linux level in bash and Python. Interfacing, developing and maintaining strong relationships with regional TEC (Technical Expertise Centers), Solution Teams and Product Business Units.\n"
     },
     {
-      "company": "Nalcor Energy",
+      "name": "Nalcor Energy",
       "position": "Software Developer (Co-Op)",
-      "website": "https://nalcorenergy.com/",
+      "url": "https://nalcorenergy.com/",
       "startDate": "2015-12-01",
       "endDate": "2016-05-01",
       "summary": "Nalcor Energy is a provincial energy corporation which is headquartered in St. John's, Newfoundland and Labrador. A provincial Crown corporation under the Government of Newfoundland and Labrador, Nalcor Energy was created in 2007 to manage the province's energy resources.\n",
@@ -82,6 +83,7 @@
   ],
   "interests": [
     {
+      "name": "Hobbies",
       "keywords": [
         "Woodworking",
         "Weightlifting",
@@ -92,7 +94,7 @@
   ],
   "education": [
     {
-      "website": "https://www.mun.ca",
+      "url": "https://www.mun.ca",
       "institution": "Memorial University of Newfoundland",
       "area": "Computer Engineering",
       "studyType": "Bachelor",
@@ -157,12 +159,12 @@
     {
       "language": "French",
       "fluency": "Intermediate"
-    },
+    }
   ],
   "meta": {
     "canonical": "https://raw.githubusercontent.com/jsonresume/resume-schema/master/resume.json",
     "version": "v1.0.0",
     "lastModified": "2017-12-24T15:53:00",
-    "theme": "spartacus"
+    "theme": "stackoverflow"
   }
 }
