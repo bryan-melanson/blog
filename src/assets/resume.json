@@ -3,9 +3,9 @@
   "basics": {
     "name": "Bryan Melanson",
     "label": "Embedded Developer",
-    "email": "bryan.melanson@gmail.com",
+    "email": "bryan@bryanmelanson.com",
     "url": "https://bryanmelanson.com",
-    "summary": "B.Eng in Computer Engineering from Memorial Univeristy of Newfoundland with a strong background in embedded development. Practical experience in safety-critical firmware development including Mission Control design of Killick-1 GNSS CubeSat, Pulsed Field Ablation devices for treatment of atrial fibrilation as well as the Mysa Smart Baseboard Thermostat, Smart Infloor Thermostat and Smart Air Conditioner. Skills include RTOS, NFC, C/C++, GDB, Assembly, React, Rust, Python and Bluetooth.\n",
+    "summary": "B.Eng in Computer Engineering from Memorial Univeristy of Newfoundland with a strong background in embedded development and a unique skill set in the creative arts. Practical experience in robotics, data science and safety-critical firmware development including Mission Control design of Killick-1 GNSS CubeSat, Pulsed Field Ablation devices for treatment of atrial fibrilation as well as the Mysa Smart Baseboard Thermostat, Smart Infloor Thermostat and Smart Air Conditioner. Skills include RTOS, NFC, C/C++, GDB, Assembly, React, Rust, Python and Bluetooth.\n",
     "image": "https://avatars.githubusercontent.com/u/46350945?v=4",
     "location": {
       "city": "Montreal",
@@ -27,19 +27,15 @@
   },
   "work": [
     {
-      "name": "Boston Scientifc",
+      "name": "Boston Scientific",
       "position": "Embedded Developer",
       "url": "https://bostonscientific.com",
       "startDate": "2023-11-06",
       "summary": "Boston Scientific is dedicated to transforming lives through innovative medical solutions that improve the health of patients around the world.",
       "highlights": [
-        "Designing, developing, and testing embedded software for Class IV medical devices including next-generation EP ablation systems, contributing to system architecture, requirements definition, and full lifecycle documentation in a regulated environment.",
-        "Developing automated test scripts and tooling in Python to support verification, prototype evaluation, and continuous improvement of embedded software test coverage.",
-        "Implementing firmware in C for microcontrollers, employing event-driven and state-machine architectures to ensure reliable real-time system performance.",
-        "Developing verification plans and executing unit, integration, and system-level testing, creating well-structured test protocols and conducting prototype and verification testing to ensure compliance with design requirements.",
-        "Executing structured debugging and issue-resolution efforts, applying methodical root-cause analysis and maintaining comprehensive documentation within issue-tracking and configuration-management systems.",
-        "Collaborating with cross-functional engineering and program management teams to build, manage, and deliver software development plans aligned with program milestones.",
-        "Applying relevant medical device development standards (IEC 62304, IEC 60601, ISO 13485) and contributing to risk-management and software design-control documentation throughout the product lifecycle."
+        "Designing, developing and testing firmware for Class IV medical devices.",
+        "Developing a bootloader system for managing MCU and FPGA updates across multiple devices with cryptographic verification",
+        "Spearheaded the automation testing initiatives for the software development lifecycle, employing Jenkins as the primary automation server and integrated automated test suites into the Jenkins continuous integration (CvI) pipeline."
       ]
     },
     {
@@ -60,20 +56,6 @@
       ]
     },
     {
-      "name": "Nokia Inc.",
-      "position": "IP/TAC 2LS Support Engineer (Co-Op)",
-      "url": "https://nokia.com",
-      "startDate": "2016-07-01",
-      "endDate": "2016-12-01",
-      "summary": "Nokia Corporation is a Finnish multinational company founded in 1865, focused on network infrastructure, including 5G equipment, cloud networking, and telecom solutions used by carriers worldwide.\n",
-      "highlights": [
-        "Remote Technical Support for 5620 SAM Network Services Platform and associated network elements.",
-        "Debugging complex product installations on CentOS/Solaris/RHEL systems, resolving complicated network problems using Open Stack, Cloud Stack and VMWare.",
-        "Scripting at a Unix/Linux level in bash and Python.",
-        "Interfacing, developing and maintaining strong relationships with regional TEC (Technical Expertise Centers), Solution Teams and Product Business Units."
-      ]
-    },
-    {
       "name": "Nalcor Energy",
       "position": "Software Developer (Co-Op)",
       "url": "https://nalcorenergy.com/",
@@ -89,7 +71,6 @@
   ],
   "interests": [
     {
-      "name": "Hobbies",
       "keywords": [
         "Woodworking",
         "Weightlifting",
@@ -145,6 +126,17 @@
         "Rust"
       ]
     },
+    {
+      "name": "Front End Development",
+      "level": "Beginner",
+      "keywords": [
+        "React",
+        "Redux",
+        "Vue",
+        "Flipper",
+        "Android"
+      ]
+    }
   ],
   "languages": [
     {
@@ -160,6 +152,6 @@
     "canonical": "https://raw.githubusercontent.com/jsonresume/resume-schema/master/resume.json",
     "version": "v1.0.0",
     "lastModified": "2017-12-24T15:53:00",
-    "theme": "stackoverflow"
+    "theme": "spartacus"
   }
 }
