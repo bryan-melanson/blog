@@ -8,8 +8,16 @@ const customElements = ["mjx-container"];
 
 // Comic section
 const comic = {
-	text: "Comic",
-	link: "/comic/",
+	text: "Comics",
+	items: [
+		{
+			text: "Series",
+			collapsible: true,
+			items: [
+				{ text: "Everybody Cheer Up", link: "/comic/everybody-cheer-up" },
+			],
+		},
+	],
 };
 
 // Music section
@@ -157,6 +165,7 @@ export default withMermaid(
 				"/music/": music,
 				"/study-guides/": guides,
 				"/resume/": all,
+				"/comic/": comic,
 			},
 
 			socialLinks: [

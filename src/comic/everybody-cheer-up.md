@@ -1,5 +1,5 @@
 ---
-title: Comic
+title: Everybody Cheer Up
 ---
 
 <script setup>
