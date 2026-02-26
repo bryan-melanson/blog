@@ -2,6 +2,7 @@
 import DefaultTheme from "vitepress/theme";
 import MyLayout from "./components/MyLayout.vue";
 import BryanMelanson from "./components/BryanMelanson.vue";
+import ComicViewer from "../../src/components/ComicViewer.vue";
 import "./style.css";
 import "./styles/mathjax3.css";
 
@@ -14,6 +15,7 @@ export default {
 	Layout: MyLayout,
 	enhanceApp({ app, router, siteData }) {
 		app.component("BryanMelanson", BryanMelanson);
+		app.component("ComicViewer", ComicViewer);
 
 		// Mermaid logic must run in onMounted() to avoid SSR issues
 		onMounted(() => {
