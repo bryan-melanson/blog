@@ -6,6 +6,20 @@ import markdownItContainer from "markdown-it-container";
 
 const customElements = ["mjx-container"];
 
+// Comic section
+const comic = {
+	text: "Comics",
+	items: [
+		{
+			text: "Series",
+			collapsible: true,
+			items: [
+				{ text: "Everybody Cheer Up", link: "/comic/everybody-cheer-up" },
+			],
+		},
+	],
+};
+
 // Music section
 const music = {
 	text: "Music",
@@ -139,6 +153,7 @@ export default withMermaid(
 				{ text: "Articles", link: "/articles" },
 				guides,
 				music,
+				comic,
 				{ text: "CV", link: "/resume" },
 			],
 
@@ -150,6 +165,7 @@ export default withMermaid(
 				"/music/": music,
 				"/study-guides/": guides,
 				"/resume/": all,
+				"/comic/": comic,
 			},
 
 			socialLinks: [
