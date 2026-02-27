@@ -105,13 +105,6 @@ const strips = [
     image: "/blog/comic/strip-021.jpg",
     date: ""
   },
-  {
-    title: "Everybody Cheer Up #22",
-    image: "/blog/comic/strip-022.jpg",
-    date: ""
-  },
-
-
 ]
 </script>
 
