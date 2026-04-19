@@ -158,6 +158,8 @@ It uses the following values to track and constrain its operations:
 - `capacity` can be used to check if the buffer is full
 - `size` (optional) is incremented when a value is written, and decremented when read
 
+### Inserting 
+
 ```c
 bool circular_buf_enqueue(circ_buf_t *circ, uint8_t value) {
   if (!circ || !circ->data || circ->size == circ->capacity)
@@ -168,7 +170,10 @@ bool circular_buf_enqueue(circ_buf_t *circ, uint8_t value) {
   circ->size++;
   return true;
 }
+```
 
+### Deleting
+```c
 bool circular_buf_dequeue(circ_buf_t *circ, uint8_t *value) {
   if (!circ || !circ->data || circ->size == 0)
     return false;
@@ -193,6 +198,7 @@ Circular Buffer but with `push_front/pop_front` and `push_back/pop_back`.
 Using the same fields as [Circular Buffer](#circular-buffer), the `push` functions 
 will now move either index value:
 
+### Inserting
 ```c
 bool cb_push_front(circ_buf_t* cb, uint8_t value) {
   if (cb->size == cb->capacity) {
@@ -219,6 +225,8 @@ bool cb_push_back(circ_buf_t* cb, uint8_t value) {
 }
 ``` 
 
+### Deleting
+
 The `pop` function works the same for the `front` but popping from the `back`,
 the `head` value is decremented first. `head` tracks the next available
 empty slot, so we have read the slot before.
@@ -233,7 +241,6 @@ bool cb_pop_back(circ_buf_t *cb, uint8_t *value) {
     cb->size--;
     return true;
 }
-```
 ```
 ```
 ```
