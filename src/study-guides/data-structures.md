@@ -77,7 +77,10 @@ To reverse these positions, the bytes can be isolated and bit-shifted by the app
 
 Arrays are collections of same-type data items stored in a contiguous memory location. Knowing the data type, each element is located at an offset based on that data size. In other words, for `int data[]` the data at `data[1]` is located at `data[0] + sizeof(int)`.
 
-<pre> ```mermaid flowchart LR A --> B --> C ``` </pre>
+<pre class="mermaid">
+graph LR
+  a --- b & c --- d
+</pre>
 
 <figure>
   <img src="/assets/img/study-guides/data-structures/array.png" alt="array" />
