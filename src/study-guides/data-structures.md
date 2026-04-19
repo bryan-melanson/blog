@@ -104,9 +104,15 @@ A C string is a pointer to an array of `char` data items which is terminated by 
 
 ## Matrix
 
-<figure>
-  <img src="/assets/img/study-guides/data-structures/matrix.png" alt="matrix" />
-</figure>
+<pre class="mermaid">
+flowchart TB
+    subgraph Matrix
+        direction LR
+        A[1] B[2] C[3]
+        D[4] E[5] F[6]
+        G[7] H[8] I[9]
+    end
+</pre>
 
 ### Normal Declaration
 
