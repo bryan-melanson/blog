@@ -762,10 +762,10 @@ A good hash value would distribute values evenly across the map.
 
 <pre class="mermaid">
 graph LR
-    A --> B
-    A --> C
-    B --> D
-    C --> D
+    A -- 5 --> B
+    A -- 2 --> C
+    B -- 1 --> D
+    C -- 7 --> D
 </pre>
 
 <BryanMelanson />
