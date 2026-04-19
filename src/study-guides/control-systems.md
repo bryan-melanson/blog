@@ -10,9 +10,39 @@ title: 'Control Systems'
 
 ### System Configuration
 
-<figure>
-  <img src="/assets/img/study-guides/control-systems/system-blocks.png" alt="system-blocks" />
-</figure>
+<pre class="mermaid">
+flowchart LR
+    R[Input / Reference]
+    IT[Input Transducer]
+    C[Controller]
+    S1((Σ Disturbance 1))
+    P[Process / Plant]
+    S2((Σ Disturbance 2))
+    Y[Output]
+
+    R --> IT --> C --> S1 --> P --> S2 --> Y
+
+    D1[Disturbance 1] --> S1
+    D2[Disturbance 2] --> S2
+</pre>
+
+<pre class="mermaid">
+flowchart LR
+    R[Input / Reference]
+    IT[Input Transducer]
+    SUM1((Σ Error))
+    C[Controller]
+    S1((Σ Disturbance 1))
+    P[Process / Plant]
+    S2((Σ Disturbance 2))
+    Y[Output]
+    OT[Output Transducer / Sensor]
+
+    R --> IT --> SUM1 --> C --> S1 --> P --> S2 --> Y --> OT --> SUM1
+
+    D1[Disturbance 1] --> S1
+    D2[Disturbance 2] --> S2
+</pre>
 
 **Open Loop** systems do not monitor or correct the output for disturbances; however, they are simpler and less expensive than closed-loop systems.
 
