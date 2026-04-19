@@ -116,9 +116,10 @@ A C string is a pointer to an array of `char` data items which is terminated by 
 
 Unlike arrays, Linked Lists are dynamic and can grow by pointing to non-contiguous locations in memory using pointers. Extra memory is required when representing each pointer in the linked list, but it allows for easily inserting and deleting objects in the linked list.
 
-<figure>
-  <img src="/assets/img/study-guides/data-structures/linkedlist.png" alt="linkedlist" />
-</figure>
+<pre class="mermaid">
+flowchart LR
+    A["10 | next"] --> B["20 | next"] --> C["30 | next"] --> D["NULL"]
+</pre>
 
 Each node in the linked list consists of its data, and a pointer to the next object in the linked list. In the case that the head of the linked list is null.
 
@@ -130,7 +131,8 @@ Each node in the linked list consists of its data, and a pointer to the next obj
 
 <pre class="mermaid">
 flowchart LR
-    A["10 | next"] --> B["20 | next"] --> C["30 | next"] --> D["NULL"]
+    head --> A[10] --> B[20] --> C[30]
+    C --> A
 </pre>
 
 ### Inserting
