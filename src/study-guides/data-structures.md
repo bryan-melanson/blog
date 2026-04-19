@@ -104,6 +104,14 @@ A C string is a pointer to an array of `char` data items which is terminated by 
 
 ## Matrix
 
+<pre class="mermaid">
+graph LR
+    A1 --> A2 --> A3
+    A1 --> B1
+    A2 --> B2
+    A3 --> B3
+</pre>
+
 ### Normal Declaration
 
 ### Dynamic Declaration
