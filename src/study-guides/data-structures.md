@@ -145,6 +145,99 @@ Each node in the linked list consists of its data, and a pointer to the next obj
 
 ### Deleting
 
+## Circular Buffer
+
+Also known as a Ring Buffer, a Circular Buffer is a fixed size structure that
+reuses memory by incrementing its read and write indexes and wrapping around 
+when reaching the size of the buffer.
+
+It uses the following values to track and constrain its operations:
+
+- `head`, the write index, is incremented when a value is written
+- `tail`, the read index, is incremented when a value is read
+- `capacity` can be used to check if the buffer is full
+- `size` (optional) is incremented when a value is written, and decremented when read
+
+```c
+bool circular_buf_enqueue(circ_buf_t *circ, uint8_t value) {
+  if (!circ || !circ->data || circ->size == circ->capacity)
+    return false;
+
+  circ->data[circ->head] = value;
+  circ->head = (circ->head + 1) % circ->capacity;
+  circ->size++;
+  return true;
+}
+
+bool circular_buf_dequeue(circ_buf_t *circ, uint8_t *value) {
+  if (!circ || !circ->data || circ->size == 0)
+    return false;
+
+  *value = circ->data[circ->tail];
+  circ->tail = (circ->tail + 1) % circ->capacity;
+  circ->size--;
+  return true;
+}
+```
+
+Instead of using `size`, `tail` and `head` can be compared
+
+- Empty: `head == tail`
+- Full: `(head + 1) % capacity == tail`
+
+## Circular Deque
+
+A Circular Deque is a double-ended queue backed by a ring buffer. Similar to the
+Circular Buffer but with `push_front/pop_front` and `push_back/pop_back`.
+
+Using the same fields as [Circular Buffer](#circular-buffer), the `push` functions 
+will now move either index value:
+
+```c
+bool cb_push_front(circ_buf_t* cb, uint8_t value) {
+  if (cb->size == cb->capacity) {
+    return false;
+  }
+
+  cb->tail = (cb->tail - 1) % cb->capacity;
+  cb->data[cb->tail] = value;
+  cb->size++;
+  return true;
+}
+```
+
+```c
+bool cb_push_back(circ_buf_t* cb, uint8_t value) {
+  if (cb->size == cb->capacity) {
+    return false;
+  }
+
+  cb->data[cb->head] = value;
+  cb->head = (cb->head + 1) % cb->capacity;
+  cb->size++;
+  return true;
+}
+``` 
+
+The `pop` function works the same for the `front` but popping from the `back`,
+the `head` value is decremented first. `head` tracks the next available
+empty slot, so we have read the slot before.
+
+```c
+bool cb_pop_back(circ_buf_t *cb, uint8_t *value) {
+    if (cb->size == 0)
+        return false;
+
+    cb->head = DEC(cb->head, cb->capacity);
+    *value = cb->data[cb->head];
+    cb->size--;
+    return true;
+}
+```
+```
+```
+```
+
 ## Binary Tree
 
 <figure>
@@ -527,7 +620,9 @@ void display(Queue *q) {
     }
 }
 
-```
+### Double Ended Queue
+
+See [Circular Deque](#circular-deque)
 
 ## Heap
 
