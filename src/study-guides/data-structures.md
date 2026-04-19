@@ -661,6 +661,7 @@ void display(Queue *q) {
         printf("%d\n", q->items[i]);
     }
 }
+```
 
 ### Double Ended Queue
 
