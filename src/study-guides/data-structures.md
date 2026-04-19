@@ -148,6 +148,11 @@ Each node in the linked list consists of its data, and a pointer to the next obj
 
 ## Circular Buffer
 
+<pre class="mermaid">
+flowchart LR
+    A[0] --> B[1] --> C[2] --> D[3] --> E[4] --> A
+</pre>
+
 Also known as a Ring Buffer, a Circular Buffer is a fixed size structure that
 reuses memory by incrementing its read and write indexes and wrapping around 
 when reaching the size of the buffer.
