@@ -79,12 +79,8 @@ Arrays are collections of same-type data items stored in a contiguous memory loc
 
 <pre class="mermaid">
 graph LR
-  a --- b & c --- d
+  A["[0] = 10"] --> B["[1] = 20"] --> C["[2] = 30"]
 </pre>
-
-<figure>
-  <img src="/assets/img/study-guides/data-structures/array.png" alt="array" />
-</figure>
 
 ### Arrays in C
 
