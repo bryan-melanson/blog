@@ -128,19 +128,24 @@ Each node in the linked list consists of its data, and a pointer to the next obj
 
 ## Circular Linked List
 
+<pre class="mermaid">
+flowchart LR
+    A["10 | next"] --> B["20 | next"] --> C["30 | next"] --> D["NULL"]
+</pre>
+
 ### Inserting
 
 ### Deleting
 
-<figure>
-  <img src="/assets/img/study-guides/data-structures/circularlinkedlist.jpg" alt="circularlinkedlist" />
-</figure>
 
 ## Doubly Linked List
 
-<figure>
-  <img src="/assets/img/study-guides/data-structures/doublylinkedlist.jpg" alt="doublylinkedlist" />
-</figure>
+<pre class="mermaid">
+flowchart LR
+    head --> A[10]
+    A <--> B[20] <--> C[30]
+    C --> tail
+</pre>
 
 ### Inserting
 
@@ -253,9 +258,15 @@ bool cb_pop_back(circ_buf_t *cb, uint8_t *value) {
 
 ## Binary Tree
 
-<figure>
-  <img src="/assets/img/study-guides/data-structures/binarytree.png" alt="binarytree" />
-</figure>
+<pre class="mermaid">
+flowchart TD
+    A[10] --> B[5]
+    A --> C[15]
+    B --> D[3]
+    B --> E[7]
+    C --> F[12]
+    C --> G[18]
+</pre>
 
 A Binary Tree is any tree organized in which each node, or **root** has at most two children, or **leaves**, hence _binary_, designated left and right.
 
@@ -333,9 +344,13 @@ def bfs(self):
 
 ## Binary Search Tree
 
-<figure>
-  <img src="/assets/img/study-guides/data-structures/binarysearchtree.jpg" alt="binarysearchtree" />
-</figure>
+<pre class="mermaid">
+flowchart TD
+    A[8] -->|L| B[3]
+    A -->|R| C[10]
+    B -->|L| D[1]
+    B -->|R| E[6]
+</pre>
 
 A Binary Search Tree is one in which the value of the node stored on the left is less than the value of root, and the value of the node on the right is greater than the value of the root. By organizing a tree in this way, values can easily be found using a similar method as binary search which eliminates half of the remaining possibilities at each step.
 
@@ -382,9 +397,12 @@ void insert(Node* new, Node* curr, int value) {
 
 ## Stack
 
-<figure>
-  <img src="/assets/img/study-guides/data-structures/stack.png" alt="stack" />
-</figure>
+<pre class="mermaid">
+flowchart TB
+    top --> A[30]
+    A --> B[20]
+    B --> C[10]
+</pre>
 
 ### Stack Array
 
@@ -475,6 +493,11 @@ int pop()
 ```
 
 ## Queue
+
+<pre class="mermaid">
+flowchart LR
+    front --> A[10] --> B[20] --> C[30] --> rear
+</pre>
 
 A queue data structure is useful in many scenarios where you need to process elements in a first-in, first-out (FIFO) order.
 
@@ -639,9 +662,15 @@ See [Circular Deque](#circular-deque)
 
 ## Heap
 
-<figure>
-  <img src="/assets/img/study-guides/data-structures/heap.png" alt="heap" />
-</figure>
+<pre class="mermaid">
+flowchart TD
+    A[1] --> B[3]
+    A --> C[5]
+    B --> D[4]
+    B --> E[8]
+    C --> F[6]
+    C --> G[9]
+</pre>
 
 ### Maximum Heap
 
@@ -649,9 +678,12 @@ See [Circular Deque](#circular-deque)
 
 ## Hashes
 
-<figure>
-  <img src="/assets/img/study-guides/data-structures/hash.jpg" alt="hash" />
-</figure>
+<pre class="mermaid">
+flowchart LR
+    K1["apple"] --> H["hash(key)"] --> B1["bucket[1]"]
+    K2["banana"] --> H
+    K3["orange"] --> H
+</pre>
 
 A hash map combines features of a static array and a linked list, without being bound by issues such as inserting new values in a size-defined array, or searching for values in a linked list. A hash map has a preallocated buffer, and uses the value of the data to be inserted to generate a key, or index by hashing it. If a hash is properly defined, there will be no hash collisions, and data with an indentical value will be stored in the identical spot in the hash map. This way, a value need only be calculated once, then stored in the hash map. Insted of generating the value again by calculation, the value can be retrieved from the hash map by visiting the pre-determined index.
 
@@ -728,8 +760,12 @@ A good hash value would distribute values evenly across the map.
 
 ## Graph
 
-<figure>
-  <img src="/assets/img/study-guides/data-structures/graph.png" alt="graph" />
-</figure>
+<pre class="mermaid">
+graph LR
+    A --> B
+    A --> C
+    B --> D
+    C --> D
+</pre>
 
 <BryanMelanson />
