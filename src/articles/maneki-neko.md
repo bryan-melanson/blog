@@ -116,7 +116,7 @@ The battery base as a little recessed area we can modify to hold the USB stable.
   <figcaption>This one is pure b-roll</figcaption>
 </figure>
 
-Carving a slot in the back seems to provide a lot of stability, and the USB can but up into the original battery base internals to keep it stable when pushed on.
+Carving a slot in the back seems to provide a lot of stability, and the USB can butt up into the original battery base internals to keep it stable when pushed on.
 
 <figure>
   <img src="/assets/img/luckycat/IMG18.jpg" />
@@ -146,7 +146,7 @@ In the end, I took mercy on my co-workers, fans of USB sticks that they are, and
 
 ## Next
 
-For future work, I've looked at different cat models as potential platforms for sensors, speakers, bluetooth hubs, radios and LLM relays. I've found that constricting your options in a project like can result in more actionable choices, and help in generating ideas. 
+For future work, I've looked at different cat models as potential platforms for sensors, speakers, bluetooth controllers, radios and mini-LLMs. I've found that constricting your options in a project like this can result in more actionable choices, and help in generating ideas. 
 
 <figure>
   <img src="/assets/img/luckycat/IMG21.jpg" />
