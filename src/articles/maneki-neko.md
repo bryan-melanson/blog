@@ -149,7 +149,7 @@ In the end, I took mercy on my co-workers, fans of USB sticks that they are, and
 For future work, I've looked at different cat models as potential platforms for sensors, speakers, bluetooth hubs, radios and LLM relays. I've found that constricting your options in a project like can result in more actionable choices, and help in generating ideas. 
 
 <figure>
-  <img src="/assets/img/luckycat/21.jpg" />
+  <img src="/assets/img/luckycat/IMG21.jpg" />
 </figure>
 
 PS - I recommend the [Lego Lucky Cat model.](https://www.amazon.ca/LEGO-Lucky-Building-Girls-Boys/dp/B0FCY8CNN4/ref=sr_1_1?sr=8-1)
