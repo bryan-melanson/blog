@@ -151,7 +151,7 @@ export default withMermaid(
 			nav: [
 				{ text: "Home", link: "/" },
 				{ text: "Articles", link: "/articles" },
-				{ text: "Blog", link: "/blog" },
+				{ text: "Words", link: "/words" },
 				guides,
 				music,
 				comic,

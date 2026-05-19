@@ -1,5 +1,5 @@
 ---
-title: "Blog"
+title: "Words"
 ---
 
 <script setup>
