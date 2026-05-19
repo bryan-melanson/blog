@@ -25,7 +25,7 @@ const data = await Promise.all(
       ...data,
       Updated: updated,
       title: contents[0].replace(/\s{2,}/g, '').trim(),
-      path: path.replace('./src/blog/', '').replace(/\.md$/, '.html'),
+      path: path.replace('./src/', '').replace(/\.md$/, '.html'),
       excerpt: contents,
     };
   })
