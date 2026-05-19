@@ -1,7 +1,7 @@
 {
   "scripts": {
-    "docs:dev": "node src/getArticles.mjs && vitepress dev",
-    "docs:build": "node src/getArticles.mjs && vitepress build",
+    "docs:dev": "node src/getArticles.mjs && node src/getBlogPosts.mjs && vitepress dev",
+    "docs:build": "node src/getArticles.mjs && node src/getBlogPosts.mjs && vitepress build",
     "docs:preview": "vitepress preview"
   },
   "devDependencies": {
