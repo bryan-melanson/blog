@@ -17,8 +17,13 @@ const data = await Promise.all(
       .trim()
       .split(/\r\n|\n|\r/);
 
+    const updated = data.Updated instanceof Date
+      ? data.Updated.toISOString().split('T')[0]
+      : data.Updated;
+
     return {
       ...data,
+      Updated: updated,
       title: contents[0].replace(/\s{2,}/g, '').trim(),
       path: path.replace('./src/blog/', '').replace(/\.md$/, '.html'),
       excerpt: contents,
