@@ -16,7 +16,7 @@ The itch in the back of your throat, roof of your mouth and sinuses isn't Poe-st
 
 Every time you blow your nose it sounds like somebody naked sitting on a leather couch, so try to be discreet.
 
-I (We) think it's Birch allergies. Montréal has a lot of those, as a natural defense against Newfoundlanders, and Bing AI has assured me that this is likely. This also relates to cross-reactive foods you have categorized as "Itchy" foods in your head, and thankfully never out loud. They range from so-so to delicious.
+We think it's Birch allergies. Montréal has a lot of those, as a natural defense against Newfoundlanders, and Bing AI has assured me that this is likely. This also relates to cross-reactive foods you have categorized as "Itchy" foods in your head, and thankfully never out loud. They range from so-so to delicious.
 
 - Almond
 - Apple
