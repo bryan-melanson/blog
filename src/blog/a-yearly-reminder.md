@@ -1,4 +1,10 @@
+---
+Updated: 2026-06-06
+---
+
 # A Yearly Reminder
+
+<!-- more -->
 
 A reminder for myself: On this day, June 6th of 2026, it is the 3rd week of trees blooming in Montréal, and the third week or your relentless seasonal allergies. **You have allergies**.
 
