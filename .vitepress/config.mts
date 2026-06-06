@@ -20,10 +20,17 @@ const comic = {
 	],
 };
 
-// Music section
-const music = {
-	text: "Music",
+// Sound section
+const sound = {
+	text: "Sound",
 	items: [
+		{
+			text: "Sound Design",
+			collapsible: true,
+			items: [
+				{ text: "Sound Design", link: "/sound/sound-design" },
+			],
+		},
 		{
 			text: "Albums",
 			collapsible: true,
@@ -157,7 +164,7 @@ const words = {
 };
 
 const all = {
-	items: [...guides.items, ...music.items],
+	items: [...guides.items, ...sound.items],
 };
 
 export default withMermaid(
@@ -193,7 +200,7 @@ export default withMermaid(
 				{ text: "Articles", link: "/articles" },
 				{ text: "Words", link: "/words" },
 				guides,
-				music,
+				sound,
 				comic,
 				{ text: "CV", link: "/resume" },
 			],
@@ -203,7 +210,8 @@ export default withMermaid(
 			},
 
 			sidebar: {
-				"/music/": music,
+				"/music/": sound,
+				"/sound/": sound,
 				"/study-guides/": guides,
 				"/resume/": all,
 				"/comic/": comic,
