@@ -87,6 +87,11 @@ export default {
 .title {
   border-top: none;
   margin: 0 0;
+  color: var(--vp-c-text-1);
+}
+
+.date {
+  color: var(--vp-c-text-2);
 }
 
 .name {

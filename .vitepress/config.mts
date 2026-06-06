@@ -116,6 +116,31 @@ const guides = {
 	],
 };
 
+// Articles section
+const articles = {
+	text: "Articles",
+	items: [
+		{
+			text: "Posts",
+			collapsible: true,
+			items: [
+				{ text: "Maneki Neko USB", link: "/articles/maneki-neko" },
+				{ text: "Microcorruption Pt. 9 - Santa Cruz", link: "/articles/microcorruption-09-santacruz" },
+				{ text: "Microcorruption Pt. 8 - Johannesburg", link: "/articles/microcorruption-08-johannesburg" },
+				{ text: "Microcorruption Pt. 7 - Montevideo", link: "/articles/microcorruption-07-montevideo" },
+				{ text: "Microcorruption Pt. 6 - Whitehorse", link: "/articles/microcorruption-06-whitehorse" },
+				{ text: "Microcorruption Pt. 5 - Reykjavik", link: "/articles/microcorruption-05-reykjavik" },
+				{ text: "Microcorruption Pt. 4 - Cusco", link: "/articles/microcorruption-04-cusco" },
+				{ text: "Microcorruption Pt. 3 - Hanoi", link: "/articles/microcorruption-03-hanoi" },
+				{ text: "Microcorruption Pt. 2 - Sydney", link: "/articles/microcorruption-02-sydney" },
+				{ text: "Creating a 2D Wrap from a 3D Object", link: "/articles/matryoshka-uv-map" },
+				{ text: "Microcorruption Pt. 1 - New Orleans", link: "/articles/microcorruption-01-neworleans" },
+				{ text: "sup world", link: "/articles/article1" },
+			],
+		},
+	],
+};
+
 // Words section
 const words = {
 	text: "Words",
@@ -184,6 +209,7 @@ export default withMermaid(
 				"/comic/": comic,
 				"/blog/": words,
 				"/words": words,
+				"/articles/": articles,
 			},
 
 			socialLinks: [
