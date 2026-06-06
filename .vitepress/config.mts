@@ -208,7 +208,6 @@ export default withMermaid(
 				"/resume/": all,
 				"/comic/": comic,
 				"/blog/": words,
-				"/words": words,
 				"/articles/": articles,
 			},
 
