@@ -35,6 +35,8 @@ I (We) think it's Birch allergies. Montréal has a lot of those, as a natural de
 
 It was lazy to assume that eating a Kiwi whole or feasting on a bowl of unadorned soybeans was what caused that itchy feeling on the roof of your mouth, and we're moving on from that theory.
 
+Side note: The song [Birch Mouth](https://bryan-melanson.github.io/blog/music/errand-boy.html) wound up being a good prognosis.
+
 The medicine doesn't work. Stay inside and buy more handkerchiefs.
 
 <BryanMelanson />
