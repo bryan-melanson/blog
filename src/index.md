@@ -4,7 +4,7 @@ title: "sup"
 hero:
   name: "Bryan Melanson"
   text: "buh-RAH-yan muh-LAHN-son"
-  tagline: "[noun] 1. an embedded developer, 2. a b.eng from newfoundland, 3. a semi-retired sound designer, 4. slow-moving land mammal"
+  tagline: "[noun] 1. an embedded developer, 2. a b.eng from newfoundland, 3. a sound designer, 4. slow-moving land mammal"
   image:
     src: /logo.png
   actions:
