@@ -25,7 +25,7 @@ const sound = {
 	text: "Sound",
 	items: [
 		{
-			text: "Sound Design",
+			text: "OK+Audio",
 			collapsible: true,
 			items: [
 				{ text: "Sound Design", link: "/sound/sound-design" },
