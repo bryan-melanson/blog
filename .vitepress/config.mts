@@ -25,10 +25,10 @@ const sound = {
 	text: "Sound",
 	items: [
 		{
-			text: "OK+Audio",
+			text: "Sound Design",
 			collapsible: true,
 			items: [
-				{ text: "Sound Design", link: "/sound/sound-design" },
+				{ text: "OK+Audio", link: "/sound/sound-design" },
 			],
 		},
 		{
