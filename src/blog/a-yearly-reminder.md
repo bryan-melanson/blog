@@ -6,7 +6,7 @@ Updated: 2026-06-06
 
 <!-- more -->
 
-A reminder for myself: On this day, June 6th of 2026, it is the 3rd week of trees blooming in Montréal, and the third week or your relentless seasonal allergies. **You have allergies**.
+_A reminder for myself:_ On this day, June 6th of 2026, it is the 3rd week of trees blooming in Montréal, and the third week or your relentless seasonal allergies. **You have allergies**.
 
 The reason you can't breathe through your nose isn't because you have contracted the cold. You use public transit a lot, and constantly touch your mustache and face afterwards, but it's safe to assume after this 42 year pattern that it is not the cold.
 
@@ -35,7 +35,7 @@ I (We) think it's Birch allergies. Montréal has a lot of those, as a natural de
 
 It was lazy to assume that eating a Kiwi whole or feasting on a bowl of unadorned soybeans was what caused that itchy feeling on the roof of your mouth, and we're moving on from that theory.
 
-Side note: The song [Birch Mouth](https://bryan-melanson.github.io/blog/music/errand-boy.html) wound up being a good prognosis.
+**Side note:** The song [Birch Mouth](https://bryan-melanson.github.io/blog/music/errand-boy.html) wound up being a good prognosis.
 
 The medicine doesn't work. Stay inside and buy more handkerchiefs.
 
