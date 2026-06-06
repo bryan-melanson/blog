@@ -116,6 +116,21 @@ const guides = {
 	],
 };
 
+// Words section
+const words = {
+	text: "Words",
+	items: [
+		{
+			text: "Posts",
+			collapsible: true,
+			items: [
+				{ text: "A Yearly Reminder", link: "/blog/a-yearly-reminder" },
+				{ text: "Missed Connections: Montréal", link: "/blog/missed-connections-montreal" },
+			],
+		},
+	],
+};
+
 const all = {
 	items: [...guides.items, ...music.items],
 };
@@ -167,6 +182,8 @@ export default withMermaid(
 				"/study-guides/": guides,
 				"/resume/": all,
 				"/comic/": comic,
+				"/blog/": words,
+				"/words": words,
 			},
 
 			socialLinks: [
