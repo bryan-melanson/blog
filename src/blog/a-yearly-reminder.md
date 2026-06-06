@@ -10,7 +10,7 @@ _A reminder for myself:_ On this day, June 6th of 2026, it is the 3rd week of tr
 
 The reason you can't breathe through your nose isn't because you have contracted the cold. You use public transit a lot, and constantly touch your mustache and face afterwards, but it's safe to assume after this 42 year pattern that it is not the cold.
 
-The reason your eyes are watering isn't unchecked grief, depression, or anxiety. Everyone assumes it is, but trust younger You in 2026 (Me). I'm smarter than You (Us).
+The reason your eyes are watering isn't unchecked grief, depression, or anxiety. Everyone assumes it is, but trust younger You in 2026 (Me). I'm smarter than You (Future Me).
 
 The itch in the back of your throat, roof of your mouth and sinuses isn't Poe-style sublimated guilt or trauma manifesting itself as an unrelenting psychosomatic torture.
 
