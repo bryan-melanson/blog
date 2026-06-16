@@ -14,7 +14,7 @@ A modern, black and white, live action remake of the 1928 Disney animated short 
 
 ### Prompts for AI Producers
 
-- Can the lower half of his body be rubbery and animated? Will fans of the original appreciate this detail?
+- Can the lower half of his body be rubbery and animated? Will fans of the original appreciate this detail? Train rubbery ass physics on latest models.
 - There's not much to work with in the original short film. It's mostly a cartoon mouse bothering less sentient animals and playing their teeth with mallets. Create a reason for Will to be chased around with guns and have a sex scene. The rubbery round cartoon ass will be important in this regard.
 - Max speed of a steamboat is 60 km/h. To what degree can this be out of control?
 - Main theme is a re-imagined Nu-metal version of "Turkey in the Straw" by Suno-powered Linkin Park AI.
