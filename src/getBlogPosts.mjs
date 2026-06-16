@@ -31,4 +31,6 @@ const data = await Promise.all(
   })
 );
 
-await fs.writeFile('./src/blog-data.json', JSON.stringify(data), 'utf-8');
+const sorted = data.sort((a, b) => new Date(b.Updated) - new Date(a.Updated));
+
+await fs.writeFile('./src/blog-data.json', JSON.stringify(sorted), 'utf-8');
