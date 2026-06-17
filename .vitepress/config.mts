@@ -156,6 +156,7 @@ const words = {
 			text: "Posts",
 			collapsible: true,
 			items: [
+				{ text: "AI Movie Pitch - \"Steamboat Willy Smith\"", link: "/blog/ai-movie-concepts" },
 				{ text: "A Yearly Reminder", link: "/blog/a-yearly-reminder" },
 				{ text: "Missed Connections: Montréal", link: "/blog/missed-connections-montreal" },
 			],
