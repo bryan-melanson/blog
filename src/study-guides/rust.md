@@ -35,13 +35,13 @@ The *Heap* is a location in memory where memory is allocated dynamically, where 
 
 #### `Drop` and RAII
 
-In C++, the [*Resource Allocation is Initialization*](https://en.wikipedia.org/wiki/Resource_acquisition_is_initialization) pattern is used to handle the freeing of memory resources after an object's lifetime, using `destructor` commands that execute cleanup. In Rust, types implement a function called `drop` which performs these cleanup actions after a variable is out of its scope.
+In C++, the [*Resource Allocation is Initialization*](https://en.wikipedia.org/wiki/Resource_acquisition_is_initialization) pattern is used to handle the freeing of memory resources after an object's lifetime, using `destructor` commands that execute cleanup. In Rust, types implement a function called `drop` which performs these cleanup actions automatically after a variable is out of its scope.
 
 #### `Move` and `Copy`
 
 Because variables are in charge of freeing their own resources, ownership of resources is assigned when a variable is created. This is known as a `Move`.  
 
-`Copy` is a trait implemented by default for primitive data types of which the size is known as compile time, such as `i32`. A new variable is created and the value is copies, similarly to [Deep Copying](https://en.wikipedia.org/wiki/Object_copying#Deep_copy). For data types such as `String` where the value isn't known at compile time, a reference is passed by variable assignment, such as in a [Shallow Copy](https://en.wikipedia.org/wiki/Object_copying#Shallow_copy). The new variable will point to the same memory location and will now *own* it, so the first variable can no longer be accessed.
+`Copy` is a trait implemented by default for primitive data types of which the size is known as compile time, such as `i32`. A new variable is created and the value is copied, similarly to [Deep Copying](https://en.wikipedia.org/wiki/Object_copying#Deep_copy). For data types such as `String` where the value isn't known at compile time, a reference is passed by variable assignment, such as in a [Shallow Copy](https://en.wikipedia.org/wiki/Object_copying#Shallow_copy). The new variable will point to the same memory location and will now *own* it, so the first variable can no longer be accessed.
 
 ``` rust
 /* COPY */
@@ -277,7 +277,7 @@ Type aliases will also pass equality tests, such as `Name == String`.
 
 ### Conversion
 
-Primitive data types can be converted between each other through (Casting)[Casting], but for custom data types such as `String`, or other `struct`s and `enum`s a `From` and `Into` trait will need to be implemented to define the behavior when converting between types.
+Primitive data types can be converted between each other through [Casting](Casting), but for custom data types such as `String`, or other `struct`s and `enum`s a `From` and `Into` trait will need to be implemented to define the behavior when converting between types.
 
 After defining the `From` behavior, `Into` functions can also be called for free as they exist as the reciprocal. `Into` calls require the type annotation to compile.
 
