@@ -277,7 +277,7 @@ Type aliases will also pass equality tests, such as `Name == String`.
 
 ### Conversion
 
-Primitive data types can be converted between each other through [Casting](Casting), but for custom data types such as `String`, or other `struct`s and `enum`s a `From` and `Into` trait will need to be implemented to define the behavior when converting between types.
+Primitive data types can be converted between each other through [Casting](#Casting), but for custom data types such as `String`, or other `struct`s and `enum`s a `From` and `Into` trait will need to be implemented to define the behavior when converting between types.
 
 After defining the `From` behavior, `Into` functions can also be called for free as they exist as the reciprocal. `Into` calls require the type annotation to compile.
 
